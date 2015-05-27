@@ -22,13 +22,13 @@ public class Grid {
         grid[block.x, block.y] = block;
     }
 
-    public void MoveBlock(Block block, Vector2 origin, Vector2 target)
+    public void MoveBlock(BlockInternal block, Vector2 origin, Vector2 target)
     {
         int type = block.type;
         block.type = 0;
-        var bloco = GetBlockByPosition((int)target.x, (int)target.y);
-        bloco.type = type;
-        bloco.CheckSurroundings();
+        var movedBlock = GetBlockByPosition((int)target.x, (int)target.y);
+        movedBlock.type = type;
+        movedBlock.CheckSurroundings();
     }
 
     public Block GetBlockByPosition(int x, int y) 
@@ -36,8 +36,20 @@ public class Grid {
         return grid[x,y];
     }
 
-    public void PopEvent(int negativos, int positivos, bool vertical = false) 
+    public void PopEvent(BlockInternal origin, int negativos, int positivos, bool vertical = false) 
     {
-
+        for (int i = positivos; i >= -negativos; i--)
+        {
+            if (vertical)
+            {
+                var block = GetBlockByPosition(origin.x, origin.y + i);
+                //block.blockExternal.Pop(positivos + negativos + 1);
+            }
+            else
+            {
+                var block = GetBlockByPosition(origin.x + i, origin.y);
+                //block.blockExternal.Pop(positivos + negativos + 1);
+            }
+        }
     }
 }
