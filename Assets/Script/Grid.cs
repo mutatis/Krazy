@@ -3,33 +3,46 @@ using System.Collections;
 
 public class Grid {
     
-    public Block[][] grid;
+    private Block[,] grid;
 
+    public Grid(int xSize, int ySize)
+    {
+        grid = new Block[xSize,ySize];
+        for (int x = 0; x < xSize; x++)
+        {
+            for (int y = 0; y < ySize; y++)
+            {
+                grid[x, y] = new Block(x,y, this, -1);
+            }
+        }
+    }
 
     public void MoveBlock(Block block, Vector2 origin, Vector2 target)
     {
         int type = block.type;
         block.type = 0;
-        GetBlockByPosition((int)target.x, (int)target.y).type = type;   
+        var bloco = GetBlockByPosition((int)target.x, (int)target.y);
+        bloco.type = type;
+        bloco.CheckSurroundings();
     }
 
     public Block GetBlockByPosition(int x, int y) 
     {
-        return grid[x][y];
+        return grid[x,y];
     }
 
-    public void PopEvent()
+    public void PopEvent(int negativos, int positivos, bool vertical = false) 
     {
 
     }
 }
 
-class Block
+public class Block
 {
     int minimumPopStack;
     int x, y;
     public int type;
-    public void Block(int x, int y, Grid parent, int minimumPopStack)
+    public Block(int x, int y, Grid parent, int minimumPopStack)
     {
         this.x = x;
         this.y = y;
