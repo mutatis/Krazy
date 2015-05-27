@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class MovMouse : MonoBehaviour 
 {
@@ -46,12 +47,12 @@ public class MovMouse : MonoBehaviour
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		posFix = collision.gameObject.transform.position;
-		print (collision.gameObject.tag);
+		print (collision.gameObject.name);
 	}
 	
 	void OnTriggerEnter2D(Collider2D collision)
 	{
 		posFix = collision.gameObject.transform.position;
-		print (collision.gameObject.tag);
+		print (collision.gameObject.name);
 	}
 }

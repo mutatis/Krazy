@@ -4,6 +4,7 @@ using System.Collections;
 public class Block : MonoBehaviour
 {
     public int minimumPopStack;
+	//[HideInInspector]
     public int x, y;
     public int type;
     public Grid parentGrid;   
@@ -16,8 +17,9 @@ public class Block : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-
+    {		
+		x = (int)transform.position.x;
+		y = (int)transform.position.y;
     } 
 
     public void CheckSurroundings()

@@ -12,7 +12,7 @@ public class Grid {
         {
             for (int y = 0; y < ySize; y++)
             {
-                grid[x, y] = new Block(x,y, this, -1, 0);
+                grid[x, y] = null;
             }
         }
     }
