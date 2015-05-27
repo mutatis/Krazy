@@ -3,21 +3,21 @@ using System.Collections;
 
 public class Grid {
     
-    private Block[,] grid;
+    private BlockInternal[,] grid;
 
     public Grid(int xSize, int ySize)
     {
-        grid = new Block[xSize,ySize];
+        grid = new BlockInternal[xSize,ySize];
         for (int x = 0; x < xSize; x++)
         {
             for (int y = 0; y < ySize; y++)
             {
-                grid[x, y] = new Block(x,y, this, -1, 0);
+                grid[x, y] = new BlockInternal(x,y, -1, 0, this);
             }
         }
     }
 
-    public void InsertBlock(Block block)
+    public void InsertBlock(BlockInternal block)
     {
         grid[block.x, block.y] = block;
     }
@@ -31,7 +31,7 @@ public class Grid {
         bloco.CheckSurroundings();
     }
 
-    public Block GetBlockByPosition(int x, int y) 
+    public BlockInternal GetBlockByPosition(int x, int y) 
     {
         return grid[x,y];
     }
