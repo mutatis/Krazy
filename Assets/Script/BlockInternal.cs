@@ -1,27 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Block : MonoBehaviour
-{
+public class BlockInternal {
+    public Block blockExternal;
+
     public int minimumPopStack;
-	//[HideInInspector]
     public int x, y;
     public int type;
     public Grid parentGrid;
-    public BlockInternal blockInternal;
 
-    // Use this for initialization
-    void Start()
+    public BlockInternal(int x, int y, int type, int minimumPopStack, Grid parentGrid)
     {
-
+        this.x = x;
+        this.y = y;
+        this.type = type;
+        this.minimumPopStack = minimumPopStack;
+        this.parentGrid = parentGrid;
     }
-
-    // Update is called once per frame
-    void Update()
-    {		
-		x = (int)transform.position.x;
-		y = (int)transform.position.y;
-    } 
 
     public void CheckSurroundings()
     {
@@ -44,10 +39,12 @@ public class Block : MonoBehaviour
         if (stackCima + stackBaixo >= minimumPopStack)
         {
             //evento de pop
+            parentGrid.PopEvent(this, stackBaixo, stackCima, true);
         }
         else if (stackDireita + stackEsquerda >= minimumPopStack)
         {
             //evento de pop
+            parentGrid.PopEvent(this, stackEsquerda, stackDireita, false);
         }
     }
 
