@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BlockInternal {
-    private Block blockExternal;
+    public Block blockExternal;
 
     public int minimumPopStack;
     public int x, y;
