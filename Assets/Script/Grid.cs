@@ -12,9 +12,14 @@ public class Grid {
         {
             for (int y = 0; y < ySize; y++)
             {
-                grid[x, y] = new Block(x,y, this, -1);
+                grid[x, y] = new Block(x,y, this, -1, 0);
             }
         }
+    }
+
+    public void InsertBlock(Block block)
+    {
+        grid[block.x, block.y] = block;
     }
 
     public void MoveBlock(Block block, Vector2 origin, Vector2 target)
@@ -40,14 +45,15 @@ public class Grid {
 public class Block
 {
     int minimumPopStack;
-    int x, y;
+    public int x, y;
     public int type;
-    public Block(int x, int y, Grid parent, int minimumPopStack)
+    public Block(int x, int y, Grid parent, int type, int minimumPopStack)
     {
         this.x = x;
         this.y = y;
         parentGrid = parent;
         this.minimumPopStack = minimumPopStack;
+        this.type = type;
     }
     Grid parentGrid;
 
