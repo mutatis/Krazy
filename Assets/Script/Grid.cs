@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Grid {
+public class Grid : MonoBehaviour {
     
-    private Block[,] grid;
+    private BlockInternal[,] grid;
+
+	public static Grid gridS;
 
     public Grid(int xSize, int ySize)
     {
-        grid = new Block[xSize,ySize];
+        grid = new BlockInternal[xSize,ySize];
         for (int x = 0; x < xSize; x++)
         {
             for (int y = 0; y < ySize; y++)
@@ -17,7 +19,7 @@ public class Grid {
         }
     }
 
-    public void InsertBlock(Block block)
+    public void InsertBlock(BlockInternal block)
     {
         grid[block.x, block.y] = block;
     }
@@ -31,7 +33,7 @@ public class Grid {
         movedBlock.CheckSurroundings();
     }
 
-    public Block GetBlockByPosition(int x, int y) 
+    public BlockInternal GetBlockByPosition(int x, int y) 
     {
         return grid[x,y];
     }
@@ -43,13 +45,16 @@ public class Grid {
             if (vertical)
             {
                 var block = GetBlockByPosition(origin.x, origin.y + i);
-                //block.blockExternal.Pop(positivos + negativos + 1);
+				block.blockExternal.Pop();
+//                block.blockExternal.Pop(positivos + negativos + 1);
             }
             else
             {
-                var block = GetBlockByPosition(origin.x + i, origin.y);
-                //block.blockExternal.Pop(positivos + negativos + 1);
+				var block = GetBlockByPosition(origin.x + i, origin.y);
+				block.blockExternal.Pop();
+               // block.blockExternal.Pop(positivos + negativos + 1);
             }
         }
+		origin.blockExternal.Pop ();
     }
 }
