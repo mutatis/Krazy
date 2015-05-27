@@ -30,12 +30,17 @@ public class MovMouse : MonoBehaviour
 
 	void OnMouseDown()
 	{
-		follow = true;
+		if(PlayerPrefs.GetInt("Click") == 0)
+		{
+			follow = true;
+			PlayerPrefs.SetInt("Click", 1);
+		}
 	}
 
 	void OnMouseUp()
 	{
 		follow = false;
+		PlayerPrefs.SetInt ("Click", 0);
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
