@@ -39,12 +39,12 @@ public class BlockInternal {
         if (stackCima + stackBaixo >= minimumPopStack)
         {
             //evento de pop
-            //blockExternal.Pop();
+            parentGrid.PopEvent(this, stackBaixo, stackCima, true);
         }
         else if (stackDireita + stackEsquerda >= minimumPopStack)
         {
             //evento de pop
-            //blockExternal.Pop();
+            parentGrid.PopEvent(this, stackEsquerda, stackDireita, false);
         }
     }
 
