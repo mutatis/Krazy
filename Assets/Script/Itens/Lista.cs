@@ -21,14 +21,14 @@ public class Lista : MonoBehaviour
 		print (obj.Count + " " + obj2.Count);
 		if(x == 4)
 		{
-			if(obj.Count > obj2.Count && obj.Count > 3)
+			if(obj.Count > 3)
 			{
 				for(int i = 0; i < obj.Count; i++)
 				{
 					Destroy ((GameObject)obj[i]);
 				}
 			}
-			else if(obj.Count < obj2.Count && obj2.Count > 3)
+			else if(obj2.Count > 3)
 			{
 				for(int i = 0; i < obj2.Count; i++)
 				{
