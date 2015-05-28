@@ -7,6 +7,8 @@ public class MovMouse : MonoBehaviour
 //	public Colisao col;
 	public GameObject tiro;
 
+	public BoxCollider2D box;
+
 	bool follow;
 	Vector2 pos;
 	Vector2 posFix;
@@ -33,6 +35,7 @@ public class MovMouse : MonoBehaviour
 
 	void OnMouseDown()
 	{
+		box.isTrigger = true;
 		if(PlayerPrefs.GetInt("Click") == 0)
 		{
 			follow = true;
@@ -42,6 +45,7 @@ public class MovMouse : MonoBehaviour
 
 	void OnMouseUp()
 	{
+		box.isTrigger = false;
 		Instantiate (tiro, transform.position, transform.rotation);
 		follow = false;
 		PlayerPrefs.SetInt ("Click", 0);

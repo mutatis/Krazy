@@ -27,7 +27,7 @@ public class Direcao : MonoBehaviour
 
 	IEnumerator Go()
 	{
-		yield return new WaitForSeconds (0.6f);
+		yield return new WaitForSeconds (0.2f);
 		lista.x ++;
 		Destroy (gameObject);
 	}
