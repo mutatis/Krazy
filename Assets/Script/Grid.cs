@@ -6,19 +6,26 @@ public class Grid : MonoBehaviour {
     private BlockInternal[,] grid;
 
 	public static Grid gridS;
+	public int xSize, ySize;
 
-    public Grid(int xSize, int ySize)
+	void Awake()
+	{
+		gridS = this;
+		grid = new BlockInternal[xSize,ySize];
+		for (int x = 0; x < xSize; x++)
+		{
+			for (int y = 0; y < ySize; y++)
+			{
+				grid[x, y] = new BlockInternal(x,y, -1, 0, this);
+			}
+		}
+	}
+
+   /* public Grid(int xSize, int ySize)
     {
-        grid = new BlockInternal[xSize,ySize];
-        for (int x = 0; x < xSize; x++)
-        {
-            for (int y = 0; y < ySize; y++)
-            {
-                grid[x, y] = null;
-            }
-        }
+       // grid = new BlockInternal[xSize,ySize];
     }
-
+*/
     public void InsertBlock(BlockInternal block)
     {
         grid[block.x, block.y] = block;

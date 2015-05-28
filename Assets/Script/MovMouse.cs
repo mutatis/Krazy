@@ -4,6 +4,8 @@ using System.Linq;
 
 public class MovMouse : MonoBehaviour 
 {
+//	public Colisao col;
+	public GameObject tiro;
 
 	bool follow;
 	Vector2 pos;
@@ -40,19 +42,25 @@ public class MovMouse : MonoBehaviour
 
 	void OnMouseUp()
 	{
+		Instantiate (tiro, transform.position, transform.rotation);
 		follow = false;
 		PlayerPrefs.SetInt ("Click", 0);
+		//col.Attack (1f, 5);
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		posFix = collision.gameObject.transform.position;
-		print (collision.gameObject.name);
+		if(collision.gameObject.tag == "Grid")
+		{
+			posFix = collision.gameObject.transform.position;
+		}
 	}
 	
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		posFix = collision.gameObject.transform.position;
-		print (collision.gameObject.name);
+		if(collision.gameObject.tag == "Grid")
+		{
+			posFix = collision.gameObject.transform.position;
+		}
 	}
 }
