@@ -25,7 +25,9 @@ public class MovMouse : MonoBehaviour
 		pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		if(follow)
 		{
-            quadradoSelecionado = squaresUnderBlock.Last();
+
+            CheckSelectedSquare();
+            
 			transform.position = new Vector3(pos.x, pos.y, 0);
 		}
 		else
@@ -60,6 +62,10 @@ public class MovMouse : MonoBehaviour
     void CheckSelectedSquare()
     {
         print("printoso");
+        
+        if (quadradoSelecionado)
+            quadradoSelecionado.SendMessage("OnRemove");
+
         quadradoSelecionado = squaresUnderBlock.OrderBy(d => Vector3.Distance(transform.position, d.transform.position)).First();
         quadradoSelecionado.SendMessage("OnSelect");
     }
