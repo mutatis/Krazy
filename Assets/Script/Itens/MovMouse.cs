@@ -14,6 +14,8 @@ public class MovMouse : MonoBehaviour
 	Vector2 pos;
 	Vector2 posFix;
 
+	Color cor;
+
 	void Start () 
 	{
 	
@@ -59,15 +61,34 @@ public class MovMouse : MonoBehaviour
 	{
 		if(collision.gameObject.tag == "Grid")
 		{
+			cor = collision.gameObject.GetComponent<SpriteRenderer>().color;
+			collision.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
 			posFix = collision.gameObject.transform.position;
 		}
 	}
-	
+
+	void OnCollisionExit2D(Collision2D collision)
+	{
+		if(collision.gameObject.tag == "Grid")
+		{
+			collision.gameObject.GetComponent<SpriteRenderer>().color = cor;
+		}
+	}
+
 	void OnTriggerEnter2D(Collider2D collision)
 	{
 		if(collision.gameObject.tag == "Grid")
 		{
+			collision.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
 			posFix = collision.gameObject.transform.position;
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D collision)
+	{
+		if(collision.gameObject.tag == "Grid")
+		{
+			collision.gameObject.GetComponent<SpriteRenderer>().color = cor;
 		}
 	}
 }
