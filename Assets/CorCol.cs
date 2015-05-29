@@ -6,10 +6,10 @@ using System.Linq;
 public class CorCol : MonoBehaviour 
 {
 	public List<string> tagsBlock;
-	public Color cor;
+	Color cor;
 	public SpriteRenderer sprite;
 
-	public bool ok;
+	bool ok;
 
 	// Use this for initialization
 	void Start ()
