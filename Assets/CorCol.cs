@@ -7,9 +7,11 @@ public class CorCol : MonoBehaviour
 {
 	public List<string> tagsBlock;
 	public Color cor;
-	public SpriteRenderer sprite;
+    public SpriteRenderer sprite;
+    bool ok;
+	public bool selected;
 
-	public bool ok;
+    bool 
 
 	// Use this for initialization
 	void Start ()
@@ -18,36 +20,28 @@ public class CorCol : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update ()
+    public void Update()
+    {
+        if (!Input.GetMouseButton(0))
+        {
+
+        }
+    }
+
+	public void OnSelect()
 	{
-		if(ok)
-		{
-			if(sprite.color != cor)
-			{
-				sprite.color = new Color(cor.r, cor.g, cor.b, cor.a);
-			}
-			else
-			{
-				ok = false;
-			}
-		}
+        sprite.color = Color.white;
 	}
 
-	public void White()
+	public void OnRemove()
 	{
-
-	}
-
-	public void Normal()
-	{
-
+        sprite.color = cor;
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
-			sprite.color = Color.white;
 		}
 	}
 	
@@ -56,7 +50,6 @@ public class CorCol : MonoBehaviour
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
 			ok = true;
-			sprite.color = new Color(cor.r, cor.g, cor.b, cor.a);
 		}
 	}
 	
@@ -64,7 +57,6 @@ public class CorCol : MonoBehaviour
 	{
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
-			sprite.color = Color.white;
 		}
 	}
 	
@@ -73,7 +65,6 @@ public class CorCol : MonoBehaviour
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
 			ok = true;
-			sprite.color = new Color(cor.r, cor.g, cor.b, cor.a);
 		}
 	}
 }

@@ -9,9 +9,9 @@ public class Direcao : MonoBehaviour
 
 	public int tipo;
 
-	public string tag;
+	public string tag_;
 
-	public Lista lista;
+    public Lista lista;
 
 	// Use this for initialization
 	void Start () 
@@ -34,7 +34,7 @@ public class Direcao : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(collision.gameObject.tag == tag)
+		if(collision.gameObject.tag == tag_)
 		{
 			StopCoroutine("Go");
 			if(tipo == 1)
@@ -51,7 +51,7 @@ public class Direcao : MonoBehaviour
 	
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		if(collision.gameObject.tag == tag)
+		if(collision.gameObject.tag == tag_)
 		{
 			StopCoroutine("Go");
 			if(tipo == 1)
