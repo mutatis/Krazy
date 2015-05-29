@@ -4,22 +4,21 @@ using System.Linq;
 
 public class MovMouse : MonoBehaviour 
 {
-//	public Colisao col;
 	public GameObject tiro;
 
-	public BoxCollider2D box;
+	public CircleCollider2D box;
 
 	bool follow;
+	bool verifica;
+
 	Vector2 pos;
 	Vector2 posFix;
 
-	// Use this for initialization
 	void Start () 
 	{
 	
 	}
-	
-	// Update is called once per frame
+
 	void Update () 
 	{
 		pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
@@ -30,10 +29,15 @@ public class MovMouse : MonoBehaviour
 		else
 		{
 			transform.position = posFix;
+			if(verifica)
+			{
+				Instantiate (tiro, transform.position, transform.rotation);
+				verifica = false;
+			}
 		}
 	}
 
-	void OnMouseDown()
+	public void Down()
 	{
 		box.isTrigger = true;
 		if(PlayerPrefs.GetInt("Click") == 0)
@@ -43,13 +47,12 @@ public class MovMouse : MonoBehaviour
 		}
 	}
 
-	void OnMouseUp()
+	public void Up()
 	{
 		box.isTrigger = false;
-		Instantiate (tiro, transform.position, transform.rotation);
 		follow = false;
+		verifica = true;
 		PlayerPrefs.SetInt ("Click", 0);
-		//col.Attack (1f, 5);
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
