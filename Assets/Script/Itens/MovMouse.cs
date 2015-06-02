@@ -19,6 +19,7 @@ public class MovMouse : MonoBehaviour
 
 	void Start () 
 	{
+		CheckSelectedSquare();
 	}
 
 	void Update () 
@@ -26,10 +27,9 @@ public class MovMouse : MonoBehaviour
 		pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		if(follow)
 		{
-
-            CheckSelectedSquare();
-            
 			transform.position = new Vector3(pos.x, pos.y, 0);
+
+            CheckSelectedSquare();            
 		}
 		else
 		{
@@ -65,7 +65,7 @@ public class MovMouse : MonoBehaviour
 		PlayerPrefs.SetInt ("Click", 0);
 	}
 
-    void CheckSelectedSquare()
+ 	void CheckSelectedSquare()
     {        
         if (quadradoSelecionado)
             quadradoSelecionado.SendMessage("OnRemove");
@@ -76,40 +76,52 @@ public class MovMouse : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(collision.gameObject.tag == "Grid" && pode)
+		if(collision.gameObject.tag == "Grid")
 		{
-			//posFix = collision.gameObject.transform.position;
-            squaresUnderBlock.Add(collision.gameObject);
-            CheckSelectedSquare();
+			if(pode)
+			{
+				//posFix = collision.gameObject.transform.position;
+	            squaresUnderBlock.Add(collision.gameObject);
+	            CheckSelectedSquare();
+			}
 		}
 	}
 
 	void OnCollisionExit2D(Collision2D collision)
 	{
-		if(collision.gameObject.tag == "Grid" && pode)
+		if(collision.gameObject.tag == "Grid")
 		{
-            squaresUnderBlock.Remove(collision.gameObject);
-            collision.gameObject.SendMessage("OnRemove");
+			if(pode)
+			{
+	            squaresUnderBlock.Remove(collision.gameObject);
+	            collision.gameObject.SendMessage("OnRemove");
+			}
 		}
 	}
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		if(collision.gameObject.tag == "Grid" && pode)
+		if(collision.gameObject.tag == "Grid")
 		{
-            //posFix = collision.gameObject.transform.position;
-            squaresUnderBlock.Add(collision.gameObject);
-            collision.gameObject.name = "Sprite" + Time.time.ToString();
-            CheckSelectedSquare();
+			if(pode)
+			{
+	            //posFix = collision.gameObject.transform.position;
+	            squaresUnderBlock.Add(collision.gameObject);
+	            collision.gameObject.name = "Sprite" + Time.time.ToString();
+	            CheckSelectedSquare();
+			}
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D collision)
 	{
-		if(collision.gameObject.tag == "Grid" && pode)
+		if(collision.gameObject.tag == "Grid")
 		{
-            squaresUnderBlock.Remove(collision.gameObject);
-            collision.gameObject.SendMessage("OnRemove");
+			if(pode)
+			{
+	            squaresUnderBlock.Remove(collision.gameObject);
+	            collision.gameObject.SendMessage("OnRemove");
+			}
 		}
 	}
 }

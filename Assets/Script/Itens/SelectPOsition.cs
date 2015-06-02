@@ -25,6 +25,7 @@ public class SelectPOsition : MonoBehaviour
 	{
 		if(!pare)
 		{
+			mouse.quadradoSelecionado = (GameObject)CreatedObj.creat.grid[CreatedObj.creat.gridRandom];
 			dist = Vector3.Distance(CreatedObj.creat.grid[CreatedObj.creat.gridRandom].transform.position, transform.position);
 			if(dist > 0.001f)
 			{
@@ -36,9 +37,9 @@ public class SelectPOsition : MonoBehaviour
 			}
 			else
 			{
+				mouse.quadradoSelecionado = (GameObject)CreatedObj.creat.grid[CreatedObj.creat.gridRandom];
 				mouse.enabled = true;
 				print("PAROOOOOOOOOOOOOOOOOOOOOO");
-				transform.position = CreatedObj.creat.grid[CreatedObj.creat.gridRandom].transform.position;
 				mouse.pode = true;
 				pare = true;
 			}
