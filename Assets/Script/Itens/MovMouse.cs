@@ -8,6 +8,7 @@ public class MovMouse : MonoBehaviour
 	public GameObject tiro;
     public GameObject quadradoSelecionado;
 	public CircleCollider2D box;
+	public bool pode;
 
 	bool follow;
 	bool verifica;
@@ -65,9 +66,7 @@ public class MovMouse : MonoBehaviour
 	}
 
     void CheckSelectedSquare()
-    {
-        print("printoso");
-        
+    {        
         if (quadradoSelecionado)
             quadradoSelecionado.SendMessage("OnRemove");
 
@@ -77,7 +76,7 @@ public class MovMouse : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(collision.gameObject.tag == "Grid")
+		if(collision.gameObject.tag == "Grid" && pode)
 		{
 			//posFix = collision.gameObject.transform.position;
             squaresUnderBlock.Add(collision.gameObject);
@@ -87,7 +86,7 @@ public class MovMouse : MonoBehaviour
 
 	void OnCollisionExit2D(Collision2D collision)
 	{
-		if(collision.gameObject.tag == "Grid")
+		if(collision.gameObject.tag == "Grid" && pode)
 		{
             squaresUnderBlock.Remove(collision.gameObject);
             collision.gameObject.SendMessage("OnRemove");
@@ -96,7 +95,7 @@ public class MovMouse : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		if(collision.gameObject.tag == "Grid")
+		if(collision.gameObject.tag == "Grid" && pode)
 		{
             //posFix = collision.gameObject.transform.position;
             squaresUnderBlock.Add(collision.gameObject);
@@ -107,7 +106,7 @@ public class MovMouse : MonoBehaviour
 
 	void OnTriggerExit2D(Collider2D collision)
 	{
-		if(collision.gameObject.tag == "Grid")
+		if(collision.gameObject.tag == "Grid" && pode)
 		{
             squaresUnderBlock.Remove(collision.gameObject);
             collision.gameObject.SendMessage("OnRemove");

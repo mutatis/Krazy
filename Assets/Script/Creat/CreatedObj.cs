@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class CreatedObj : MonoBehaviour 
 {
 
+	public static CreatedObj creat;
+
 	public GameObject[] grid;
 	public GameObject[] created;
 
@@ -12,8 +14,13 @@ public class CreatedObj : MonoBehaviour
 
 	int pode;
 
-	int gridRandom;
+	public int gridRandom;
 	int createdRandom;
+
+	void Awake()
+	{
+		creat = this;
+	}
 
 	// Use this for initialization
 	void Start () 
@@ -46,7 +53,7 @@ public class CreatedObj : MonoBehaviour
 			}
 		}
 		createdRandom = Random.Range (0, created.Length);
-		GameObject obj = Instantiate (created [createdRandom], grid [gridRandom].transform.position, transform.rotation) as GameObject;
+		GameObject obj = Instantiate (created [createdRandom], new Vector2(0, -10), transform.rotation) as GameObject;
 		obj.transform.localScale = new Vector3 (0.01f, 0.01f, 0.01f);
 		obj.transform.parent = this.gameObject.transform;
 		pode = 0;

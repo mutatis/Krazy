@@ -33,7 +33,6 @@ public class CorCol : MonoBehaviour
 
 	public void OnSelect()
 	{
-        print("selected");
         sprite.color = Color.white;
         selectColorOK = true;
 	}

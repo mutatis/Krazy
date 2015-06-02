@@ -11,7 +11,7 @@ public class Lista : MonoBehaviour
 
 	GameObject objeto;
 
-	Animator s;
+	Animator anim;
 
 	// Use this for initialization
 	void Start ()
@@ -22,7 +22,6 @@ public class Lista : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		print (obj.Count + " " + obj2.Count);
 		if(x == 4)
 		{
 			if(obj.Count > 3)
@@ -30,8 +29,8 @@ public class Lista : MonoBehaviour
 				for(int i = 0; i < obj.Count; i++)
 				{
 					objeto = (GameObject)obj[i];
-					s = objeto.GetComponent<Animator>();
-					s.SetTrigger("Kill");
+					anim = objeto.GetComponent<Animator>();
+					anim.SetTrigger("Kill");
 					//Destroy ((GameObject)obj[i]);
 				}
 			}
@@ -40,8 +39,8 @@ public class Lista : MonoBehaviour
 				for(int i = 0; i < obj2.Count; i++)
 				{
 					objeto = (GameObject)obj2[i];
-					s = objeto.GetComponent<Animator>();
-					s.SetTrigger("Kill");
+					anim = objeto.GetComponent<Animator>();
+					anim.SetTrigger("Kill");
 					//Destroy ((GameObject)obj2[i]);
 				}
 			}
