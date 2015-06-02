@@ -16,7 +16,7 @@ public class Lista : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-
+		StartCoroutine("GO");
 	}
 	
 	// Update is called once per frame
@@ -49,5 +49,11 @@ public class Lista : MonoBehaviour
 				Destroy(gameObject);
 			}
 		}
+	}
+
+	IEnumerator GO()
+	{
+		yield return new WaitForSeconds(6);
+		Destroy(gameObject);
 	}
 }
