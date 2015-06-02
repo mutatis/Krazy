@@ -39,7 +39,6 @@ public class SelectPOsition : MonoBehaviour
 			{
 				mouse.quadradoSelecionado = (GameObject)CreatedObj.creat.grid[CreatedObj.creat.gridRandom];
 				mouse.enabled = true;
-				print("PAROOOOOOOOOOOOOOOOOOOOOO");
 				mouse.pode = true;
 				pare = true;
 			}

@@ -9,6 +9,7 @@ public class CorCol : MonoBehaviour
 	public SpriteRenderer sprite;
     bool selectColorOK = true;
     Color cor;
+	public bool ok = true;
 
     // Use this for initialization
     void Start()
@@ -25,7 +26,6 @@ public class CorCol : MonoBehaviour
             selectColorOK = false;
         }
     }
-	public bool ok;
 
 	// Use this for initialization
 	
