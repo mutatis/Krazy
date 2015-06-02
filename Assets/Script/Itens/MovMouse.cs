@@ -41,6 +41,11 @@ public class MovMouse : MonoBehaviour
 		}
 	}
 
+	public void Kill()
+	{
+		Destroy(gameObject);
+	}
+
 	public void Down()
 	{
 		box.isTrigger = true;

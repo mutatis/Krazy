@@ -9,6 +9,10 @@ public class Lista : MonoBehaviour
 	public ArrayList obj2 = new ArrayList();
 	public int x;
 
+	GameObject objeto;
+
+	Animator s;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -25,14 +29,20 @@ public class Lista : MonoBehaviour
 			{
 				for(int i = 0; i < obj.Count; i++)
 				{
-					Destroy ((GameObject)obj[i]);
+					objeto = (GameObject)obj[i];
+					s = objeto.GetComponent<Animator>();
+					s.SetTrigger("Kill");
+					//Destroy ((GameObject)obj[i]);
 				}
 			}
 			else if(obj2.Count > 3)
 			{
 				for(int i = 0; i < obj2.Count; i++)
 				{
-					Destroy ((GameObject)obj2[i]);
+					objeto = (GameObject)obj2[i];
+					s = objeto.GetComponent<Animator>();
+					s.SetTrigger("Kill");
+					//Destroy ((GameObject)obj2[i]);
 				}
 			}
 			else
