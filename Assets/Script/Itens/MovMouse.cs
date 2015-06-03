@@ -30,7 +30,7 @@ public class MovMouse : MonoBehaviour
 
 	void Start () 
 	{
-		CheckSelectedSquare();
+		//CheckSelectedSquare();
 	}
 
 	void Update () 
@@ -150,14 +150,14 @@ public class MovMouse : MonoBehaviour
 		}
 	}
 
-    /*void OnTriggerStay2D(Collider2D collider)
+    void OnTriggerStay2D(Collider2D collider)
     {
 
-        if (squaresUnderBlock.Count == 0 && collider.tag == "Grid")
+        if (squaresUnderBlock.Count == 0 && collider.tag == "Grid" && pode)
         {
             squaresUnderBlock.Add(collider.gameObject);
         }
-    }*/
+    }
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
