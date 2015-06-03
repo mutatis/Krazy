@@ -64,7 +64,7 @@ public class MovMouse : MonoBehaviour
         if (!playingAnimation)
         {
             StartCoroutine("MovingBlock");
-            box.isTrigger = true;
+           // box.isTrigger = true;
             if (PlayerPrefs.GetInt("Click") == 0)
             {
                 PlayerPrefs.SetInt("Click", 1);
@@ -76,7 +76,7 @@ public class MovMouse : MonoBehaviour
 	{
         if (!playingAnimation)
         {
-            box.isTrigger = false;
+           // box.isTrigger = false;
             if (canLand)
             {
                 StopCoroutine("MovingBlock");
