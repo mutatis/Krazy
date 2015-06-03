@@ -36,9 +36,10 @@ public class SelectPOsition : MonoBehaviour
 			}
 			else
 			{
-				mouse.quadradoSelecionado = (GameObject)CreatedObj.creat.grid[CreatedObj.creat.gridRandom];
+				
 				mouse.enabled = true;
 				mouse.pode = true;
+                mouse.quadradoSelecionado = (GameObject)CreatedObj.creat.grid[CreatedObj.creat.gridRandom];
                 mouse.playingAnimation = false;
 				pare = true;
 			}

@@ -51,7 +51,6 @@ public class Lista : MonoBehaviour
 					{
 						anim = objeto.GetComponent<Animator>();
 						anim.SetTrigger("Kill");
-                        gameObject.SendMessage("OnDestroy");
 					}
 					//Destroy ((GameObject)obj2[i]);
 				}

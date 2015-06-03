@@ -10,7 +10,7 @@ public class MovMouse : MonoBehaviour
 
 	public CircleCollider2D box;
 
-	public bool pode;
+	public bool pode = false;
 	public bool playingAnimation;
 
 	float dist;
@@ -149,14 +149,14 @@ public class MovMouse : MonoBehaviour
 		}
 	}
 
-    void OnTriggerStay2D(Collider2D collider)
+    /*void OnTriggerStay2D(Collider2D collider)
     {
 
         if (squaresUnderBlock.Count == 0 && collider.tag == "Grid")
         {
             squaresUnderBlock.Add(collider.gameObject);
         }
-    }
+    }*/
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
