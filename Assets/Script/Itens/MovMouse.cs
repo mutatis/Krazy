@@ -33,7 +33,10 @@ public class MovMouse : MonoBehaviour
 		}
 		else
 		{
-			transform.position = quadradoSelecionado.transform.position;
+			if(quadradoSelecionado != null)
+			{
+				transform.position = quadradoSelecionado.transform.position;
+			}
 			if(verifica)
 			{
 				Instantiate (tiro, transform.position, transform.rotation);

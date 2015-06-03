@@ -29,8 +29,11 @@ public class Lista : MonoBehaviour
 				for(int i = 0; i < obj.Count; i++)
 				{
 					objeto = (GameObject)obj[i];
-					anim = objeto.GetComponent<Animator>();
-					anim.SetTrigger("Kill");
+					if(objeto != null)
+					{
+						anim = objeto.GetComponent<Animator>();
+						anim.SetTrigger("Kill");
+					}
 					//Destroy ((GameObject)obj[i]);
 				}
 			}
@@ -39,8 +42,11 @@ public class Lista : MonoBehaviour
 				for(int i = 0; i < obj2.Count; i++)
 				{
 					objeto = (GameObject)obj2[i];
-					anim = objeto.GetComponent<Animator>();
-					anim.SetTrigger("Kill");
+					if(objeto != null)
+					{
+						anim = objeto.GetComponent<Animator>();
+						anim.SetTrigger("Kill");
+					}
 					//Destroy ((GameObject)obj2[i]);
 				}
 			}
