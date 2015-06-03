@@ -8,7 +8,7 @@ public class Lista : MonoBehaviour
 	public ArrayList obj = new ArrayList();
 	public ArrayList obj2 = new ArrayList();
 
-	public AudioClip audio;
+	public AudioClip somPontuacao;
 
 	public int x;
 

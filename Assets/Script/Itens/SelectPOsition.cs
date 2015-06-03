@@ -29,6 +29,7 @@ public class SelectPOsition : MonoBehaviour
 			dist = Vector3.Distance(CreatedObj.creat.grid[CreatedObj.creat.gridRandom].transform.position, transform.position);
 			if(dist > 0.001f)
 			{
+                mouse.playingAnimation = true;
 				direction2 = (CreatedObj.creat.grid[CreatedObj.creat.gridRandom].transform.position - transform.position);
 				Vector3 destination = transform.position + direction2;
 				transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, 0.25f);
@@ -38,6 +39,7 @@ public class SelectPOsition : MonoBehaviour
 				mouse.quadradoSelecionado = (GameObject)CreatedObj.creat.grid[CreatedObj.creat.gridRandom];
 				mouse.enabled = true;
 				mouse.pode = true;
+                mouse.playingAnimation = false;
 				pare = true;
 			}
 		}

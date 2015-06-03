@@ -12,6 +12,7 @@ public class MovMouse : MonoBehaviour
 
    bool canLand = false; 
    bool verifica = true;
+   public bool playingAnimation;
 
 	Vector3 posInicial;
 
@@ -36,28 +37,34 @@ public class MovMouse : MonoBehaviour
 
 	public void Down()
 	{
-		StartCoroutine ("MovingBlock");
-		box.isTrigger = true;
-		if(PlayerPrefs.GetInt("Click") == 0)
-		{
-			PlayerPrefs.SetInt("Click", 1);
-		}
+        if (!playingAnimation)
+        {
+            StartCoroutine("MovingBlock");
+            box.isTrigger = true;
+            if (PlayerPrefs.GetInt("Click") == 0)
+            {
+                PlayerPrefs.SetInt("Click", 1);
+            }
+        }
 	}
 
 	public void Up()
 	{
-		box.isTrigger = false;
-        if (canLand) 
-		{
-            StopCoroutine("MovingBlock");
-			transform.position = quadradoSelecionado.transform.position;
-            Instantiate(tiro, transform.position, transform.rotation);
+        if (!playingAnimation)
+        {
+            box.isTrigger = false;
+            if (canLand)
+            {
+                StopCoroutine("MovingBlock");
+                transform.position = quadradoSelecionado.transform.position;
+                Instantiate(tiro, transform.position, transform.rotation);
+            }
+            else
+            {
+                verifica = false;
+            }
+            PlayerPrefs.SetInt("Click", 0);
         }
-		else
-		{
-			verifica = false;
-		}
-		PlayerPrefs.SetInt ("Click", 0);
 	}
 
     IEnumerator MovingBlock()
@@ -75,7 +82,7 @@ public class MovMouse : MonoBehaviour
 
 	void Segue()
 	{
-		float dist;
+		/*float dist;
 		
 		Vector3 direction2;
 		
@@ -85,7 +92,7 @@ public class MovMouse : MonoBehaviour
 		/*direction2 = (CreatedObj.creat.grid[CreatedObj.creat.gridRandom].transform.position - transform.position);
 		Vector3 destination = transform.position + direction2;
 		transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, 0.25f);*/
-		transform.position = posInicial;
+        transform.position = posInicial;
 	}
 
  	bool CheckSelectedSquare()
