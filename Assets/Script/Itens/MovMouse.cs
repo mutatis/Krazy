@@ -149,6 +149,15 @@ public class MovMouse : MonoBehaviour
 		}
 	}
 
+    void OnTriggerStay2D(Collider2D collider)
+    {
+
+        if (squaresUnderBlock.Count == 0 && collider.tag == "Grid")
+        {
+            squaresUnderBlock.Add(collider.gameObject);
+        }
+    }
+
 	void OnTriggerEnter2D(Collider2D collision)
 	{
 		if(collision.gameObject.tag == "Grid")
@@ -174,4 +183,5 @@ public class MovMouse : MonoBehaviour
 			}
 		}
 	}
+
 }
