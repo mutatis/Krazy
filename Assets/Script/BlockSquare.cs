@@ -10,6 +10,7 @@ public class BlockSquare : MonoBehaviour
     bool selectColorOK = true;
     Color cor;
 	public bool ok = true;
+	public int blockStack = 0;
 
     // Use this for initialization
     void Start()
@@ -45,13 +46,14 @@ public class BlockSquare : MonoBehaviour
 
     public bool CanLand()
     {
-        return ok;
+        return blockStack == 1;
     }
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
+			blockStack ++;
 			ok = false;
 		}
 	}
@@ -68,6 +70,7 @@ public class BlockSquare : MonoBehaviour
 	{
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
+			blockStack --;
 			ok = true;
 		}
 	}
@@ -76,6 +79,7 @@ public class BlockSquare : MonoBehaviour
 	{
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
+			blockStack ++;
 			ok = false;
 		}
 	}
@@ -92,6 +96,7 @@ public class BlockSquare : MonoBehaviour
 	{
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
+			blockStack --;
 			ok = true;
 		}
 	}

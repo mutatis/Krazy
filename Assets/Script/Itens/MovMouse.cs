@@ -34,6 +34,7 @@ public class MovMouse : MonoBehaviour
 
 	public void Down()
 	{
+		StartCoroutine ("MovingBlock");
 		box.isTrigger = true;
 		if(PlayerPrefs.GetInt("Click") == 0)
 		{
@@ -44,10 +45,17 @@ public class MovMouse : MonoBehaviour
 	public void Up()
 	{
 		box.isTrigger = false;
-        if (canLand) {
+        if (canLand) 
+		{
+			print("printoso" + Time.time);
             StopCoroutine("MovingBlock");
+			transform.position = quadradoSelecionado.transform.position;
             Instantiate(tiro, transform.position, transform.rotation);
         }
+		else
+		{
+			verifica = false;
+		}
 		PlayerPrefs.SetInt ("Click", 0);
 	}
 
@@ -60,7 +68,6 @@ public class MovMouse : MonoBehaviour
             canLand = CheckSelectedSquare();
             yield return new WaitForEndOfFrame();
         }
-
     } 
 
 
