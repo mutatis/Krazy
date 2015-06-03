@@ -111,6 +111,7 @@ public class MovMouse : MonoBehaviour
 
 	void Segue()
 	{		
+		AudioSource.PlayClipAtPoint(soundFX[2], transform.position, 1);
 		anim = true;
         //transform.position = posInicial;
 	}
