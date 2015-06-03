@@ -55,6 +55,7 @@ public class MovMouse : MonoBehaviour
 
 	public void Kill()
 	{
+        quadradoSelecionado.GetComponent<BlockSquare>().blockStack--;
 		Destroy(gameObject);
 	}
 
@@ -121,14 +122,6 @@ public class MovMouse : MonoBehaviour
             return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
         }
         return true;
-    }
-
-    public void OnDestroy()
-    {
-        if (quadradoSelecionado != null)
-        {
-            quadradoSelecionado.SendMessage("OnDestroySelected");
-        }
     }
 
 	void OnCollisionEnter2D(Collision2D collision)
