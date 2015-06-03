@@ -70,8 +70,11 @@ public class MovMouse : MonoBehaviour
         if (quadradoSelecionado)
             quadradoSelecionado.SendMessage("OnRemove");
 
-        quadradoSelecionado = squaresUnderBlock.OrderBy(d => Vector3.Distance(transform.position, d.transform.position)).First();
-        quadradoSelecionado.SendMessage("OnSelect");
+        quadradoSelecionado = squaresUnderBlock.OrderBy(d => Vector3.Distance(transform.position, d.transform.position)).FirstOrDefault();
+        if (quadradoSelecionado != null)
+        {
+            quadradoSelecionado.SendMessage("OnSelect");
+        }
     }
 
 	void OnCollisionEnter2D(Collision2D collision)
