@@ -27,7 +27,7 @@ public class SelectPOsition : MonoBehaviour
 		{
 			mouse.quadradoSelecionado = (GameObject)CreatedObj.creat.grid[CreatedObj.creat.gridRandom];
 			dist = Vector3.Distance(CreatedObj.creat.grid[CreatedObj.creat.gridRandom].transform.position, transform.position);
-			if(dist > 0.001f)
+			if(dist > 0.1f)
 			{
                 mouse.playingAnimation = true;
 				direction2 = (CreatedObj.creat.grid[CreatedObj.creat.gridRandom].transform.position - transform.position);

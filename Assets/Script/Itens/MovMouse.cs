@@ -7,16 +7,24 @@ public class MovMouse : MonoBehaviour
 {
 	public GameObject tiro;
     public GameObject quadradoSelecionado;
+
 	public CircleCollider2D box;
+
 	public bool pode;
+	public bool playingAnimation;
 
-   bool canLand = false; 
-   bool verifica = true;
-   public bool playingAnimation;
+	float dist;
+	
+	Vector3 direction2;
+	Vector3 posInicial;	
+	Vector3 velocity = Vector3.zero;
 
-	Vector3 posInicial;
+   	bool canLand = false; 
+  	bool verifica = true;
+	bool anim;
 
 	Vector2 pos;
+
 	//Vector2 posFix;
     public List<GameObject> squaresUnderBlock;
 
@@ -28,6 +36,21 @@ public class MovMouse : MonoBehaviour
 	void Update () 
 	{
 		pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		if(anim)
+		{
+			dist = Vector3.Distance(posInicial, transform.position);
+			if(dist > 0.1f)
+			{
+				direction2 = posInicial - transform.position;
+				Vector3 destination = transform.position + direction2;
+				transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, 0.25f);
+			}
+			else
+			{
+				transform.position = posInicial;
+				anim = false;
+			}
+		}
 	}
 
 	public void Kill()
@@ -81,18 +104,9 @@ public class MovMouse : MonoBehaviour
     } 
 
 	void Segue()
-	{
-		/*float dist;
-		
-		Vector3 direction2;
-		
-		Vector3 velocity = Vector3.zero;
-		
-		dist = Vector3.Distance(posInicial, transform.position);
-		/*direction2 = (CreatedObj.creat.grid[CreatedObj.creat.gridRandom].transform.position - transform.position);
-		Vector3 destination = transform.position + direction2;
-		transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, 0.25f);*/
-        transform.position = posInicial;
+	{		
+		anim = true;
+        //transform.position = posInicial;
 	}
 
  	bool CheckSelectedSquare()
