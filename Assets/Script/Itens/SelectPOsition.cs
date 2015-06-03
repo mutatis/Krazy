@@ -30,10 +30,8 @@ public class SelectPOsition : MonoBehaviour
 			if(dist > 0.001f)
 			{
 				direction2 = (CreatedObj.creat.grid[CreatedObj.creat.gridRandom].transform.position - transform.position);
-//				direction2.Normalize();	
 				Vector3 destination = transform.position + direction2;
 				transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, 0.25f);
-				//transform.Translate(direction2 / 4);
 			}
 			else
 			{
