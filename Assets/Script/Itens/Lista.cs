@@ -7,6 +7,9 @@ public class Lista : MonoBehaviour
 
 	public ArrayList obj = new ArrayList();
 	public ArrayList obj2 = new ArrayList();
+
+	public AudioClip audio;
+
 	public int x;
 
 	GameObject objeto;
@@ -26,6 +29,7 @@ public class Lista : MonoBehaviour
 		{
 			if(obj.Count > 3)
 			{
+				//AudioSource.PlayClipAtPoint(audio, transform.position, 1);
 				for(int i = 0; i < obj.Count; i++)
 				{
 					objeto = (GameObject)obj[i];
@@ -39,6 +43,7 @@ public class Lista : MonoBehaviour
 			}
 			else if(obj2.Count > 3)
 			{
+				//AudioSource.PlayClipAtPoint(audio, transform.position, 1);
 				for(int i = 0; i < obj2.Count; i++)
 				{
 					objeto = (GameObject)obj2[i];
