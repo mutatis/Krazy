@@ -10,8 +10,8 @@ public class MovMouse : MonoBehaviour
 	public CircleCollider2D box;
 	public bool pode;
 
-	bool follow;
-	bool verifica;
+   bool canLand = false; 
+   bool verifica = true;
 
 	Vector2 pos;
 	//Vector2 posFix;
@@ -25,21 +25,6 @@ public class MovMouse : MonoBehaviour
 	void Update () 
 	{
 		pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		if(follow)
-		{
-			transform.position = new Vector3(pos.x, pos.y, 0);
-
-            CheckSelectedSquare();            
-		}
-		else
-		{
-			transform.position = quadradoSelecionado.transform.position;
-			if(verifica)
-			{
-				Instantiate (tiro, transform.position, transform.rotation);
-				verifica = false;
-			}
-		}
 	}
 
 	public void Kill()
@@ -52,7 +37,6 @@ public class MovMouse : MonoBehaviour
 		box.isTrigger = true;
 		if(PlayerPrefs.GetInt("Click") == 0)
 		{
-			follow = true;
 			PlayerPrefs.SetInt("Click", 1);
 		}
 	}
@@ -60,12 +44,27 @@ public class MovMouse : MonoBehaviour
 	public void Up()
 	{
 		box.isTrigger = false;
-		follow = false;
-		verifica = true;
+        if (canLand) {
+            StopCoroutine("MovingBlock");
+            Instantiate(tiro, transform.position, transform.rotation);
+        }
 		PlayerPrefs.SetInt ("Click", 0);
 	}
 
- 	void CheckSelectedSquare()
+    IEnumerator MovingBlock()
+    {
+        var posInicial = transform.position;
+        while (verifica)
+        {
+            transform.position = new Vector3(pos.x, pos.y, 0);            
+            canLand = CheckSelectedSquare();
+            yield return new WaitForEndOfFrame();
+        }
+
+    } 
+
+
+ 	bool CheckSelectedSquare()
     {        
         if (quadradoSelecionado)
             quadradoSelecionado.SendMessage("OnRemove");
@@ -74,7 +73,9 @@ public class MovMouse : MonoBehaviour
         if (quadradoSelecionado != null)
         {
             quadradoSelecionado.SendMessage("OnSelect");
+            return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
         }
+        return true;
     }
 
 	void OnCollisionEnter2D(Collision2D collision)

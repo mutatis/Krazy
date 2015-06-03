@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class CorCol : MonoBehaviour 
+public class BlockSquare : MonoBehaviour 
 {
 	public List<string> tagsBlock;
 	public SpriteRenderer sprite;
@@ -41,6 +41,11 @@ public class CorCol : MonoBehaviour
     {
         sprite.color = cor;
         selectColorOK = true;
+    }
+
+    public bool CanLand()
+    {
+        return ok;
     }
 
 	void OnCollisionEnter2D(Collision2D collision)

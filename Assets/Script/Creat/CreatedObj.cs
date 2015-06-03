@@ -42,12 +42,12 @@ public class CreatedObj : MonoBehaviour
 		gridRandom = Random.Range (0, grid.Length);
 		do
 		{
-			if(grid[gridRandom].GetComponent<CorCol>().ok == false)
+			if(grid[gridRandom].GetComponent<BlockSquare>().ok == false)
 			{
 				gridRandom = Random.Range (0, grid.Length);
 				pode = -1;
 			}
-			else if(grid[gridRandom].GetComponent<CorCol>().ok == true)
+			else if(grid[gridRandom].GetComponent<BlockSquare>().ok == true)
 			{
 				pode = 1;
 			}
