@@ -13,6 +13,8 @@ public class MovMouse : MonoBehaviour
    bool canLand = false; 
    bool verifica = true;
 
+	Vector3 posInicial;
+
 	Vector2 pos;
 	//Vector2 posFix;
     public List<GameObject> squaresUnderBlock;
@@ -47,7 +49,6 @@ public class MovMouse : MonoBehaviour
 		box.isTrigger = false;
         if (canLand) 
 		{
-			print("printoso" + Time.time);
             StopCoroutine("MovingBlock");
 			transform.position = quadradoSelecionado.transform.position;
             Instantiate(tiro, transform.position, transform.rotation);
@@ -61,15 +62,31 @@ public class MovMouse : MonoBehaviour
 
     IEnumerator MovingBlock()
     {
-        var posInicial = transform.position;
+        posInicial = transform.position;
         while (verifica)
         {
             transform.position = new Vector3(pos.x, pos.y, 0);            
             canLand = CheckSelectedSquare();
             yield return new WaitForEndOfFrame();
         }
+		verifica = true;
+		Segue ();
     } 
 
+	void Segue()
+	{
+		float dist;
+		
+		Vector3 direction2;
+		
+		Vector3 velocity = Vector3.zero;
+		
+		dist = Vector3.Distance(posInicial, transform.position);
+		/*direction2 = (CreatedObj.creat.grid[CreatedObj.creat.gridRandom].transform.position - transform.position);
+		Vector3 destination = transform.position + direction2;
+		transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, 0.25f);*/
+		transform.position = posInicial;
+	}
 
  	bool CheckSelectedSquare()
     {        
