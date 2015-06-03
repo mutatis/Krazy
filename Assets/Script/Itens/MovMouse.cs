@@ -102,6 +102,14 @@ public class MovMouse : MonoBehaviour
         return true;
     }
 
+    public void OnDestroy()
+    {
+        if (quadradoSelecionado != null)
+        {
+            quadradoSelecionado.SendMessage("OnDestroySelected");
+        }
+    }
+
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		if(collision.gameObject.tag == "Grid")

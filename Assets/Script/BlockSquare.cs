@@ -44,6 +44,11 @@ public class BlockSquare : MonoBehaviour
         selectColorOK = true;
     }
 
+    public void OnDestroySelected()
+    {
+        blockStack--;
+    }
+
     public bool CanLand()
     {
         return blockStack == 1;
