@@ -8,6 +8,8 @@ public class SelectPOsition : MonoBehaviour
 
 	public MovMouse mouse;
 
+	public AudioClip spawn;
+
 	private Vector3 velocity = Vector3.zero;
 
 	float dist;
@@ -17,7 +19,7 @@ public class SelectPOsition : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-
+		AudioSource.PlayClipAtPoint(spawn, transform.position, 1);
 	}
 	
 	// Update is called once per frame

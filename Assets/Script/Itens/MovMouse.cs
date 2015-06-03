@@ -13,6 +13,8 @@ public class MovMouse : MonoBehaviour
 	public bool pode = false;
 	public bool playingAnimation;
 
+	public AudioClip[] soundFX;
+
 	float dist;
 	
 	Vector3 direction2;
@@ -64,6 +66,7 @@ public class MovMouse : MonoBehaviour
 	{
         if (!playingAnimation)
         {
+			AudioSource.PlayClipAtPoint(soundFX[0], transform.position, 1);
             StartCoroutine("MovingBlock");
            // box.isTrigger = true;
             if (PlayerPrefs.GetInt("Click") == 0)
@@ -77,6 +80,7 @@ public class MovMouse : MonoBehaviour
 	{
         if (!playingAnimation)
         {
+			AudioSource.PlayClipAtPoint(soundFX[1], transform.position, 1);
            // box.isTrigger = false;
             if (canLand)
             {

@@ -16,6 +16,8 @@ public class Lista : MonoBehaviour
 
 	Animator anim;
 
+	bool toca;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -29,7 +31,11 @@ public class Lista : MonoBehaviour
 		{
 			if(obj.Count > 3)
 			{
-				//AudioSource.PlayClipAtPoint(audio, transform.position, 1);
+				if(!toca)
+				{
+					AudioSource.PlayClipAtPoint(somPontuacao, transform.position, 1);
+					toca = true;
+				}
 				for(int i = 0; i < obj.Count; i++)
 				{
 					objeto = (GameObject)obj[i];
@@ -43,7 +49,11 @@ public class Lista : MonoBehaviour
 			}
 			if(obj2.Count > 3)
 			{
-				//AudioSource.PlayClipAtPoint(audio, transform.position, 1);
+				if(!toca)
+				{
+					AudioSource.PlayClipAtPoint(somPontuacao, transform.position, 1);
+					toca = true;
+				}
 				for(int i = 0; i < obj2.Count; i++)
 				{
 					objeto = (GameObject)obj2[i];
