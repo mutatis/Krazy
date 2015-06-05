@@ -96,7 +96,7 @@ public class BlockSquare : MonoBehaviour
 	{
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
-			ok = false;
+            ok = false;
 		}
 		else
 		{
