@@ -61,12 +61,11 @@ public class SelectPOsition : MonoBehaviour
             direction2 = (target.transform.position - transform.position);
             var noise = (rnd.NextDouble() + Mathf.Sin(Time.time * 15)) * noiseRange;
             mouse.playingAnimation = true;
-            
+            dist = Vector3.Distance(target.transform.position, transform.position);
             Vector3 destination = transform.position + direction2;
-            transform.position = Vector3.SmoothDamp(transform.position, destination + (noiseDirection * (float)noise * (direction2.magnitude / magnitudeInicial)), ref velocity, 0.25f);
+            transform.position = Vector3.SmoothDamp(transform.position, destination + (noiseDirection * (float)noise * (dist / magnitudeInicial)), ref velocity, 0.25f);
             yield return new WaitForEndOfFrame();
         }
-        print("terminou");
         mouse.enabled = true;
         mouse.pode = true;
         mouse.quadradoSelecionado = target;

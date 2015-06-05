@@ -38,7 +38,6 @@ public class CreatedObj : MonoBehaviour
 	IEnumerator GO()
 	{
 		pode = 0;
-        yield return new WaitForSeconds(tempoWave);
         var rdm = new System.Random();
         var qtdWave = wave++ == 0 ? startingWave : rdm.Next(minWave, maxWave);//range não inclui o maior extremo
         print(qtdWave);
@@ -68,6 +67,7 @@ public class CreatedObj : MonoBehaviour
             obj.GetComponent<SelectPOsition>().StartCoroutine("GoToTarget");
         }
 		pode = 0;
+        yield return new WaitForSeconds(tempoWave);
 		StartCoroutine("GO");
 	}
 }
