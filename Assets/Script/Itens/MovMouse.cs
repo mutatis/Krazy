@@ -82,7 +82,7 @@ public class MovMouse : MonoBehaviour
         {
 			AudioSource.PlayClipAtPoint(soundFX[1], transform.position, 1);
            // box.isTrigger = false;
-            if (canLand)
+            if (canLand && quadradoSelecionado != null)
             {
                 StopCoroutine("MovingBlock");
                 transform.position = quadradoSelecionado.transform.position;
@@ -141,6 +141,10 @@ public class MovMouse : MonoBehaviour
 	            CheckSelectedSquare();
 			}
 		}
+		else
+		{
+			quadradoSelecionado = null;
+		}
 	}
 
 	void OnCollisionExit2D(Collision2D collision)
@@ -175,6 +179,10 @@ public class MovMouse : MonoBehaviour
 	            collision.gameObject.name = "Sprite" + Time.time.ToString();
 	            CheckSelectedSquare();
 			}
+		}
+		else
+		{
+			quadradoSelecionado = null;
 		}
 	}
 
