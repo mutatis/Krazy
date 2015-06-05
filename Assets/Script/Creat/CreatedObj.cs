@@ -15,6 +15,8 @@ public class CreatedObj : MonoBehaviour
 	int pode = -1;
 
 	public int gridRandom;
+	public int minX, maxX;
+
 	int createdRandom;
 
 	void Awake()

@@ -57,10 +57,11 @@ public class MovMouse : MonoBehaviour
 
 	public void Kill()
 	{
-		if(quadradoSelecionado != null)
-		{
-        	quadradoSelecionado.GetComponent<BlockSquare>().blockStack--;
-		}
+       	quadradoSelecionado.GetComponent<BlockSquare>().blockStack--;
+	}
+
+	public void Destroy()
+	{
 		Destroy(gameObject);
 	}
 
