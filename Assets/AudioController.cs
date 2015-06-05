@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AudioController : MonoBehaviour {
+public class AudioController : MonoBehaviour 
+{
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public AudioClip[] sons;
+
+	public void Morte()
+	{
+		AudioSource.PlayClipAtPoint(sons[0], transform.position, 0.2f);
 	}
 }

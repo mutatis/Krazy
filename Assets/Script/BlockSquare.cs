@@ -21,7 +21,7 @@ public class BlockSquare : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (blockStack < 0)
+		if (blockStack < 0 || ok)
 			blockStack = 0;
 
         if (!Input.GetMouseButton(0) && selectColorOK)
@@ -68,6 +68,10 @@ public class BlockSquare : MonoBehaviour
 		{
 			ok = false;
 		}
+		else
+		{
+			ok = true;
+		}
 	}
 	
 	void OnCollisionExit2D(Collision2D collision)
@@ -93,6 +97,10 @@ public class BlockSquare : MonoBehaviour
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
 			ok = false;
+		}
+		else
+		{
+			ok = true;
 		}
 	}
 	

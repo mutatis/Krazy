@@ -271,7 +271,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdebc0e742743524b9889c5488cacd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  somPontuacao: {fileID: 8300000, guid: aa81d5ab00f2fc54b8db94abcfa63c25, type: 3}
+  somPontuacao:
+  - {fileID: 8300000, guid: aa81d5ab00f2fc54b8db94abcfa63c25, type: 3}
+  - {fileID: 8300000, guid: b37af6c375f152c40b1b2e436b6e1a63, type: 3}
+  - {fileID: 8300000, guid: 06874c726e8eecc469e333601d25b4c1, type: 3}
+  - {fileID: 8300000, guid: acc861b4b4f98e1479c18383b20dd268, type: 3}
+  - {fileID: 8300000, guid: 92fbb6918a6127743af7bb6c833c9291, type: 3}
+  - {fileID: 8300000, guid: ca33a79e259835c428c2667ad6399253, type: 3}
+  - {fileID: 8300000, guid: bbccd788cad06904c9fef0ac97f240a9, type: 3}
   x: 0
 --- !u!114 &11460886
 MonoBehaviour:

@@ -119,7 +119,7 @@ public class MovMouse : MonoBehaviour
         //transform.position = posInicial;
 	}
 
- 	bool CheckSelectedSquare()
+ 	public bool CheckSelectedSquare()
     {        
         if (quadradoSelecionado)
             quadradoSelecionado.SendMessage("OnRemove");

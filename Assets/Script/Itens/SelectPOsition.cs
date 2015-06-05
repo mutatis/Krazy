@@ -70,6 +70,7 @@ public class SelectPOsition : MonoBehaviour
         mouse.pode = true;
         mouse.quadradoSelecionado = target;
         mouse.playingAnimation = false;
+		mouse.CheckSelectedSquare ();
     } 
 
     public void SetTarget(GameObject target)

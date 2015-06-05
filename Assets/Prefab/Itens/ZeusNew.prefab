@@ -16,6 +16,7 @@ GameObject:
   - 50: {fileID: 5081568}
   - 114: {fileID: 11481570}
   - 114: {fileID: 11481568}
+  - 114: {fileID: 11469274}
   m_Layer: 0
   m_Name: ZeusNew
   m_TagString: Zeus
@@ -64,6 +65,19 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11469274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d631562922aec40a535b252b779ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sons:
+  - {fileID: 8300000, guid: dc30c55f075560344a69d97406f81f9b, type: 3}
 --- !u!114 &11481568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,7 +158,7 @@ MonoBehaviour:
   playingAnimation: 0
   soundFX:
   - {fileID: 8300000, guid: 5a2d47953d825464c9894acf3f6020ea, type: 3}
-  - {fileID: 8300000, guid: 38433fffcad924044850261a53d04603, type: 3}
+  - {fileID: 8300000, guid: f2da06a2e1e23c14582d2f42c3606c66, type: 3}
   - {fileID: 8300000, guid: 3a897d3915ec97947af823ae8d09329c, type: 3}
   squaresUnderBlock: []
 --- !u!114 &11481574

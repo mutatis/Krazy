@@ -8,7 +8,7 @@ public class Lista : MonoBehaviour
 	public ArrayList obj = new ArrayList();
 	public ArrayList obj2 = new ArrayList();
 
-	public AudioClip somPontuacao;
+	public AudioClip[] somPontuacao;
 
 	public int x;
 
@@ -33,7 +33,36 @@ public class Lista : MonoBehaviour
 			{
 				if(!toca)
 				{
-					AudioSource.PlayClipAtPoint(somPontuacao, transform.position, 1);
+					switch(obj.Count)
+					{
+					case 3:
+						AudioSource.PlayClipAtPoint(somPontuacao[0], transform.position, 1);
+						break;
+						
+					case 4:
+						AudioSource.PlayClipAtPoint(somPontuacao[1], transform.position, 1);
+						break;
+						
+					case 5:
+						AudioSource.PlayClipAtPoint(somPontuacao[2], transform.position, 1);
+						break;
+						
+					case 6:
+						AudioSource.PlayClipAtPoint(somPontuacao[3], transform.position, 1);
+						break;
+						
+					case 7:
+						AudioSource.PlayClipAtPoint(somPontuacao[4], transform.position, 1);
+						break;
+						
+					case 8:
+						AudioSource.PlayClipAtPoint(somPontuacao[5], transform.position, 1);
+						break;
+						
+					default:
+						AudioSource.PlayClipAtPoint(somPontuacao[6], transform.position, 1);
+						break;
+					}
 					toca = true;
 				}
 				for(int i = 0; i < obj.Count; i++)
@@ -51,7 +80,36 @@ public class Lista : MonoBehaviour
 			{
 				if(!toca)
 				{
-					AudioSource.PlayClipAtPoint(somPontuacao, transform.position, 1);
+					switch(obj2.Count)
+					{
+						case 3:
+							AudioSource.PlayClipAtPoint(somPontuacao[0], transform.position, 1);
+						break;
+
+						case 4:
+							AudioSource.PlayClipAtPoint(somPontuacao[1], transform.position, 1);
+						break;
+
+						case 5:
+							AudioSource.PlayClipAtPoint(somPontuacao[2], transform.position, 1);
+						break;
+
+						case 6:
+							AudioSource.PlayClipAtPoint(somPontuacao[3], transform.position, 1);
+						break;
+
+						case 7:
+							AudioSource.PlayClipAtPoint(somPontuacao[4], transform.position, 1);
+						break;
+
+						case 8:
+							AudioSource.PlayClipAtPoint(somPontuacao[5], transform.position, 1);
+						break;
+
+						default:
+							AudioSource.PlayClipAtPoint(somPontuacao[6], transform.position, 1);
+						break;
+					}
 					toca = true;
 				}
 				for(int i = 0; i < obj2.Count; i++)
