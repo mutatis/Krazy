@@ -13,6 +13,7 @@ public class CreatedObj : MonoBehaviour
     public int maxWave;
     public int wave = 0;
 	public GameObject[] posCreated;
+	public AudioClip spawnPrimeiraWave;
 
 	int pode = -1;
 
@@ -24,15 +25,16 @@ public class CreatedObj : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+		StartCoroutine("Delay");
 		grid = GameObject.FindGameObjectsWithTag("Grid");
 		posCreated = GameObject.FindGameObjectsWithTag("Spawn");
 		StartCoroutine("GO");
 	}
 	
-	// Update is called once per frame
-	void Update () 
+	IEnumerator Delay()
 	{
-	
+		yield return new WaitForSeconds (0.2f);
+		AudioSource.PlayClipAtPoint(spawnPrimeiraWave, transform.position, 0.5f);
 	}
 
 	IEnumerator GO()

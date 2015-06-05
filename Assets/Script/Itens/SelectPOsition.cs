@@ -15,14 +15,12 @@ public class SelectPOsition : MonoBehaviour
     public float noiseRange;
 
 	bool pare;
-
-	// Use this for initialization
+	
 	void Start ()
 	{
-		AudioSource.PlayClipAtPoint(spawn, transform.position, 1);
+		//AudioSource.PlayClipAtPoint(spawn, transform.position, 1);
 	}
 	
-	// Update is called once per frame
 	void Update ()
 	{
 		/*if(!pare)

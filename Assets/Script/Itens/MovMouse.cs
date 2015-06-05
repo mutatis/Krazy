@@ -83,10 +83,10 @@ public class MovMouse : MonoBehaviour
 	{
         if (!playingAnimation)
         {
-			AudioSource.PlayClipAtPoint(soundFX[1], transform.position, 1);
            // box.isTrigger = false;
             if (canLand && quadradoSelecionado != null)
             {
+				AudioSource.PlayClipAtPoint(soundFX[1], transform.position, 1);
                 StopCoroutine("MovingBlock");
                 transform.position = quadradoSelecionado.transform.position;
                 Instantiate(tiro, transform.position, transform.rotation);
@@ -114,7 +114,7 @@ public class MovMouse : MonoBehaviour
 
 	void Segue()
 	{		
-		AudioSource.PlayClipAtPoint(soundFX[2], transform.position, 1);
+		AudioSource.PlayClipAtPoint(soundFX[2], transform.position, 0.3f);
 		anim = true;
         //transform.position = posInicial;
 	}
