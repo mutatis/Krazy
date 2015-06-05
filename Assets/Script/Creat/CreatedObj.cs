@@ -12,6 +12,7 @@ public class CreatedObj : MonoBehaviour
     public int minWave;
     public int maxWave;
     public int wave = 0;
+	public GameObject[] posCreated;
 
 	int pode = -1;
 
@@ -24,6 +25,7 @@ public class CreatedObj : MonoBehaviour
 	void Start () 
 	{
 		grid = GameObject.FindGameObjectsWithTag("Grid");
+		posCreated = GameObject.FindGameObjectsWithTag("Spawn");
 		StartCoroutine("GO");
 	}
 	
@@ -59,7 +61,7 @@ public class CreatedObj : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             } while (pode < 0);
             createdRandom = Random.Range(0, created.Length);
-            GameObject obj = Instantiate(created[createdRandom], new Vector2(0, -10), transform.rotation) as GameObject;
+			GameObject obj = Instantiate(created[createdRandom], posCreated[Random.Range(0, posCreated.Length)].transform.position, transform.rotation) as GameObject;
             obj.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
             obj.transform.parent = this.gameObject.transform;
             obj.SendMessage("SetTarget", target);
