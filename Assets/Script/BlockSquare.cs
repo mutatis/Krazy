@@ -31,10 +31,6 @@ public class BlockSquare : MonoBehaviour
         }
     }
 
-	// Use this for initialization
-	
-	// Update is called once per frame
-
 	public void OnSelect()
 	{
         sprite.color = Color.white;

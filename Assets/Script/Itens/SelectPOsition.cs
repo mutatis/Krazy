@@ -46,7 +46,7 @@ public class SelectPOsition : MonoBehaviour
 		}*/
 	}
 
-    IEnumerator GoToTarget()
+    /*IEnumerator GoToTarget()
     {
         var rnd = new System.Random();
         mouse.quadradoSelecionado = target;
@@ -69,11 +69,12 @@ public class SelectPOsition : MonoBehaviour
         mouse.quadradoSelecionado = target;
         mouse.playingAnimation = false;
 		mouse.CheckSelectedSquare ();
-    } 
+    }*/ 
 
     public void SetTarget(GameObject target)
     {
-        this.target = target;
+        var cpm = GetComponent<BlockMovement>();
+        cpm.StartCoroutine(cpm.GoToTarget(target.transform, true));
         target.GetComponent<BlockSquare>().ok = false;
     }
 }

@@ -28,7 +28,7 @@ public class CreatedObj : MonoBehaviour
 		StartCoroutine("Delay");
 		grid = GameObject.FindGameObjectsWithTag("Grid");
 		posCreated = GameObject.FindGameObjectsWithTag("Spawn");
-		StartCoroutine("GO");
+		StartCoroutine("LaunchWave");
 	}
 	
 	IEnumerator Delay()
@@ -37,11 +37,11 @@ public class CreatedObj : MonoBehaviour
 		AudioSource.PlayClipAtPoint(spawnPrimeiraWave, transform.position, 0.5f);
 	}
 
-	IEnumerator GO()
+	IEnumerator LaunchWave()
 	{
 		pode = 0;
         var rdm = new System.Random();
-        var qtdWave = wave++ == 0 ? startingWave : rdm.Next(minWave, maxWave);//range não inclui o maior extremo
+        var qtdWave = wave++ == 0 ? startingWave : rdm.Next(minWave, maxWave); //range não inclui o maior extremo
         print(qtdWave);
         for (int i = 0; i < qtdWave; i++)
         {
@@ -65,11 +65,12 @@ public class CreatedObj : MonoBehaviour
 			GameObject obj = Instantiate(created[createdRandom], posCreated[Random.Range(0, posCreated.Length)].transform.position, transform.rotation) as GameObject;
             obj.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
             obj.transform.parent = this.gameObject.transform;
+            //obj.SendMessage("SetTarget", target);
+            //obj.GetComponent<SelectPOsition>().StartCoroutine("GoToTarget");
             obj.SendMessage("SetTarget", target);
-            obj.GetComponent<SelectPOsition>().StartCoroutine("GoToTarget");
         }
 		pode = 0;
         yield return new WaitForSeconds(tempoWave);
-		StartCoroutine("GO");
+		StartCoroutine("LaunchWave");
 	}
 }
