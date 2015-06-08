@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11494086}
   m_Layer: 8
   m_Name: Afrodite
-  m_TagString: Afrodite
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,6 +34,7 @@ GameObject:
   - 58: {fileID: 5816910}
   - 114: {fileID: 11416908}
   - 114: {fileID: 11416902}
+  - 114: {fileID: 11457982}
   m_Layer: 8
   m_Name: AfroditeAll
   m_TagString: Afrodite
@@ -199,9 +200,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d19c70d8629e04e91f8dff2c5dcc6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouse: {fileID: 11416904}
-  spawn: {fileID: 8300000, guid: b05f7f9c8bcb5264e8e01fe732405d5a, type: 3}
-  noiseRange: 7
+--- !u!114 &11457982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07cde98867f45c04baff94621a3e5acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnSound: {fileID: 8300000, guid: b05f7f9c8bcb5264e8e01fe732405d5a, type: 3}
 --- !u!114 &11494084
 MonoBehaviour:
   m_ObjectHideFlags: 1

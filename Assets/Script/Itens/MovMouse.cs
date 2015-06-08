@@ -27,37 +27,12 @@ public class MovMouse : MonoBehaviour
 
 	Vector2 pos;
 
-	//Vector2 posFix;
     public List<GameObject> squaresUnderBlock;
-
-	void Start () 
-	{
-		//CheckSelectedSquare();
-	}
-
-	void Update () 
-	{
-		pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		if(anim)
-		{
-			dist = Vector3.Distance(posInicial, transform.position);
-			if(dist > 0.1f)
-			{
-				direction2 = posInicial - transform.position;
-				Vector3 destination = transform.position + direction2;
-				transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, 0.25f);
-			}
-			else
-			{
-				transform.position = posInicial;
-				anim = false;
-			}
-		}
-	}
 
 	public void Kill()
 	{
-       	quadradoSelecionado.GetComponent<BlockSquare>().blockStack--;
+        quadradoSelecionado.GetComponent<BlockSquare>().blockStack--;
+
 	}
 
 	public void Destroy()
@@ -71,7 +46,6 @@ public class MovMouse : MonoBehaviour
         {
 			AudioSource.PlayClipAtPoint(soundFX[0], transform.position, 1);
             StartCoroutine("MovingBlock");
-           // box.isTrigger = true;
             if (PlayerPrefs.GetInt("Click") == 0)
             {
                 PlayerPrefs.SetInt("Click", 1);
@@ -83,10 +57,9 @@ public class MovMouse : MonoBehaviour
 	{
         if (!playingAnimation)
         {
-           // box.isTrigger = false;
             if (canLand && quadradoSelecionado != null)
             {
-				AudioSource.PlayClipAtPoint(soundFX[1], transform.position, 1);
+				AudioSource.PlayClipAtPoint(soundFX[1], transform.position, 1); //som de erro
                 StopCoroutine("MovingBlock");
                 transform.position = quadradoSelecionado.transform.position;
                 Instantiate(tiro, transform.position, transform.rotation);
@@ -101,7 +74,7 @@ public class MovMouse : MonoBehaviour
 
     IEnumerator MovingBlock()
     {
-        posInicial = transform.position;
+        var quadradoSelecionadoInicial = quadradoSelecionado;
         while (verifica)
         {
             transform.position = new Vector3(pos.x, pos.y, 0);            
@@ -109,7 +82,8 @@ public class MovMouse : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 		verifica = true;
-		Segue ();
+		//se chegamos até aqui, é porque o bloco não pode ser soltado na posição desejada.
+        SendMessage("SetTarget", quadradoSelecionadoInicial);
     } 
 
 	void Segue()
@@ -139,15 +113,10 @@ public class MovMouse : MonoBehaviour
 		{
 			if(pode)
 			{
-				//posFix = collision.gameObject.transform.position;
 	            squaresUnderBlock.Add(collision.gameObject);
 	            CheckSelectedSquare();
 			}
 		}
-		/*else
-		{
-			quadradoSelecionado = null;
-		}*/
 	}
 
 	void OnCollisionExit2D(Collision2D collision)
@@ -177,16 +146,11 @@ public class MovMouse : MonoBehaviour
 		{
 			if(pode)
 			{
-	            //posFix = collision.gameObject.transform.position;
 	            squaresUnderBlock.Add(collision.gameObject);
 	            collision.gameObject.name = "Sprite" + Time.time.ToString();
 	            CheckSelectedSquare();
 			}
 		}
-		/*else
-		{
-			quadradoSelecionado = null;
-		}*/
 	}
 
 	void OnTriggerExit2D(Collider2D collision)

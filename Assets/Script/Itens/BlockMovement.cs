@@ -8,9 +8,11 @@ public class BlockMovement : MonoBehaviour {
     public float timeArrival;
     public Transform testTarget;
 
-    public IEnumerator GoToTarget(Transform target, bool useNoise = false)
+    public IEnumerator GoToTarget(Transform target, bool useNoise)
     {
-        
+        var mouseInteraction = GetComponent<MovMouse>();
+        mouseInteraction.enabled = false; //can't grab while moving!
+
         var rnd = new System.Random();
         var dist = Vector3.Distance(target.transform.position, transform.position);
         var distInicial = dist;
@@ -31,10 +33,8 @@ public class BlockMovement : MonoBehaviour {
         }
        
         transform.position = target.position; //ensure deltaTime errors are corrected
-
-        var mouse = gameObject.GetComponent<MovMouse>();
-        mouse.enabled = true; //MovMouse is disabled by default
-        mouse.pode = true;
-        mouse.quadradoSelecionado = target.gameObject;
+        mouseInteraction.enabled = true;
+        mouseInteraction.pode = true;
+        mouseInteraction.quadradoSelecionado = target.gameObject;
     }
 }

@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11421728}
   m_Layer: 10
   m_Name: Poseidon
-  m_TagString: Poseidon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,6 +34,7 @@ GameObject:
   - 114: {fileID: 11421724}
   - 114: {fileID: 11421726}
   - 114: {fileID: 11421730}
+  - 114: {fileID: 11404836}
   m_Layer: 10
   m_Name: PoseidonAll
   m_TagString: Poseidon
@@ -82,6 +83,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11404836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07cde98867f45c04baff94621a3e5acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnSound: {fileID: 8300000, guid: b05f7f9c8bcb5264e8e01fe732405d5a, type: 3}
 --- !u!114 &11421718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,9 +209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d19c70d8629e04e91f8dff2c5dcc6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouse: {fileID: 11421722}
-  spawn: {fileID: 8300000, guid: b05f7f9c8bcb5264e8e01fe732405d5a, type: 3}
-  noiseRange: 7
 --- !u!114 &11421728
 MonoBehaviour:
   m_ObjectHideFlags: 1

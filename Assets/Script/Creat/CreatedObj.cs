@@ -42,7 +42,6 @@ public class CreatedObj : MonoBehaviour
 		pode = 0;
         var rdm = new System.Random();
         var qtdWave = wave++ == 0 ? startingWave : rdm.Next(minWave, maxWave); //range não inclui o maior extremo
-        print(qtdWave);
         for (int i = 0; i < qtdWave; i++)
         {
             gridRandom = rdm.Next(0, grid.Length);
@@ -63,11 +62,8 @@ public class CreatedObj : MonoBehaviour
             } while (pode < 0);
             createdRandom = Random.Range(0, created.Length);
 			GameObject obj = Instantiate(created[createdRandom], posCreated[Random.Range(0, posCreated.Length)].transform.position, transform.rotation) as GameObject;
-            //obj.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
             obj.transform.parent = this.gameObject.transform;
-            //obj.SendMessage("SetTarget", target);
-            //obj.GetComponent<SelectPOsition>().StartCoroutine("GoToTarget");
-            obj.SendMessage("SetTarget", target);
+            obj.GetComponent<Block>().SetTarget(target, true);
         }
 		pode = 0;
         yield return new WaitForSeconds(tempoWave);
