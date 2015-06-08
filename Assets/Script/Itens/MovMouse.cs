@@ -87,22 +87,29 @@ public class MovMouse : MonoBehaviour
 		verifica = true;
 		//se chegamos até aqui, é porque o bloco não pode ser soltado na posição desejada.
         GetComponent<Block>().SetTarget(quadradoSelecionadoInicial);
-		AudioSource.PlayClipAtPoint(soundFX[2], transform.position, 0.1f);
-        print(quadradoSelecionadoInicial.GetInstanceID());
+
     } 
+
+	void Segue()
+	{		
+		AudioSource.PlayClipAtPoint(soundFX[2], transform.position, 0.3f);
+        //transform.position = posInicial;
+	}
 
  	public bool CheckSelectedSquare()
     {        
-        if (quadradoSelecionado)
-            quadradoSelecionado.SendMessage("OnRemove");
-
-        quadradoSelecionado = squaresUnderBlock.OrderBy(d => Vector3.Distance(transform.position, d.transform.position)).FirstOrDefault();
-        if (quadradoSelecionado != null)
+        var candidato = squaresUnderBlock.OrderBy(d => Vector3.Distance(transform.position, d.transform.position)).FirstOrDefault();
+        if (quadradoSelecionado != candidato && quadradoSelecionado)
         {
+            quadradoSelecionado.SendMessage("OnRemove");
+            quadradoSelecionado = candidato;
             quadradoSelecionado.SendMessage("OnSelect");
             return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
         }
-        return true;
+        else
+        {
+            return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
+        }
     }
 
 	void OnCollisionEnter2D(Collision2D collision)
@@ -158,7 +165,7 @@ public class MovMouse : MonoBehaviour
 			if(pode)
 			{
 	            squaresUnderBlock.Remove(collision.gameObject);
-	            collision.gameObject.SendMessage("OnRemove");
+	            //collision.gameObject.SendMessage("OnRemove");
 			}
 		}
 	}
