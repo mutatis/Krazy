@@ -45,6 +45,7 @@ public class MovMouse : MonoBehaviour
         if (!playingAnimation && pode)
         {
 			AudioSource.PlayClipAtPoint(soundFX[0], transform.position, 1);
+			StartCoroutine("MovingBlock");
             if (PlayerPrefs.GetInt("Click") == 0)
             {
                 PlayerPrefs.SetInt("Click", 1);
