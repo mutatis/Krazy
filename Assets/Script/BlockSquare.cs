@@ -21,8 +21,10 @@ public class BlockSquare : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (blockStack < 0 || ok)
-			blockStack = 0;
+        if (blockStack < 0 || ok)
+        {
+            blockStack = 0;
+        }
 
         if (!Input.GetMouseButton(0) && selectColorOK)
         {
@@ -53,6 +55,7 @@ public class BlockSquare : MonoBehaviour
 	{
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
+            print("++");
 			blockStack ++;
 			ok = false;
 		}
@@ -74,8 +77,10 @@ public class BlockSquare : MonoBehaviour
 	{
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
+            print("--");
 			blockStack --;
-			ok = true;
+            if (blockStack == 0)
+                ok = true;
 		}
 	}
 
@@ -83,6 +88,7 @@ public class BlockSquare : MonoBehaviour
 	{
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
+            print("++");
 			blockStack ++;
 			ok = false;
 		}
@@ -105,7 +111,8 @@ public class BlockSquare : MonoBehaviour
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
 			blockStack --;
-			ok = true;
+            if(blockStack == 0)
+			    ok = true;
 		}
 	}
 }

@@ -11,7 +11,7 @@ public class BlockMovement : MonoBehaviour {
     public IEnumerator GoToTarget(Transform target, bool useNoise)
     {
         var mouseInteraction = GetComponent<MovMouse>();
-        mouseInteraction.enabled = false; //can't grab while moving!
+        mouseInteraction.pode = false; //can't grab while moving!
 
         var rnd = new System.Random();
         var dist = Vector3.Distance(target.transform.position, transform.position);
@@ -33,8 +33,9 @@ public class BlockMovement : MonoBehaviour {
         }
        
         transform.position = target.position; //ensure deltaTime errors are corrected
-        mouseInteraction.enabled = true;
         mouseInteraction.pode = true;
         mouseInteraction.quadradoSelecionado = target.gameObject;
+        if (mouseInteraction.quadradoSelecionado != null && mouseInteraction.quadradoSelecionado.GetComponent<BlockSquare>().blockStack != 1)
+            print(mouseInteraction.quadradoSelecionado.transform.position);
     }
 }

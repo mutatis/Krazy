@@ -19,16 +19,17 @@ public class MovMouse : MonoBehaviour
 	
 	Vector3 direction2;
 	Vector3 posInicial;	
-	Vector3 velocity = Vector3.zero;
+	//Vector3 velocity = Vector3.zero;
 
    	bool canLand = false; 
   	bool verifica = true;
-	bool anim;
+	//bool anim;
 
     public List<GameObject> squaresUnderBlock;
 
 	public void Kill()
 	{
+        print("kill");
         quadradoSelecionado.GetComponent<BlockSquare>().blockStack--;
 
 	}
@@ -44,7 +45,6 @@ public class MovMouse : MonoBehaviour
         if (!playingAnimation && pode)
         {
 			AudioSource.PlayClipAtPoint(soundFX[0], transform.position, 1);
-            StartCoroutine("MovingBlock");
             if (PlayerPrefs.GetInt("Click") == 0)
             {
                 PlayerPrefs.SetInt("Click", 1);
@@ -75,6 +75,7 @@ public class MovMouse : MonoBehaviour
     {
 		Vector2 pos = new Vector2();
         var quadradoSelecionadoInicial = quadradoSelecionado;
+        print(quadradoSelecionadoInicial.GetInstanceID());
         while (verifica)
         {
 			pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
@@ -85,12 +86,12 @@ public class MovMouse : MonoBehaviour
 		verifica = true;
 		//se chegamos até aqui, é porque o bloco não pode ser soltado na posição desejada.
         GetComponent<Block>().SetTarget(quadradoSelecionadoInicial);
+        print(quadradoSelecionadoInicial.GetInstanceID());
     } 
 
 	void Segue()
 	{		
 		AudioSource.PlayClipAtPoint(soundFX[2], transform.position, 0.3f);
-		anim = true;
         //transform.position = posInicial;
 	}
 
