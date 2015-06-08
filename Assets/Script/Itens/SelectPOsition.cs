@@ -4,13 +4,13 @@ using System.Collections;
 public class SelectPOsition : MonoBehaviour 
 {
 
-	/*private Vector3 direction2;
+	private Vector3 direction2;
 
 	public MovMouse mouse;
 
 	public AudioClip spawn;
 
-	//private Vector3 velocity = Vector3.zero;
+	private Vector3 velocity = Vector3.zero;
     GameObject target;
     public float noiseRange;
 
@@ -44,6 +44,7 @@ public class SelectPOsition : MonoBehaviour
 				pare = true;
 			}
 		}*/
+	}
 
     /*IEnumerator GoToTarget()
     {

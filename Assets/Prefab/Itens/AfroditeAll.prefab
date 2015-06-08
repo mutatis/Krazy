@@ -11,6 +11,8 @@ GameObject:
   - 222: {fileID: 22216910}
   - 114: {fileID: 11416900}
   - 95: {fileID: 9516910}
+  - 114: {fileID: 11494084}
+  - 114: {fileID: 11494086}
   m_Layer: 8
   m_Name: Afrodite
   m_TagString: Afrodite
@@ -31,9 +33,8 @@ GameObject:
   - 114: {fileID: 11416906}
   - 58: {fileID: 5816910}
   - 114: {fileID: 11416908}
-  - 114: {fileID: 11416910}
   - 114: {fileID: 11416902}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AfroditeAll
   m_TagString: Afrodite
   m_Icon: {fileID: 0}
@@ -114,9 +115,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockCosmetic: {fileID: 116908}
-  noisePeriod: 0
-  noiseAmplitude: 0
-  timeArrival: 0
+  noisePeriod: 15
+  noiseAmplitude: 8
+  timeArrival: .5
   testTarget: {fileID: 0}
 --- !u!114 &11416904
 MonoBehaviour:
@@ -201,12 +202,24 @@ MonoBehaviour:
   mouse: {fileID: 11416904}
   spawn: {fileID: 8300000, guid: b05f7f9c8bcb5264e8e01fe732405d5a, type: 3}
   noiseRange: 7
---- !u!114 &11416910
+--- !u!114 &11494084
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116910}
+  m_GameObject: {fileID: 116908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f1fe860df7b84418364dc5e1300662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouse: {fileID: 11416904}
+--- !u!114 &11494086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116908}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18d631562922aec40a535b252b779ecc, type: 3}
@@ -228,7 +241,7 @@ RectTransform:
   m_GameObject: {fileID: 116908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .908494711, y: .908493578, z: 42.511055}
+  m_LocalScale: {x: .908494711, y: .908493578, z: 42.5110512}
   m_Children: []
   m_Father: {fileID: 22486706}
   m_RootOrder: 0

@@ -42,7 +42,7 @@ public class CreatedObj : MonoBehaviour
 		pode = 0;
         var rdm = new System.Random();
         var qtdWave = wave++ == 0 ? startingWave : rdm.Next(minWave, maxWave); //range não inclui o maior extremo
-
+        print(qtdWave);
         for (int i = 0; i < qtdWave; i++)
         {
             gridRandom = rdm.Next(0, grid.Length);
