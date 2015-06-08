@@ -25,8 +25,6 @@ public class MovMouse : MonoBehaviour
   	bool verifica = true;
 	bool anim;
 
-	Vector2 pos;
-
     public List<GameObject> squaresUnderBlock;
 
 	public void Kill()
@@ -75,9 +73,11 @@ public class MovMouse : MonoBehaviour
 
     IEnumerator MovingBlock()
     {
+		Vector2 pos = new Vector2();
         var quadradoSelecionadoInicial = quadradoSelecionado;
         while (verifica)
         {
+			pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
             transform.position = new Vector3(pos.x, pos.y, 0);            
             canLand = CheckSelectedSquare();
             yield return new WaitForEndOfFrame();
