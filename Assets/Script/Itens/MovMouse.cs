@@ -41,7 +41,7 @@ public class MovMouse : MonoBehaviour
 
 	public void Down()
 	{
-        if (!playingAnimation)
+        if (!playingAnimation && pode)
         {
 			AudioSource.PlayClipAtPoint(soundFX[0], transform.position, 1);
             StartCoroutine("MovingBlock");
@@ -54,7 +54,7 @@ public class MovMouse : MonoBehaviour
 
 	public void Up()
 	{
-        if (!playingAnimation)
+        if (!playingAnimation && pode)
         {
             if (canLand && quadradoSelecionado != null)
             {

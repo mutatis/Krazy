@@ -8,11 +8,19 @@ public class Manager : MonoBehaviour
 	public GameObject[] Ares;
 	public GameObject[] Zeus;
 	public GameObject[] Poseidon;
+
+	public GameObject End;
+
+	public static int minPonto = 40;
+
+	public float tempo = 60;
+	
 	int x;
 
 	// Use this for initialization
 	void Start () 
 	{
+		Time.timeScale = 1;
 		grid = GameObject.FindGameObjectsWithTag("Grid");
 		StartCoroutine("GO");
 	}
@@ -29,13 +37,14 @@ public class Manager : MonoBehaviour
 
 		if(x >= grid.Length)
 		{
-			Application.LoadLevel("GameOver");
+			End.SetActive(true);
 		}
 	}
 
 	IEnumerator GO()
 	{
-		yield return new WaitForSeconds (60);
-		Application.LoadLevel("GameOver");
+		yield return new WaitForSeconds (tempo);
+		Time.timeScale = 0;
+		End.SetActive(true);
 	}
 }

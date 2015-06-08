@@ -6,8 +6,12 @@ public class Score : MonoBehaviour
 {
 
 	public static Score score;
+
 	public Text text;
-	float ponto;
+
+	[HideInInspector]
+	public float ponto;
+
 	float pontoTemp;
 
 	void Awake()
