@@ -70,7 +70,7 @@ public class Lista : MonoBehaviour
 					objeto = (GameObject)obj[i];
 					if(objeto != null)
 					{
-						anim = objeto.GetComponent<Animator>();
+						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
 					}
 					//Destroy ((GameObject)obj[i]);
@@ -117,7 +117,7 @@ public class Lista : MonoBehaviour
 					objeto = (GameObject)obj2[i];
 					if(objeto != null)
 					{
-						anim = objeto.GetComponent<Animator>();
+						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
 					}
 					//Destroy ((GameObject)obj2[i]);

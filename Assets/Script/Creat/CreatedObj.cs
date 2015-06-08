@@ -63,7 +63,7 @@ public class CreatedObj : MonoBehaviour
             } while (pode < 0);
             createdRandom = Random.Range(0, created.Length);
 			GameObject obj = Instantiate(created[createdRandom], posCreated[Random.Range(0, posCreated.Length)].transform.position, transform.rotation) as GameObject;
-            obj.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            //obj.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
             obj.transform.parent = this.gameObject.transform;
             //obj.SendMessage("SetTarget", target);
             //obj.GetComponent<SelectPOsition>().StartCoroutine("GoToTarget");
