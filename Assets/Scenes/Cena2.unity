@@ -1441,6 +1441,22 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 525278006}
+    - target: {fileID: 11417654, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: created.Array.data[0]
+      value: 
+      objectReference: {fileID: 116910, guid: 0f14d451982930e4eb29f9f49f129576, type: 2}
+    - target: {fileID: 11417654, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: created.Array.data[1]
+      value: 
+      objectReference: {fileID: 117550, guid: d07cf489651880847a577ddcdf2b2e39, type: 2}
+    - target: {fileID: 11417654, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: created.Array.data[2]
+      value: 
+      objectReference: {fileID: 121730, guid: 2795a5b542934514b81aee58ea74c912, type: 2}
+    - target: {fileID: 11417654, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: created.Array.data[3]
+      value: 
+      objectReference: {fileID: 174290, guid: a4489094dd170b64dad22d4ea7c4ea37, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
   m_RootGameObject: {fileID: 1077557026}
@@ -4968,10 +4984,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: []
   created:
-  - {fileID: 166560, guid: 7cb68b413c237d54ebd720b5a990c62f, type: 2}
-  - {fileID: 181568, guid: 1dbc22ae95e92f842af90eba2a8734fe, type: 2}
-  - {fileID: 199910, guid: 1ba001d850315d14ea1a5c2a8a4a0b7f, type: 2}
-  - {fileID: 107218, guid: fbfa30f436a0c4141a1bc76607acbf15, type: 2}
+  - {fileID: 116910, guid: 0f14d451982930e4eb29f9f49f129576, type: 2}
+  - {fileID: 117550, guid: d07cf489651880847a577ddcdf2b2e39, type: 2}
+  - {fileID: 121730, guid: 2795a5b542934514b81aee58ea74c912, type: 2}
+  - {fileID: 174290, guid: a4489094dd170b64dad22d4ea7c4ea37, type: 2}
   canvas: {fileID: 1077557030}
   tempoWave: 0
   startingWave: 0
@@ -4979,6 +4995,7 @@ MonoBehaviour:
   maxWave: 0
   wave: 0
   posCreated: []
+  spawnPrimeiraWave: {fileID: 0}
   gridRandom: 0
   minX: 0
   maxX: 0

@@ -4121,7 +4121,7 @@ MonoBehaviour:
   Zeus: []
   Poseidon: []
   End: {fileID: 1133862136}
-  tempo: 60
+  tempo: 9999999
 --- !u!114 &542492472
 MonoBehaviour:
   m_ObjectHideFlags: 0

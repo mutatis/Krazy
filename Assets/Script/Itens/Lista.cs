@@ -11,6 +11,7 @@ public class Lista : MonoBehaviour
 	public AudioClip[] somPontuacao;
 
 	public int x;
+	public int quant = 3;
 
 	GameObject objeto;
 
@@ -29,7 +30,7 @@ public class Lista : MonoBehaviour
 	{
 		if(x == 4)
 		{
-			if(obj.Count > 3)
+			if(obj.Count > quant)
 			{
 				if(!toca)
 				{
@@ -77,7 +78,7 @@ public class Lista : MonoBehaviour
 				}
 			}
 
-			if(obj2.Count > 3)
+			if(obj2.Count > quant)
 			{
 				if(!toca)
 				{
@@ -125,7 +126,7 @@ public class Lista : MonoBehaviour
 				}
 			}
 
-			if(obj2.Count <= 3 && obj.Count <= 3)
+			if(obj2.Count <= quant && obj.Count <= quant)
 			{
 				Destroy(gameObject);
 			}

@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47cca91352b658d4e8dd609483134997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockCosmetic: {fileID: 161536, guid: fd7d199394296b34eb4861780d4475b3, type: 2}
+  blockCosmetic: {fileID: 117548}
   noisePeriod: 15
   noiseAmplitude: 8
   timeArrival: .5

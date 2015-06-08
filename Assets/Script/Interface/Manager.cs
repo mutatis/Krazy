@@ -38,6 +38,7 @@ public class Manager : MonoBehaviour
 		if(x >= grid.Length)
 		{
 			End.SetActive(true);
+			Time.timeScale = 0;
 		}
 	}
 
