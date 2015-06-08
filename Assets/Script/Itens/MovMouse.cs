@@ -144,10 +144,10 @@ public class MovMouse : MonoBehaviour
 	            CheckSelectedSquare();
 			}
 		}
-		else
+		/*else
 		{
 			quadradoSelecionado = null;
-		}
+		}*/
 	}
 
 	void OnCollisionExit2D(Collision2D collision)
@@ -183,10 +183,10 @@ public class MovMouse : MonoBehaviour
 	            CheckSelectedSquare();
 			}
 		}
-		else
+		/*else
 		{
 			quadradoSelecionado = null;
-		}
+		}*/
 	}
 
 	void OnTriggerExit2D(Collider2D collision)
