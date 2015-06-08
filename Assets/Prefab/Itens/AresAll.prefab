@@ -136,7 +136,7 @@ MonoBehaviour:
   soundFX:
   - {fileID: 8300000, guid: 5a2d47953d825464c9894acf3f6020ea, type: 3}
   - {fileID: 8300000, guid: f2da06a2e1e23c14582d2f42c3606c66, type: 3}
-  - {fileID: 8300000, guid: 3a897d3915ec97947af823ae8d09329c, type: 3}
+  - {fileID: 8300000, guid: e1123774f7b1a0647b4dfa30b7cba4b6, type: 3}
   squaresUnderBlock: []
 --- !u!114 &11417546
 MonoBehaviour:

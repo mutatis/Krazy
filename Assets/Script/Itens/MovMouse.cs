@@ -87,14 +87,9 @@ public class MovMouse : MonoBehaviour
 		verifica = true;
 		//se chegamos até aqui, é porque o bloco não pode ser soltado na posição desejada.
         GetComponent<Block>().SetTarget(quadradoSelecionadoInicial);
+		AudioSource.PlayClipAtPoint(soundFX[2], transform.position, 0.1f);
         print(quadradoSelecionadoInicial.GetInstanceID());
     } 
-
-	void Segue()
-	{		
-		AudioSource.PlayClipAtPoint(soundFX[2], transform.position, 0.3f);
-        //transform.position = posInicial;
-	}
 
  	public bool CheckSelectedSquare()
     {        
