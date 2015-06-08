@@ -62,6 +62,7 @@ public class MovMouse : MonoBehaviour
 
 	public void Destroy()
 	{
+		Score.score.Ponto (1);
 		Destroy(gameObject);
 	}
 

@@ -76,6 +76,7 @@ public class Lista : MonoBehaviour
 					//Destroy ((GameObject)obj[i]);
 				}
 			}
+
 			if(obj2.Count > 3)
 			{
 				if(!toca)
@@ -123,6 +124,7 @@ public class Lista : MonoBehaviour
 					//Destroy ((GameObject)obj2[i]);
 				}
 			}
+
 			if(obj2.Count <= 3 && obj.Count <= 3)
 			{
 				Destroy(gameObject);
