@@ -131,6 +131,7 @@ MonoBehaviour:
   tiro: {fileID: 176740, guid: 7c9d835e133cca64a877d7f7f4e230c0, type: 2}
   quadradoSelecionado: {fileID: 0}
   box: {fileID: 5817550}
+  quant: 3
   pode: 0
   playingAnimation: 0
   soundFX:

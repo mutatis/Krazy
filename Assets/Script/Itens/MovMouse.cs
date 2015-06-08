@@ -10,6 +10,8 @@ public class MovMouse : MonoBehaviour
 
 	public CircleCollider2D box;
 
+	public int quant = 3;
+
 	public bool pode = false;
 	public bool playingAnimation;
 
@@ -29,9 +31,7 @@ public class MovMouse : MonoBehaviour
 
 	public void Kill()
 	{
-        print("kill");
         quadradoSelecionado.GetComponent<BlockSquare>().blockStack--;
-
 	}
 
 	public void Destroy()
@@ -62,7 +62,8 @@ public class MovMouse : MonoBehaviour
 				AudioSource.PlayClipAtPoint(soundFX[1], transform.position, 1); //som de erro
                 StopCoroutine("MovingBlock");
                 transform.position = quadradoSelecionado.transform.position;
-                Instantiate(tiro, transform.position, transform.rotation);
+                GameObject tempObj = Instantiate(tiro, transform.position, transform.rotation) as GameObject;
+				tempObj.GetComponent<Lista>().quant = quant;
             }
             else
             {
