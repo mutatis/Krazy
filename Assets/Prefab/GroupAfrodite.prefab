@@ -280,6 +280,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ca33a79e259835c428c2667ad6399253, type: 3}
   - {fileID: 8300000, guid: bbccd788cad06904c9fef0ac97f240a9, type: 3}
   x: 0
+  quant: 3
 --- !u!114 &11460886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velX: 0
-  velY: 9
+  velY: 8
   tipo: 1
   tag_: Afrodite
   lista: {fileID: 11460884}
@@ -308,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velX: 0
-  velY: -9
+  velY: -8
   tipo: 1
   tag_: Afrodite
   lista: {fileID: 11460884}
@@ -323,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35923de35f2e3244886e37b6d68ac934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velX: -9
+  velX: -8
   velY: 0
   tipo: 2
   tag_: Afrodite
@@ -339,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35923de35f2e3244886e37b6d68ac934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velX: 9
+  velX: 8
   velY: 0
   tipo: 2
   tag_: Afrodite
