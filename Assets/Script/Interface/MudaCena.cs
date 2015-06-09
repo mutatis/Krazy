@@ -7,10 +7,7 @@ public class MudaCena : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		if(Time.timeScale != 0)
-		{
-			Application.LoadLevel("Game");
-		}
+
 	}
 	
 	// Update is called once per frame
