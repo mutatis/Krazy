@@ -18,6 +18,7 @@ public class MudaCena : MonoBehaviour
 
 	public void LoadScene(string level)
 	{
-		Application.LoadLevel (level);
+		PlayerPrefs.SetString ("Loading", level);
+		Application.LoadLevel ("Loading");
 	}
 }
