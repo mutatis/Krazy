@@ -3577,6 +3577,38 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Cena2
       objectReference: {fileID: 0}
+    - target: {fileID: 11475186, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475186, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475186, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22475192, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 279.720001
+      objectReference: {fileID: 0}
+    - target: {fileID: 22475192, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 115.800003
+      objectReference: {fileID: 0}
+    - target: {fileID: 22475192, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -253.399994
+      objectReference: {fileID: 0}
+    - target: {fileID: 22475192, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 185.399994
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475186, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
   m_RootGameObject: {fileID: 1875337356}
@@ -10385,10 +10417,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -10421,8 +10453,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -309, y: 231}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -253.399994, y: 185.399994}
+  m_SizeDelta: {x: 279.720001, y: 115.800003}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &1128559949
 GameObject:

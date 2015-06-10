@@ -18,6 +18,8 @@ public class MovMouse : MonoBehaviour
 	public AudioClip[] soundFX;
 
 	float dist;
+
+	int x;
 	
 	Vector3 direction2;
 	Vector3 posInicial;	
@@ -28,6 +30,14 @@ public class MovMouse : MonoBehaviour
 	//bool anim;
 
     public List<GameObject> squaresUnderBlock;
+
+	void Update () 
+	{
+		if(Input.GetMouseButton(0) || Input.GetMouseButton(0))
+		{
+			x = 0;
+		}
+	}
 
 	public void Kill()
 	{
@@ -42,6 +52,7 @@ public class MovMouse : MonoBehaviour
 
 	public void Down()
 	{
+		x = 0;
         if (!playingAnimation && pode)
         {
 			AudioSource.PlayClipAtPoint(soundFX[0], transform.position, 1);
@@ -55,6 +66,8 @@ public class MovMouse : MonoBehaviour
 
 	public void Up()
 	{
+		print (x);
+		x = 0;
         if (!playingAnimation && pode)
         {
             if (canLand && quadradoSelecionado != null)
@@ -62,8 +75,9 @@ public class MovMouse : MonoBehaviour
 				AudioSource.PlayClipAtPoint(soundFX[1], transform.position, 1); //som de erro
                 StopCoroutine("MovingBlock");
                 transform.position = quadradoSelecionado.transform.position;
-                GameObject tempObj = Instantiate(tiro, transform.position, transform.rotation) as GameObject;
-				tempObj.GetComponent<Lista>().quant = quant;
+				Atira();
+                /*GameObject tempObj = Instantiate(tiro, transform.position, transform.rotation) as GameObject;
+				tempObj.GetComponent<Lista>().quant = quant;*/
             }
             else
             {
@@ -73,11 +87,21 @@ public class MovMouse : MonoBehaviour
         }
 	}
 
+	public void Atira()
+	{
+		if(x == 0)
+		{
+			GameObject tempObj = Instantiate(tiro, transform.position, transform.rotation) as GameObject;
+			x = 1;
+		}
+	}
+
     IEnumerator MovingBlock()
     {
+		print (x);
+		x = 0;
 		Vector2 pos = new Vector2();
         var quadradoSelecionadoInicial = quadradoSelecionado;
-        print(quadradoSelecionadoInicial.GetInstanceID());
         while (verifica)
         {
 			pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);

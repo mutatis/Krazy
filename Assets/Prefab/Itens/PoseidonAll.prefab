@@ -237,7 +237,6 @@ MonoBehaviour:
   noisePeriod: 15
   noiseAmplitude: 8
   timeArrival: .5
-  testTarget: {fileID: 0}
 --- !u!222 &22221730
 CanvasRenderer:
   m_ObjectHideFlags: 1

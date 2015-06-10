@@ -13,6 +13,8 @@ public class Direcao : MonoBehaviour
 
     public Lista lista;
 
+	GameObject obj;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -32,6 +34,14 @@ public class Direcao : MonoBehaviour
 		Destroy (gameObject);
 	}
 
+	void Atira()
+	{
+		if(lista.obj.Count + lista.obj2.Count > 4)
+		{
+			obj.GetComponent<MovMouse>().Atira();
+		}
+	}
+
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		if(collision.gameObject.tag == tag_)
@@ -40,11 +50,15 @@ public class Direcao : MonoBehaviour
 			if(tipo == 1)
 			{
 				lista.obj.Add (collision.gameObject);
+				//collision.gameObject.GetComponent<MovMouse>().Atira();
 			}
 			else if(tipo == 2)
 			{
 				lista.obj2.Add (collision.gameObject);
+				//collision.gameObject.GetComponent<MovMouse>().Atira();
 			}
+			obj = collision.gameObject;
+			Atira();
 			StartCoroutine("Go");
 		}
 	}
@@ -57,11 +71,15 @@ public class Direcao : MonoBehaviour
 			if(tipo == 1)
 			{
 				lista.obj.Add (collision.gameObject);
+				//collision.gameObject.GetComponent<MovMouse>().Atira();
 			}
 			else if(tipo == 2)
 			{
 				lista.obj2.Add (collision.gameObject);
+				//collision.gameObject.GetComponent<MovMouse>().Atira();
 			}
+			obj = collision.gameObject;
+			Atira();
 			StartCoroutine("Go");
 		}
 	}
