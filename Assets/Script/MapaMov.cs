@@ -13,6 +13,9 @@ public class MapaMov : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		transform.Translate (Input.GetAxis ("Mouse X"), Input.GetAxis ("Mouse Y"), 0);
+		if(Input.GetMouseButton(0))
+		{
+			transform.Translate (Input.GetAxis ("Mouse X"), Input.GetAxis ("Mouse Y"), 0);
+		}
 	}
 }
