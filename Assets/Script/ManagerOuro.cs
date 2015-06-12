@@ -17,6 +17,6 @@ public class ManagerOuro : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		text.text = "Ouro: " + DBManager.GetFunds("cois");
+		text.text = "Ouro: " + DBManager.GetFunds("coins");
 	}
 }
