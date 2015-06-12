@@ -95,7 +95,12 @@ public class MovMouse : MonoBehaviour
 		verifica = true;
 		//se chegamos até aqui, é porque o bloco não pode ser soltado na posição desejada.
 		quadradoSelecionado.SendMessage("OnExit");
-		squaresUnderBlock.Clear ();
+		var _squares = new List<GameObject> (squaresUnderBlock);
+		foreach (var square in _squares) 
+		{
+			square.SendMessage("OnExit");
+			squaresUnderBlock.Remove(square);
+		}
         GetComponent<Block>().SetTarget(quadradoTemp);
     } 
 
