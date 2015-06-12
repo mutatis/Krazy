@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class musicaController : MonoBehaviour 
+public class MusicaController : MonoBehaviour 
 {
 
 	public AudioSource audio;
@@ -9,12 +9,6 @@ public class musicaController : MonoBehaviour
 	void Awake()
 	{
 		DontDestroyOnLoad (gameObject);
-	}
-
-	// Use this for initialization
-	void Start () 
-	{
-	
 	}
 	
 	// Update is called once per frame
