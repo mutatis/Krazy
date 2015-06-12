@@ -131,6 +131,7 @@ MonoBehaviour:
   tiro: {fileID: 176740, guid: 7c9d835e133cca64a877d7f7f4e230c0, type: 2}
   quadradoSelecionado: {fileID: 0}
   box: {fileID: 5817550}
+  quant: 3
   pode: 0
   playingAnimation: 0
   soundFX:
@@ -232,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47cca91352b658d4e8dd609483134997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockCosmetic: {fileID: 161536, guid: fd7d199394296b34eb4861780d4475b3, type: 2}
+  blockCosmetic: {fileID: 117548}
   noisePeriod: 15
   noiseAmplitude: 8
   timeArrival: .5
@@ -268,14 +269,14 @@ RectTransform:
   m_GameObject: {fileID: 117550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .0104999989, y: .0104999989, z: .491325438}
+  m_LocalScale: {x: .00850513298, y: .00850513298, z: .397979885}
   m_Children:
   - {fileID: 22417548}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: .74000001}
+  m_AnchoredPosition: {x: .970000029, y: 1.60000002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000

@@ -116,7 +116,7 @@ Transform:
   m_GameObject: {fileID: 121040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .00999999978, z: 0}
-  m_LocalScale: {x: .363431603, y: .363431603, z: .363431603}
+  m_LocalScale: {x: .22618559, y: .226185545, z: .226185545}
   m_Children: []
   m_Father: {fileID: 421038}
   m_RootOrder: 2
@@ -128,7 +128,7 @@ Transform:
   m_GameObject: {fileID: 121042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .00999999978, z: 0}
-  m_LocalScale: {x: .363431603, y: .363431603, z: .363431603}
+  m_LocalScale: {x: .22618559, y: .226185545, z: .226185545}
   m_Children: []
   m_Father: {fileID: 421038}
   m_RootOrder: 1
@@ -140,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 121044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .00999999978, z: 0}
-  m_LocalScale: {x: .363431603, y: .363431603, z: .363431603}
+  m_LocalScale: {x: .22618559, y: .226185545, z: .226185545}
   m_Children: []
   m_Father: {fileID: 421038}
   m_RootOrder: 0
@@ -152,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 121046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .00999999978, z: 0}
-  m_LocalScale: {x: .363431603, y: .363431603, z: .363431603}
+  m_LocalScale: {x: .22618559, y: .226185545, z: .226185545}
   m_Children: []
   m_Father: {fileID: 421038}
   m_RootOrder: 3
@@ -278,8 +278,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: acc861b4b4f98e1479c18383b20dd268, type: 3}
   - {fileID: 8300000, guid: 92fbb6918a6127743af7bb6c833c9291, type: 3}
   - {fileID: 8300000, guid: ca33a79e259835c428c2667ad6399253, type: 3}
-  - {fileID: 8300000, guid: bbccd788cad06904c9fef0ac97f240a9, type: 3}
+  - {fileID: 8300000, guid: 877385a3efd4441448554a0e0870c516, type: 3}
   x: 0
+  quant: 3
 --- !u!114 &11421040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velX: 0
-  velY: 9
+  velY: 5
   tipo: 1
   tag_: Poseidon
   lista: {fileID: 11421038}
@@ -308,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velX: 0
-  velY: -9
+  velY: -5
   tipo: 1
   tag_: Poseidon
   lista: {fileID: 11421038}
@@ -323,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35923de35f2e3244886e37b6d68ac934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velX: -9
+  velX: -5
   velY: 0
   tipo: 2
   tag_: Poseidon
@@ -339,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35923de35f2e3244886e37b6d68ac934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velX: 9
+  velX: 5
   velY: 0
   tipo: 2
   tag_: Poseidon

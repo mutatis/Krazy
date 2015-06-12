@@ -143,6 +143,7 @@ MonoBehaviour:
   tiro: {fileID: 121038, guid: 58fdc466b48f4e74ba14816235a7415a, type: 2}
   quadradoSelecionado: {fileID: 0}
   box: {fileID: 5821730}
+  quant: 3
   pode: 0
   playingAnimation: 0
   soundFX:
@@ -236,7 +237,6 @@ MonoBehaviour:
   noisePeriod: 15
   noiseAmplitude: 8
   timeArrival: .5
-  testTarget: {fileID: 0}
 --- !u!222 &22221730
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -268,14 +268,14 @@ RectTransform:
   m_GameObject: {fileID: 121730}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .0104999989, y: .0104999989, z: .491325438}
+  m_LocalScale: {x: .00850513298, y: .00850513298, z: .397979885}
   m_Children:
   - {fileID: 22421728}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: .74000001}
+  m_AnchoredPosition: {x: .970000029, y: 1.60000002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
