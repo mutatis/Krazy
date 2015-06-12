@@ -5652,7 +5652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &467605479
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12513,6 +12513,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 123124, guid: cc92702d3f3078f43870f9ff4bc818dd, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc92702d3f3078f43870f9ff4bc818dd, type: 2}
   m_RootGameObject: {fileID: 467605478}
@@ -15986,11 +15990,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475176, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
       propertyPath: tempoWave
-      value: 5
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 11475176, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
       propertyPath: startingWave
-      value: 20
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
@@ -16562,8 +16566,8 @@ MonoBehaviour:
   - {fileID: 121730, guid: 2795a5b542934514b81aee58ea74c912, type: 2}
   - {fileID: 174290, guid: a4489094dd170b64dad22d4ea7c4ea37, type: 2}
   canvas: {fileID: 233977672}
-  tempoWave: 5
-  startingWave: 20
+  tempoWave: 1000
+  startingWave: 3
   minWave: 3
   maxWave: 5
   wave: 0

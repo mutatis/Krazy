@@ -69,7 +69,6 @@ public class CreatedObj : MonoBehaviour
             } while (pode < 0);
 
             obj.transform.parent = this.gameObject.transform;
-            target.SendMessage("LockBlock", obj);
             obj.GetComponent<Block>().SetTarget(target, true);
         }
         pode = 0;

@@ -18,6 +18,8 @@ public class MovMouse : MonoBehaviour
 	public AudioClip[] soundFX;
 
 	//float dist;
+
+	GameObject quadradoTemp;
 	
 	Vector3 direction2;
 	Vector3 posInicial;	
@@ -28,6 +30,7 @@ public class MovMouse : MonoBehaviour
 	//bool anim;
 
     public List<GameObject> squaresUnderBlock;
+
 	public void Kill()
 	{
         quadradoSelecionado.SendMessage("OnExit");
@@ -61,6 +64,7 @@ public class MovMouse : MonoBehaviour
         {
             if (canLand && quadradoSelecionado != null)
             {
+				quadradoTemp.SendMessage("UnlockBlock", gameObject);
 				AudioSource.PlayClipAtPoint(soundFX[1], transform.position, 1); //som de erro
                 StopCoroutine("MovingBlock");
                 transform.position = quadradoSelecionado.transform.position;
@@ -69,6 +73,7 @@ public class MovMouse : MonoBehaviour
             }
             else
             {
+				quadradoSelecionado = quadradoTemp;
                 verifica = false;
             }
             PlayerPrefs.SetInt("Click", 0);
@@ -78,8 +83,8 @@ public class MovMouse : MonoBehaviour
     IEnumerator MovingBlock()
     {
 		Vector2 pos = new Vector2();
-        var quadradoSelecionadoInicial = quadradoSelecionado;
-        quadradoSelecionadoInicial.SendMessage("LockBlock", gameObject);
+        quadradoTemp = quadradoSelecionado;
+		quadradoTemp.GetComponent<BlockSquare> ().LockBlock (gameObject, true);
         while (verifica)
         {
 			pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
@@ -89,9 +94,9 @@ public class MovMouse : MonoBehaviour
         }
 		verifica = true;
 		//se chegamos até aqui, é porque o bloco não pode ser soltado na posição desejada.
-        if(quadradoSelecionado)
-            quadradoSelecionado.SendMessage("OnExit");
-        GetComponent<Block>().SetTarget(quadradoSelecionadoInicial);
+		quadradoSelecionado.SendMessage("OnExit");
+		squaresUnderBlock.Clear ();
+        GetComponent<Block>().SetTarget(quadradoTemp);
     } 
 
 	void Segue()
@@ -108,13 +113,8 @@ public class MovMouse : MonoBehaviour
             quadradoSelecionado.SendMessage("OnDeselect");
         }
         quadradoSelecionado = candidato;
-        if (quadradoSelecionado)
-        {
-            quadradoSelecionado.SendMessage("OnSelect");
-            return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
-        }
-        else
-            return false;
+        quadradoSelecionado.SendMessage("OnSelect");
+        return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
     }
 
 	void OnCollisionEnter2D(Collision2D collision)
