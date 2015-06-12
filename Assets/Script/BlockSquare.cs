@@ -21,10 +21,10 @@ public class BlockSquare : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (blockStack < 0 || ok)
+        if (blockStack < 0 || ok)
         {
             blockStack = 0;
-        }*/
+        }
 
         if (!Input.GetMouseButton(0) && selectColorOK)
         {
@@ -35,23 +35,17 @@ public class BlockSquare : MonoBehaviour
 
 	public void OnSelect()
 	{
+        print("++" + gameObject.GetInstanceID().ToString());
         sprite.color = Color.white;
         selectColorOK = true;
+        blockStack++;
 	}
 
-    public void OnDeselect()
+    public void OnRemove() 
     {
+        print("--" + gameObject.GetInstanceID().ToString());
         sprite.color = cor;
         selectColorOK = true;
-    }
-
-    public void OnHover()
-    {
-        blockStack++;
-    }
-
-    public void OnExit() 
-    {
         blockStack--;
     }
 

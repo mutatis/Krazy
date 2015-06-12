@@ -99,13 +99,17 @@ public class MovMouse : MonoBehaviour
  	public bool CheckSelectedSquare()
     {        
         var candidato = squaresUnderBlock.OrderBy(d => Vector3.Distance(transform.position, d.transform.position)).FirstOrDefault();
-        if (quadradoSelecionado != candidato && quadradoSelecionado != null) 
+        if (quadradoSelecionado != candidato && quadradoSelecionado)
         {
-            quadradoSelecionado.SendMessage("OnDeselect");
+            quadradoSelecionado.SendMessage("OnRemove");
+            quadradoSelecionado = candidato;
+            quadradoSelecionado.SendMessage("OnSelect");
+            return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
         }
-        quadradoSelecionado = candidato;
-        quadradoSelecionado.SendMessage("OnSelect");
-        return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
+        else
+        {
+            return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
+        }
     }
 
 	void OnCollisionEnter2D(Collision2D collision)
@@ -115,8 +119,7 @@ public class MovMouse : MonoBehaviour
 			if(pode)
 			{
 	            squaresUnderBlock.Add(collision.gameObject);
-                collision.gameObject.SendMessage("OnHover");
-	            //CheckSelectedSquare();
+	            CheckSelectedSquare();
 			}
 		}
 	}
@@ -128,8 +131,7 @@ public class MovMouse : MonoBehaviour
 			if(pode)
 			{
 	            squaresUnderBlock.Remove(collision.gameObject);
-                collision.gameObject.SendMessage("OnExit");
-	            //collision.gameObject.SendMessage("OnRemove");
+	            collision.gameObject.SendMessage("OnRemove");
 			}
 		}
 	}
@@ -140,7 +142,6 @@ public class MovMouse : MonoBehaviour
         if (squaresUnderBlock.Count == 0 && collider.tag == "Grid" && pode)
         {
             squaresUnderBlock.Add(collider.gameObject);
-            collider.gameObject.SendMessage("OnHover");
         }
     }
 
@@ -151,9 +152,8 @@ public class MovMouse : MonoBehaviour
 			if(pode)
 			{
 	            squaresUnderBlock.Add(collision.gameObject);
-                collision.gameObject.SendMessage("OnHover");
-	            //collision.gameObject.name = "Sprite" + Time.time.ToString();
-	            //CheckSelectedSquare();
+	            collision.gameObject.name = "Sprite" + Time.time.ToString();
+	            CheckSelectedSquare();
 			}
 		}
 	}
@@ -165,7 +165,7 @@ public class MovMouse : MonoBehaviour
 			if(pode)
 			{
 	            squaresUnderBlock.Remove(collision.gameObject);
-	            collision.gameObject.SendMessage("OnExit");
+	            //collision.gameObject.SendMessage("OnRemove");
 			}
 		}
 	}
