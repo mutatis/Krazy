@@ -66,7 +66,10 @@ public class BlockSquare : MonoBehaviour
     public void OnExit() 
     {
         if(blockStack > 0)
+		{
+			print("print");
             blockStack--;
+		}
     }
 
 
