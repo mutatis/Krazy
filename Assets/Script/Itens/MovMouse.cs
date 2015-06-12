@@ -34,12 +34,14 @@ public class MovMouse : MonoBehaviour
         box.enabled = false;
         quadradoSelecionado.SendMessage("OnExit");
         pode = false;
+		quadradoSelecionado.SendMessage ("LockBlock", gameObject);
         print("Killed, stack: " + quadradoSelecionado.GetComponent<BlockSquare>().blockStack.ToString());
 	}
 
 	public void Destroy()
 	{
 		Score.score.Ponto (1);
+		quadradoSelecionado.SendMessage ("UnlockBlock", gameObject);
 		Destroy(gameObject);
 	}
 
