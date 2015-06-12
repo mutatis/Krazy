@@ -31,7 +31,9 @@ public class MovMouse : MonoBehaviour
 
 	public void Kill()
 	{
-        quadradoSelecionado.GetComponent<BlockSquare>().blockStack--;
+        quadradoSelecionado.SendMessage("OnDeselect");
+        pode = false;
+        print("Killed, stack: " + quadradoSelecionado.GetComponent<BlockSquare>().blockStack.ToString());
 	}
 
 	public void Destroy()
