@@ -17,7 +17,7 @@ public class MovMouse : MonoBehaviour
 
 	public AudioClip[] soundFX;
 
-	float dist;
+	//float dist;
 	
 	Vector3 direction2;
 	Vector3 posInicial;	
