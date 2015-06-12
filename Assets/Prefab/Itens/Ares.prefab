@@ -74,8 +74,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2d19c70d8629e04e91f8dff2c5dcc6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &11461536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,8 +85,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: 8206c11d7e66d4c479df715694e0ea1a, type: 3}
@@ -106,8 +106,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a863aa8c04641438cf99b1a9e4d34b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tiro: {fileID: 176740, guid: 7c9d835e133cca64a877d7f7f4e230c0, type: 2}
   quadradoSelecionado: {fileID: 0}
   box: {fileID: 5861536}
@@ -127,8 +127,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   delegates:
   - eventID: 2
     callback:
@@ -143,7 +143,7 @@ MonoBehaviour:
               Culture=neutral, PublicKeyToken=null
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument:
             m_BoolArgument: 0
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
@@ -161,7 +161,7 @@ MonoBehaviour:
               Culture=neutral, PublicKeyToken=null
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument:
             m_BoolArgument: 0
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
@@ -174,9 +174,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 161536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18d631562922aec40a535b252b779ecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Script: {fileID: 11500000, guid: d0fad34d824644a40b8e067a507cbd3e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
   sons:
   - {fileID: 8300000, guid: dc30c55f075560344a69d97406f81f9b, type: 3}
 --- !u!222 &22261536

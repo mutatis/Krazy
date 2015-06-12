@@ -10,7 +10,7 @@ public class BlockSquare : MonoBehaviour
     bool selectColorOK = true;
     Color cor;
 	public bool ok = true;
-	public int blockStack = 0;
+    public int blockStack = 0;
 
     // Use this for initialization
     void Start()
@@ -21,10 +21,10 @@ public class BlockSquare : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (blockStack < 0 || ok)
+        /*if (blockStack < 0 || ok)
         {
             blockStack = 0;
-        }
+        }*/
 
         if (!Input.GetMouseButton(0) && selectColorOK)
         {
@@ -39,10 +39,20 @@ public class BlockSquare : MonoBehaviour
         selectColorOK = true;
 	}
 
-    public void OnRemove() 
+    public void OnDeselect()
     {
         sprite.color = cor;
         selectColorOK = true;
+    }
+
+    public void OnHover()
+    {
+        blockStack++;
+    }
+
+    public void OnExit() 
+    {
+        blockStack--;
     }
 
 
@@ -51,7 +61,7 @@ public class BlockSquare : MonoBehaviour
         return blockStack == 1;
     }
 
-	void OnCollisionEnter2D(Collision2D collision)
+	/*void OnCollisionEnter2D(Collision2D collision)
 	{
 		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
 		{
@@ -114,5 +124,5 @@ public class BlockSquare : MonoBehaviour
             if(blockStack == 0)
 			    ok = true;
 		}
-	}
+	}*/
 }
