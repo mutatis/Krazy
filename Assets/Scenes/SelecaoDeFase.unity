@@ -442,7 +442,7 @@ RectTransform:
   m_Children:
   - {fileID: 1536729522}
   m_Father: {fileID: 1944270023}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -5.09999943, y: -180.499985}
@@ -1999,7 +1999,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CenaCaveira
+  m_Text: Fase2
 --- !u!222 &1051051835
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2441,7 +2441,7 @@ MonoBehaviour:
   m_Content: {fileID: 1944270023}
   m_Horizontal: 1
   m_Vertical: 1
-  m_MovementType: 0
+  m_MovementType: 2
   m_Elasticity: .100000001
   m_Inertia: 1
   m_DecelerationRate: .135000005
@@ -2459,7 +2459,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1406252817}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -2608,7 +2608,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Fase1
 --- !u!222 &1536729524
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3255,6 +3255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f67b7bef3921ebb4aa6f99ea71dfccba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1944270020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3310,14 +3311,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.06461382, y: 5.51163483, z: 2.06461382}
   m_Children:
-  - {fileID: 2023319194}
   - {fileID: 232683688}
+  - {fileID: 2023319194}
   - {fileID: 441452228}
   m_Father: {fileID: 1406252818}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1064}
+  m_AnchoredPosition: {x: 0, y: 992}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1944270024
@@ -3427,7 +3428,7 @@ GameObject:
   - 114: {fileID: 2023319196}
   - 114: {fileID: 2023319195}
   m_Layer: 5
-  m_Name: Button
+  m_Name: SelectFase2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3445,10 +3446,10 @@ RectTransform:
   m_Children:
   - {fileID: 1051051833}
   m_Father: {fileID: 1944270023}
-  m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -454.73999}
+  m_RootOrder: 1
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: -205.600006}
   m_SizeDelta: {x: 800, y: 250.114944}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2023319195

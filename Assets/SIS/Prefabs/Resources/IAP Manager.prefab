@@ -1,0 +1,581 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400004}
+  m_Layer: 0
+  m_Name: IAP Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400002}
+  - 114: {fileID: 11400006}
+  m_Layer: 0
+  m_Name: IAP Listener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400002}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &400002
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400000}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cafc064c316f49744b1ae08c43a9a12e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IAPs:
+  - id: 1405262948.9577788
+    name: IAP
+    items:
+    - id: coins
+      localId:
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 1
+        id: coins_v2
+      - overridden: 0
+        id: 
+      fetch: 1
+      type: 0
+      title: coins
+      description: 1000 coins to unlock items.
+      realPrice: $1.99
+      icon: {fileID: 21300000, guid: be156e93a0da3cd4689f5fcd8c6badea, type: 3}
+      virtualPrice: []
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: coin_pack
+      localId:
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 1
+        id: demo_product
+      - overridden: 0
+        id: 
+      fetch: 1
+      type: 0
+      title: coin pack
+      description: 2500 coins!\n saving of 20%
+      realPrice: $3.99
+      icon: {fileID: 21300000, guid: d84fc91eaef14d14a8f21f8984c43d38, type: 3}
+      virtualPrice: []
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: big_coin_pack
+      localId:
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      fetch: 1
+      type: 0
+      title: big coin pack
+      description: 6000 coins!\n big saving of 33%
+      realPrice: $7.99
+      icon: {fileID: 21300000, guid: 6cfb1fdb188e1194fb01c6463cc715ba, type: 3}
+      virtualPrice: []
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: huge_coin_pack
+      localId:
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      fetch: 1
+      type: 0
+      title: huge coin pack
+      description: '12000 coins!\n huge saving of 50% '
+      realPrice: $11.99
+      icon: {fileID: 21300000, guid: 3755fa2481534024fbe5dec0d651bd43, type: 3}
+      virtualPrice: []
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: no_ads
+      localId:
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 1
+        id: no_ads_v2
+      - overridden: 0
+        id: 
+      fetch: 1
+      type: 1
+      title: remove ads
+      description: disables ads from showing up.
+      realPrice: $1.99
+      icon: {fileID: 21300000, guid: 07b80a176cc8fb24e840c795e48286ac, type: 3}
+      virtualPrice: []
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: abo_monthly
+      localId:
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      fetch: 1
+      type: 2
+      title: monthly subscription
+      description: monthly subscription for awesome features.
+      realPrice: $0.99
+      icon: {fileID: 21300000, guid: b4acb9e5975427d4581256e5c20544ed, type: 3}
+      virtualPrice: []
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: restore
+      localId:
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      fetch: 0
+      type: 0
+      title: restore
+      description: restore purchases
+      realPrice: X
+      icon: {fileID: 21300000, guid: e165572b11ad6214a9cf46afd0eaa1fd, type: 3}
+      virtualPrice: []
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+  currency:
+  - name: coins
+    amount: 2000
+  IGCs:
+  - id: 1386019334.20801503
+    name: Items
+    items:
+    - id: bullets
+      localId: []
+      fetch: 0
+      type: 3
+      title: bullets
+      description: a pack of ammunition. consumable.
+      realPrice: 
+      icon: {fileID: 21300000, guid: f79e7b766efd7e647a48a4d2501f68e9, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 250
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: health
+      localId: []
+      fetch: 0
+      type: 3
+      title: health
+      description: a pack of first aid kits. consumable.
+      realPrice: 
+      icon: {fileID: 21300000, guid: b88e60833990a5e4f9c34811f5ce3ad3, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 250
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: energy
+      localId: []
+      fetch: 0
+      type: 3
+      title: energy
+      description: a charge of energy. consumable.
+      realPrice: 
+      icon: {fileID: 21300000, guid: dadaaa9430246e24b8ab868f33e59df4, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 400
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: speed
+      localId: []
+      fetch: 0
+      type: 4
+      title: speed
+      description: gain a speed boost at start.
+      realPrice: 
+      icon: {fileID: 21300000, guid: 6f3ee196296da2345aafec723f21c754, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 500
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: speed_1
+      platformFoldout: 0
+    - id: bonus
+      localId: []
+      fetch: 0
+      type: 4
+      title: bonus
+      description: unlocks a bonus level. non-consumable.
+      realPrice: 
+      icon: {fileID: 21300000, guid: b0bc4d658e4fd2c43b04161e29a3735b, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 2000
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+  - id: 1386019334.2080160
+    name: Armory
+    items:
+    - id: pistol
+      localId: []
+      fetch: 0
+      type: 4
+      title: pistol
+      description: battle tested standard.
+      realPrice: 
+      icon: {fileID: 21300000, guid: c359c83e78b9af74190863b19f54af41, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 0
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: uzi
+      localId: []
+      fetch: 0
+      type: 4
+      title: uzi
+      description: handy, rapid fire.
+      realPrice: 
+      icon: {fileID: 21300000, guid: 5b99290955e7a1649b33bf54d889f10c, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 500
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: ak47
+      localId: []
+      fetch: 0
+      type: 4
+      title: ak47
+      description: robust, gas- operated rifle.
+      realPrice: 
+      icon: {fileID: 21300000, guid: ef1be56422fc17442bdecdb1f9a65e20, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 1250
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: m4
+      localId: []
+      fetch: 0
+      type: 4
+      title: m4
+      description: elegant, more precise rifle.
+      realPrice: 
+      icon: {fileID: 21300000, guid: 4aa7ec9fd3cc7ff439a4d99cd812272d, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 1500
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+  - id: 1386019334.20801925
+    name: Custom
+    items:
+    - id: hat
+      localId: []
+      fetch: 0
+      type: 4
+      title: hat
+      description: protects mostly from the sun.
+      realPrice: 
+      icon: {fileID: 21300000, guid: 56bebea273381ad4d8bbd417791dc4de, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 650
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: backpack
+      localId: []
+      fetch: 0
+      type: 4
+      title: backpack
+      description: a lot of room for army gear.
+      realPrice: 
+      icon: {fileID: 21300000, guid: c15599ff72e1be643906cc653bfa5878, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 550
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: belt
+      localId: []
+      fetch: 0
+      type: 4
+      title: ammo belt
+      description: carry ammo on your belt.
+      realPrice: 
+      icon: {fileID: 21300000, guid: 6481ae68eade16e4cad66a4f45762d27, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 450
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+  - id: 1388365213.37915255
+    name: Locked
+    items:
+    - id: jetpack
+      localId: []
+      fetch: 0
+      type: 4
+      title: jetpack
+      description: why walk when you can fly.
+      realPrice: 
+      icon: {fileID: 21300000, guid: 6d96c1c47da974663975780c567826a0, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 650
+      req:
+        entry: level
+        target: 1
+        labelText: unlock on level 1
+        nextId: 
+      platformFoldout: 0
+    - id: booster
+      localId: []
+      fetch: 0
+      type: 4
+      title: booster
+      description: doubles the experience earned.
+      realPrice: 
+      icon: {fileID: 21300000, guid: f3067de0cda0e4fe1a387dc3fa4d0b7d, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 950
+      req:
+        entry: level
+        target: 2
+        labelText: unlock on level 2
+        nextId: 
+      platformFoldout: 0
+  - id: 1422410122.93164300
+    name: Upgrades
+    items:
+    - id: speed_1
+      localId: []
+      fetch: 0
+      type: 4
+      title: speed 1
+      description: 'gain a speed boost at start. next upgrade: +10%'
+      realPrice: 
+      icon: {fileID: 21300000, guid: 61f73df092bfad94f8aed638786c1265, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 50
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: speed_2
+      platformFoldout: 0
+    - id: speed_2
+      localId: []
+      fetch: 0
+      type: 4
+      title: speed 2
+      description: 'gain a speed boost at start. next upgrade: +20%'
+      realPrice: 
+      icon: {fileID: 21300000, guid: 2bf9ac96244336041ab6d976b0249ba0, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 100
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: speed_3
+      platformFoldout: 0
+    - id: speed_3
+      localId: []
+      fetch: 0
+      type: 4
+      title: speed 3
+      description: 'gain a speed boost at start. next upgrade: +30%'
+      realPrice: 
+      icon: {fileID: 21300000, guid: dc09299bb071725478451b761006780a, type: 3}
+      virtualPrice:
+      - name: coins
+        amount: 150
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede593cb3d7afa745b31541dc1b842f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  encrypt: 0
+  obfuscKey: 
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a3624475fe7d74292ab7640dc0ba31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
