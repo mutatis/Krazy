@@ -17,7 +17,7 @@ public class Block : MonoBehaviour
     {
         var cpm = GetComponent<BlockMovement>();
         cpm.StartCoroutine(cpm.GoToTarget(target.transform, useNoise));
-        target.GetComponent<BlockSquare>().ok = false;
+        //target.GetComponent<BlockSquare>().ok = false;
     }
 
 }

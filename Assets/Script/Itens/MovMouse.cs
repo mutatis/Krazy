@@ -80,6 +80,7 @@ public class MovMouse : MonoBehaviour
     {
 		Vector2 pos = new Vector2();
         var quadradoSelecionadoInicial = quadradoSelecionado;
+        quadradoSelecionadoInicial.SendMessage("LockBlock", gameObject);
         while (verifica)
         {
 			pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
@@ -119,7 +120,6 @@ public class MovMouse : MonoBehaviour
 			{
 	            squaresUnderBlock.Add(collision.gameObject);
                 collision.gameObject.SendMessage("OnHover");
-	            //CheckSelectedSquare();
 			}
 		}
 	}
@@ -132,7 +132,6 @@ public class MovMouse : MonoBehaviour
 			{
 	            squaresUnderBlock.Remove(collision.gameObject);
                 collision.gameObject.SendMessage("OnExit");
-	            //collision.gameObject.SendMessage("OnRemove");
 			}
 		}
 	}
@@ -155,8 +154,6 @@ public class MovMouse : MonoBehaviour
 			{
 	            squaresUnderBlock.Add(collision.gameObject);
                 collision.gameObject.SendMessage("OnHover");
-	            //collision.gameObject.name = "Sprite" + Time.time.ToString();
-	            //CheckSelectedSquare();
 			}
 		}
 	}

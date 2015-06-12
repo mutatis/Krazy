@@ -20,7 +20,7 @@ public class Manager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		Time.timeScale = 0;
+		Time.timeScale = 1;
 		grid = GameObject.FindGameObjectsWithTag("Grid");
 		StartCoroutine("GO");
 	}

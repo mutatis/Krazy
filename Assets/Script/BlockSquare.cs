@@ -9,8 +9,9 @@ public class BlockSquare : MonoBehaviour
 	public SpriteRenderer sprite;
     bool selectColorOK = true;
     Color cor;
-	public bool ok = true;
+    public GameObject lockedBlock;
     public int blockStack = 0;
+
 
     // Use this for initialization
     void Start()
@@ -21,16 +22,30 @@ public class BlockSquare : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (blockStack < 0 || ok)
-        {
-            blockStack = 0;
-        }*/
-
         if (!Input.GetMouseButton(0) && selectColorOK)
         {
             sprite.color = cor;
             selectColorOK = false;
         }
+    }
+
+    public bool LockBlock(GameObject block)
+    {
+        if (lockedBlock != null || blockStack > 0) 
+        {
+            return false;
+        }
+        else
+            lockedBlock = block;
+        return true;
+    }
+
+    public void UnlockBlock(GameObject key)
+    {
+        if (lockedBlock == key)
+            lockedBlock = null;
+        else
+            print("ERROOOUUU");
     }
 
 	public void OnSelect()
@@ -60,69 +75,4 @@ public class BlockSquare : MonoBehaviour
     {
         return blockStack == 1;
     }
-
-	/*void OnCollisionEnter2D(Collision2D collision)
-	{
-		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
-		{
-            print("++");
-			blockStack ++;
-			ok = false;
-		}
-	}
-
-	void OnCollisionStay2D(Collision2D collision)
-	{
-		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
-		{
-			ok = false;
-		}
-		else
-		{
-			ok = true;
-		}
-	}
-	
-	void OnCollisionExit2D(Collision2D collision)
-	{
-		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
-		{
-            print("--");
-			blockStack --;
-            if (blockStack == 0)
-                ok = true;
-		}
-	}
-
-	void OnTriggerEnter2D(Collider2D collision)
-	{
-		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
-		{
-            print("++");
-			blockStack ++;
-			ok = false;
-		}
-	}
-	
-	void OnTriggerStay2D(Collider2D collision)
-	{
-		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
-		{
-            ok = false;
-		}
-		else
-		{
-			ok = true;
-		}
-	}
-	
-	void OnTriggerExit2D(Collider2D collision)
-	{
-		if(tagsBlock.Any(tag => tag == collision.gameObject.tag))
-		{
-			blockStack --;
-            if(blockStack == 0)
-			    ok = true;
-		}
-	}*/
 }
