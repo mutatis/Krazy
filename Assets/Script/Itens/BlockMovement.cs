@@ -36,8 +36,11 @@ public class BlockMovement : MonoBehaviour {
         }
        
         transform.position = target.position; //ensure deltaTime errors are corrected
-        target.SendMessage("UnlockBlock", gameObject);
-
         mouseInteraction.pode = true;
+        target.SendMessage("UnlockBlock", gameObject);
+        yield return new WaitForFixedUpdate();
+        if (bloco.blockStack == 0)
+            bloco.blockStack++;
+        
     }
 }
