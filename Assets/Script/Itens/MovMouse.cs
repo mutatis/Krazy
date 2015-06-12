@@ -30,7 +30,6 @@ public class MovMouse : MonoBehaviour
     public List<GameObject> squaresUnderBlock;
 	public void Kill()
 	{
-        box.enabled = false;
         quadradoSelecionado.SendMessage("OnExit");
         pode = false;
         print("Killed, stack: " + quadradoSelecionado.GetComponent<BlockSquare>().blockStack.ToString());
