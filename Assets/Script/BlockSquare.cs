@@ -11,6 +11,7 @@ public class BlockSquare : MonoBehaviour
     Color cor;
     public GameObject lockedBlock;
     public int blockStack = 0;
+    //public List<GameObject> blocksOverSquare;
 
 
     // Use this for initialization
@@ -65,13 +66,66 @@ public class BlockSquare : MonoBehaviour
 
     public void OnExit() 
     {
+        //print(transform.parent.name);
         if(blockStack > 0)
             blockStack--;
+
     }
 
 
     public bool CanLand()
     {
-        return blockStack == 1;
+        print("printoso");
+        return blockStack == 1 && lockedBlock == null;
     }
+
+    	/*void OnCollisionEnter2D(Collision2D collision)
+	{
+		if(tagsBlock.Any(t => t == collision.gameObject.tag))
+		{
+			if(pode)
+			{
+	            blocksOverSquare.Add(collision.gameObject);
+                collision.gameObject.SendMessage("OnHover");
+			}
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D collision)
+	{
+		if(tagsBlock.Any(t => t == collision.gameObject.tag))
+		{
+	            blocksOverSquare.Remove(collision.gameObject);
+		}
+	}
+
+    void OnTriggerStay2D(Collider2D collider)
+    {
+
+        if (blocksOverSquare.Count == 0 && tagsBlock.Any(t => t == collider.gameObject.tag))
+        {
+            blocksOverSquare.Add(collider.gameObject);
+            collider.gameObject.SendMessage("OnHover");
+        }
+    }
+
+	void OnTriggerEnter2D(Collider2D collision)
+	{
+		if(tagsBlock.Any(t => t == collision.gameObject.tag))
+		{
+	            blocksOverSquare.Add(collision.gameObject);
+                collision.gameObject.SendMessage("OnHover");
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D collision)
+	{
+		if(tagsBlock.Any(t => t == collision.gameObject.tag))
+		{
+	            blocksOverSquare.Remove(collision.gameObject);
+	            collision.gameObject.SendMessage("OnExit");
+		}
+	}
+
+}*/
 }

@@ -28,7 +28,6 @@ public class MovMouse : MonoBehaviour
 	//bool anim;
 
     public List<GameObject> squaresUnderBlock;
-
 	public void Kill()
 	{
         box.enabled = false;
@@ -91,7 +90,8 @@ public class MovMouse : MonoBehaviour
         }
 		verifica = true;
 		//se chegamos até aqui, é porque o bloco não pode ser soltado na posição desejada.
-		quadradoSelecionado.SendMessage("OnExit");
+        if(quadradoSelecionado)
+            quadradoSelecionado.SendMessage("OnExit");
         GetComponent<Block>().SetTarget(quadradoSelecionadoInicial);
     } 
 
@@ -109,8 +109,13 @@ public class MovMouse : MonoBehaviour
             quadradoSelecionado.SendMessage("OnDeselect");
         }
         quadradoSelecionado = candidato;
-        quadradoSelecionado.SendMessage("OnSelect");
-        return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
+        if (quadradoSelecionado)
+        {
+            quadradoSelecionado.SendMessage("OnSelect");
+            return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
+        }
+        else
+            return false;
     }
 
 	void OnCollisionEnter2D(Collision2D collision)
