@@ -44,8 +44,6 @@ public class BlockSquare : MonoBehaviour
     {
         if (lockedBlock == key)
             lockedBlock = null;
-        else
-            print("ERROOOUUU");
     }
 
 	public void OnSelect()
@@ -67,7 +65,8 @@ public class BlockSquare : MonoBehaviour
 
     public void OnExit() 
     {
-        blockStack--;
+        if(blockStack > 0)
+            blockStack--;
     }
 
 

@@ -282,7 +282,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 22152037}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &22152036
 BoxCollider2D:
@@ -868,7 +868,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 65367039}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &65367038
 BoxCollider2D:
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 82782988}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &82782987
 BoxCollider2D:
@@ -1473,7 +1473,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 112579809}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &112579808
 BoxCollider2D:
@@ -1558,7 +1558,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 125614275}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &125614274
 BoxCollider2D:
@@ -1803,7 +1803,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 137882959}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &137882958
 BoxCollider2D:
@@ -1888,7 +1888,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 158510825}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &158510824
 BoxCollider2D:
@@ -2157,7 +2157,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 182931109}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &182931108
 BoxCollider2D:
@@ -2473,7 +2473,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 200940538}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &200940537
 BoxCollider2D:
@@ -3109,7 +3109,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 253577735}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &253577734
 BoxCollider2D:
@@ -3444,7 +3444,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 280008609}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &280008608
 BoxCollider2D:
@@ -3529,7 +3529,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 290649969}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &290649968
 BoxCollider2D:
@@ -3888,7 +3888,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 342434868}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &342434867
 BoxCollider2D:
@@ -3973,7 +3973,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 345605550}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &345605549
 BoxCollider2D:
@@ -4058,7 +4058,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 353154314}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &353154313
 BoxCollider2D:
@@ -4143,7 +4143,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 359072339}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &359072338
 BoxCollider2D:
@@ -4228,7 +4228,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 363865802}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &363865801
 BoxCollider2D:
@@ -4792,7 +4792,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 409376504}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &409376503
 BoxCollider2D:
@@ -4877,7 +4877,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 413671429}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &413671428
 BoxCollider2D:
@@ -5234,7 +5234,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 438475195}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &438475194
 BoxCollider2D:
@@ -5780,7 +5780,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 467716196}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &467716195
 BoxCollider2D:
@@ -5911,7 +5911,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 472721949}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &472721948
 BoxCollider2D:
@@ -5996,7 +5996,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 474722979}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &474722978
 BoxCollider2D:
@@ -6127,7 +6127,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 478851594}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &478851593
 BoxCollider2D:
@@ -6368,7 +6368,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 489722762}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &489722761
 BoxCollider2D:
@@ -6545,7 +6545,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 513863429}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &513863428
 BoxCollider2D:
@@ -6958,7 +6958,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 546295835}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &546295834
 BoxCollider2D:
@@ -7089,7 +7089,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 562647937}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &562647936
 BoxCollider2D:
@@ -7382,7 +7382,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 605682741}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &605682740
 BoxCollider2D:
@@ -7467,7 +7467,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 609327110}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &609327109
 BoxCollider2D:
@@ -7552,7 +7552,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 611352433}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &611352432
 BoxCollider2D:
@@ -7637,7 +7637,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 611473468}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &611473467
 BoxCollider2D:
@@ -7814,7 +7814,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 624602747}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &624602746
 BoxCollider2D:
@@ -7899,7 +7899,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 628806284}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &628806283
 BoxCollider2D:
@@ -7984,7 +7984,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 632666348}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &632666347
 BoxCollider2D:
@@ -8069,7 +8069,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 645925418}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &645925417
 BoxCollider2D:
@@ -8382,7 +8382,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 713055768}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &713055767
 BoxCollider2D:
@@ -8600,7 +8600,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 733457850}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &733457849
 BoxCollider2D:
@@ -8777,7 +8777,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 751657926}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &751657925
 BoxCollider2D:
@@ -8976,7 +8976,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 771686100}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &771686099
 BoxCollider2D:
@@ -9129,7 +9129,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 778071590}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &778071589
 BoxCollider2D:
@@ -9605,7 +9605,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 810159448}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &810159447
 BoxCollider2D:
@@ -9690,7 +9690,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 833008606}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &833008605
 BoxCollider2D:
@@ -9889,7 +9889,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 840780270}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &840780269
 BoxCollider2D:
@@ -10042,7 +10042,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 859079948}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &859079947
 BoxCollider2D:
@@ -10173,7 +10173,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 869865822}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &869865821
 BoxCollider2D:
@@ -10258,7 +10258,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 872383249}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &872383248
 BoxCollider2D:
@@ -10478,7 +10478,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 888012344}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &888012343
 BoxCollider2D:
@@ -10955,7 +10955,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 911678664}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &911678663
 BoxCollider2D:
@@ -11040,7 +11040,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 920604028}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &920604027
 BoxCollider2D:
@@ -11171,7 +11171,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 930180641}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &930180640
 BoxCollider2D:
@@ -11324,7 +11324,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 936110541}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &936110540
 BoxCollider2D:
@@ -11409,7 +11409,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 939529301}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &939529300
 BoxCollider2D:
@@ -11846,7 +11846,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 954167709}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &954167708
 BoxCollider2D:
@@ -12045,7 +12045,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 963374458}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &963374457
 BoxCollider2D:
@@ -12827,7 +12827,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1032527514}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1032527513
 BoxCollider2D:
@@ -13072,7 +13072,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1039470598}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1039470597
 BoxCollider2D:
@@ -13408,7 +13408,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1078938115}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1078938114
 BoxCollider2D:
@@ -13493,7 +13493,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1085119323}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1085119322
 BoxCollider2D:
@@ -13651,7 +13651,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1107390176}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1107390175
 BoxCollider2D:
@@ -13736,7 +13736,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1114753060}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1114753059
 BoxCollider2D:
@@ -13821,7 +13821,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1124457097}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1124457096
 BoxCollider2D:
@@ -13972,7 +13972,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1137796751}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1137796750
 BoxCollider2D:
@@ -14107,7 +14107,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1164562486}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1164562485
 BoxCollider2D:
@@ -14192,7 +14192,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1176315601}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1176315600
 BoxCollider2D:
@@ -14597,7 +14597,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1214118310}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1214118309
 BoxCollider2D:
@@ -15129,7 +15129,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1247314469}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1247314468
 BoxCollider2D:
@@ -15282,7 +15282,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1252814953}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1252814952
 BoxCollider2D:
@@ -15367,7 +15367,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1271130469}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1271130468
 BoxCollider2D:
@@ -15520,7 +15520,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1315486153}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1315486152
 BoxCollider2D:
@@ -16200,7 +16200,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1378445472}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1378445471
 BoxCollider2D:
@@ -16421,7 +16421,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1416124529}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1416124528
 BoxCollider2D:
@@ -16655,7 +16655,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1419994833}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1419994832
 BoxCollider2D:
@@ -16905,7 +16905,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1453970712}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1453970711
 BoxCollider2D:
@@ -16990,7 +16990,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1457738288}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1457738287
 BoxCollider2D:
@@ -17075,7 +17075,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1489840091}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1489840090
 BoxCollider2D:
@@ -17160,7 +17160,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1491266357}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1491266356
 BoxCollider2D:
@@ -17659,7 +17659,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1544171384}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1544171383
 BoxCollider2D:
@@ -17812,7 +17812,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1550009301}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1550009300
 BoxCollider2D:
@@ -18011,7 +18011,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1579746769}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1579746768
 BoxCollider2D:
@@ -18096,7 +18096,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1594935603}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1594935602
 BoxCollider2D:
@@ -18572,7 +18572,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1661866647}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1661866646
 BoxCollider2D:
@@ -18703,7 +18703,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1672341494}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1672341493
 BoxCollider2D:
@@ -18788,7 +18788,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1676295971}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1676295970
 BoxCollider2D:
@@ -19170,7 +19170,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1711770229}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1711770228
 BoxCollider2D:
@@ -19255,7 +19255,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1711827273}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1711827272
 BoxCollider2D:
@@ -19340,7 +19340,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1714737056}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1714737055
 BoxCollider2D:
@@ -19671,7 +19671,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1732256318}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1732256317
 BoxCollider2D:
@@ -19802,7 +19802,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1754504554}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1754504553
 BoxCollider2D:
@@ -19955,7 +19955,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1776054224}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1776054223
 BoxCollider2D:
@@ -20040,7 +20040,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1777623810}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1777623809
 BoxCollider2D:
@@ -20423,7 +20423,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1818381835}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1818381834
 BoxCollider2D:
@@ -20554,7 +20554,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1829046019}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1829046018
 BoxCollider2D:
@@ -20685,7 +20685,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1830676144}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1830676143
 BoxCollider2D:
@@ -20770,7 +20770,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1837748037}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1837748036
 BoxCollider2D:
@@ -21339,7 +21339,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1920550962}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1920550961
 BoxCollider2D:
@@ -21492,7 +21492,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1922000718}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1922000717
 BoxCollider2D:
@@ -21577,7 +21577,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1931491424}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1931491423
 BoxCollider2D:
@@ -22059,7 +22059,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 1966986055}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &1966986054
 BoxCollider2D:
@@ -22747,7 +22747,7 @@ MonoBehaviour:
   - Poseidon
   - Zeus
   sprite: {fileID: 2048250911}
-  ok: 1
+  lockedBlock: {fileID: 0}
   blockStack: 0
 --- !u!61 &2048250910
 BoxCollider2D:
