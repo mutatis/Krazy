@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedAppIndex: 0
   appIds:
-  - 30
+  - 564151423717342
   appLabels:
-  - 417070204e616d65
+  - Purrtheon
   cookie: 1
   logging: 1
   status: 1

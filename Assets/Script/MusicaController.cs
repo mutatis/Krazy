@@ -4,13 +4,18 @@ using System.Collections;
 public class MusicaController : MonoBehaviour 
 {
 
-	public AudioSource audio;
+	AudioSource audio;
 
 	void Awake()
 	{
 		DontDestroyOnLoad (gameObject);
 	}
-	
+
+	void Start()
+	{
+		audio = gameObject.GetComponent<AudioSource> ();
+	}
+
 	// Update is called once per frame
 	void Update () 
 	{
