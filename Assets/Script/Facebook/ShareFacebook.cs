@@ -1,36 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class InviteFriends : MonoBehaviour 
-{
+public class ShareFacebook : MonoBehaviour {
 
 	// Use this for initialization
-	void Start ()
-	{
+	void Start () {
 	
 	}
 	
 	// Update is called once per frame
-	void Update () 
-	{
+	void Update () {
 	
 	}
 
-	public void Invite()
-	{
-		if(FB.IsLoggedIn)
-		{
-			FB.AppRequest(
-				message: "Come play this great game!", 
-				callback: LogCallback
-				);
-		}
-		else
-		{
-			FB.Login("user_about_me, user_relationships, user_birthday, user_location", FBLoginCallback);
-		}
-	}
-	
 	public void Share()
 	{
 		if(FB.IsLoggedIn)
@@ -54,10 +36,5 @@ public class InviteFriends : MonoBehaviour
 		} else {
 			Debug.Log ("FBLoginCallback: User canceled login");
 		}
-	}
-
-	void LogCallback(FBResult response) 
-	{
-		Debug.Log(response.Text);
 	}
 }

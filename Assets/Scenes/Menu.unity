@@ -86,8 +86,9 @@ GameObject:
   - 222: {fileID: 124201068}
   - 114: {fileID: 124201067}
   - 114: {fileID: 124201066}
+  - 114: {fileID: 124201070}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Share
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,7 +133,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 383804876}
+      - m_Target: {fileID: 124201070}
         m_MethodName: Share
         m_Mode: 1
         m_Arguments:
@@ -191,6 +192,17 @@ RectTransform:
   m_AnchoredPosition: {x: -260, y: 88}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &124201070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 124201065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3b6d49c25df784ba40ede8db389dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &127836695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,7 +1548,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Share
 --- !u!222 &1215883479
 CanvasRenderer:
   m_ObjectHideFlags: 0

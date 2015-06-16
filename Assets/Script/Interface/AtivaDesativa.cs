@@ -21,10 +21,12 @@ public class AtivaDesativa : MonoBehaviour
 		if(obj.active)
 		{
 			obj.SetActive(false);
+			Time.timeScale = 1;
 		}
 		else
 		{
 			obj.SetActive(true);
+			Time.timeScale = 0;
 		}
 	}
 }
