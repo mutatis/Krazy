@@ -38,7 +38,7 @@ public class BlockMovement : MonoBehaviour {
         transform.position = target.position; //ensure deltaTime errors are corrected
         blockCosmetic.transform.localPosition = Vector3.zero;
         mouseInteraction.pode = true;
-        yield return new WaitForFixedUpdate();
+        mouseInteraction.squaresUnderBlock.Add(target.gameObject);
         target.SendMessage("UnlockBlock", gameObject);
         //print(target.GetInstanceID() + "+" + Time.time.ToString());
         /*yield return new WaitForFixedUpdate();
