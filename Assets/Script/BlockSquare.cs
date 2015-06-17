@@ -9,7 +9,7 @@ public class BlockSquare : MonoBehaviour
 	public SpriteRenderer sprite;
     bool selectColorOK = true;
     Color cor;
-    public GameObject lockedBlock;
+    public GameObject lockedBlock = null;
     public int blockStack = 0;
 
 
