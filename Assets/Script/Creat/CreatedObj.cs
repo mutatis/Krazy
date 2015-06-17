@@ -68,8 +68,10 @@ public class CreatedObj : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             } while (pode < 0);
 
+            target.SendMessage("OnHover");
             obj.transform.parent = this.gameObject.transform;
             obj.GetComponent<Block>().SetTarget(target, true);
+            
         }
         pode = 0;
         yield return new WaitForSeconds(tempoWave);
