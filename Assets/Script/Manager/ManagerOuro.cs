@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-//using SIS;
+using SIS;
 
 public class ManagerOuro : MonoBehaviour
 {
@@ -17,6 +17,6 @@ public class ManagerOuro : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		//text.text = "Ouro: " + DBManager.GetFunds("coins");
+		text.text = "Ouro: " + DBManager.GetFunds("coins");
 	}
 }

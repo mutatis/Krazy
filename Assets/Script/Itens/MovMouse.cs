@@ -8,8 +8,6 @@ public class MovMouse : MonoBehaviour
 	public GameObject tiro;
     public GameObject quadradoSelecionado;
 
-	public CircleCollider2D box;
-
 	public int quant = 3;
 
 	public bool pode = false;
