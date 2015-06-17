@@ -3,7 +3,6 @@ using System.Collections;
 
 public class InviteFriends : MonoBehaviour 
 {
-
 	// Use this for initialization
 	void Start ()
 	{
