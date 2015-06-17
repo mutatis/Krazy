@@ -37,7 +37,7 @@ public class BlockSquare : MonoBehaviour
 		}
         else if (lockedBlock != null || blockStack > 0) 
         {
-			print(block.tag);
+			//print(block.tag);
             return false;
         }
         else
@@ -70,6 +70,7 @@ public class BlockSquare : MonoBehaviour
 
     public void OnExit() 
     {
+        //print(GetInstanceID() + Time.time.ToString());
         if(blockStack > 0)
             blockStack--;
     }

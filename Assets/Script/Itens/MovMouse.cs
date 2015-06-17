@@ -8,7 +8,7 @@ public class MovMouse : MonoBehaviour
 	public GameObject tiro;
     public GameObject quadradoSelecionado;
 
-	public CircleCollider2D box;
+	//public CircleCollider2D box;
 
 	public int quant = 3;
 
@@ -122,7 +122,7 @@ public class MovMouse : MonoBehaviour
         return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
     }
 
-	void OnCollisionEnter2D(Collision2D collision)
+	/*void OnCollisionEnter2D(Collision2D collision)
 	{
 		if(collision.gameObject.tag == "Grid")
 		{
@@ -144,9 +144,9 @@ public class MovMouse : MonoBehaviour
                 collision.gameObject.SendMessage("OnExit");
 			}
 		}
-	}
+	}*/
 
-    void OnTriggerStay2D(Collider2D collider)
+    /*void OnTriggerStay2D(Collider2D collider)
     {
 
         if (squaresUnderBlock.Count == 0 && collider.tag == "Grid" && pode)
@@ -154,7 +154,7 @@ public class MovMouse : MonoBehaviour
             squaresUnderBlock.Add(collider.gameObject);
             collider.gameObject.SendMessage("OnHover");
         }
-    }
+    }*/
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
@@ -172,9 +172,8 @@ public class MovMouse : MonoBehaviour
 	{
 		if(collision.gameObject.tag == "Grid")
 		{
-			if(pode)
+			if(pode && squaresUnderBlock.Remove(collision.gameObject))
 			{
-	            squaresUnderBlock.Remove(collision.gameObject);
 	            collision.gameObject.SendMessage("OnExit");
 			}
 		}
