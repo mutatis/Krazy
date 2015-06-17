@@ -2182,6 +2182,29 @@ MonoBehaviour:
         labelText: 
         nextId: 
       platformFoldout: 0
+    - id: PowerUp1
+      localId:
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      fetch: 0
+      type: 0
+      title: 
+      description: 
+      realPrice: 
+      icon: {fileID: 0}
+      virtualPrice: []
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
   currency:
   - name: coins
     amount: 0
