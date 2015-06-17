@@ -15,17 +15,13 @@ public class MovMouse : MonoBehaviour
 
 	public AudioClip[] soundFX;
 
-	//float dist;
-
 	GameObject quadradoTemp;
 	
 	Vector3 direction2;
 	Vector3 posInicial;	
-	//Vector3 velocity = Vector3.zero;
 
    	bool canLand = false; 
   	bool verifica = true;
-	//bool anim;
 
     public List<GameObject> squaresUnderBlock;
 
@@ -105,7 +101,6 @@ public class MovMouse : MonoBehaviour
 	void Segue()
 	{		
 		AudioSource.PlayClipAtPoint(soundFX[2], transform.position, 0.3f);
-        //transform.position = posInicial;
 	}
 
  	public bool CheckSelectedSquare()
@@ -119,40 +114,6 @@ public class MovMouse : MonoBehaviour
         quadradoSelecionado.SendMessage("OnSelect");
         return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
     }
-
-	/*void OnCollisionEnter2D(Collision2D collision)
-	{
-		if(collision.gameObject.tag == "Grid")
-		{
-			if(pode)
-			{
-	            squaresUnderBlock.Add(collision.gameObject);
-                collision.gameObject.SendMessage("OnHover");
-			}
-		}
-	}
-
-	void OnCollisionExit2D(Collision2D collision)
-	{
-		if(collision.gameObject.tag == "Grid")
-		{
-			if(pode)
-			{
-	            squaresUnderBlock.Remove(collision.gameObject);
-                collision.gameObject.SendMessage("OnExit");
-			}
-		}
-	}*/
-
-    /*void OnTriggerStay2D(Collider2D collider)
-    {
-
-        if (squaresUnderBlock.Count == 0 && collider.tag == "Grid" && pode)
-        {
-            squaresUnderBlock.Add(collider.gameObject);
-            collider.gameObject.SendMessage("OnHover");
-        }
-    }*/
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{

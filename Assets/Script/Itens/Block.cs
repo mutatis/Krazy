@@ -4,14 +4,6 @@ using System.Collections;
 public class Block : MonoBehaviour
 {
     public AudioClip spawnSound;
-    void Start()
-    {
-
-    }
-    void Update()
-    {
-
-    }
 
     public void SetTarget(GameObject target, bool useNoise = false)
     {

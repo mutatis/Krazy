@@ -14,8 +14,6 @@ public class BlockMovement : MonoBehaviour {
 
         mouseInteraction.quadradoSelecionado = target.gameObject;
         var bloco = mouseInteraction.quadradoSelecionado.GetComponent<BlockSquare>();
-        //bloco.ok = false;
-
         var rnd = new System.Random();
         var dist = Vector3.Distance(target.transform.position, transform.position);
         var distInicial = dist;
@@ -40,10 +38,6 @@ public class BlockMovement : MonoBehaviour {
         mouseInteraction.pode = true;
         mouseInteraction.squaresUnderBlock.Add(target.gameObject);
         target.SendMessage("UnlockBlock", gameObject);
-        //print(target.GetInstanceID() + "+" + Time.time.ToString());
-        /*yield return new WaitForFixedUpdate();
-        if (bloco.blockStack == 0)
-            bloco.blockStack++;*/
         
     }
 }
