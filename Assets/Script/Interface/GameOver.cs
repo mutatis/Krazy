@@ -13,6 +13,10 @@ public class GameOver : MonoBehaviour {
     {
         sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>();
         qtdEstrelas = sceneMaster.GetStarCount();
+		if(qtdEstrelas > PlayerPrefs.GetInt(PlayerPrefs.GetString("Loading")))
+		{
+			PlayerPrefs.SetInt(PlayerPrefs.GetString("Loading"), qtdEstrelas);
+		}
         StartCoroutine(MostrarEstrelas());
     }
 
