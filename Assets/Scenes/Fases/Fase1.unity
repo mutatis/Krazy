@@ -7338,7 +7338,6 @@ GameObject:
   - 124: {fileID: 542492466}
   - 81: {fileID: 542492465}
   - 114: {fileID: 542492472}
-  - 114: {fileID: 542492470}
   - 114: {fileID: 542492471}
   m_Layer: 0
   m_Name: Camera
@@ -7417,25 +7416,6 @@ Transform:
   - {fileID: 1156745391}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &542492470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11453854, guid: 2007bfc6eb9ffaa4799d44c9b91325b8,
-    type: 2}
-  m_PrefabInternal: {fileID: 595120089}
-  m_GameObject: {fileID: 542492464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30d2dfb96bce29e4393789cdcbe5a03d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grid: []
-  Afrodite: []
-  Ares: []
-  Zeus: []
-  Poseidon: []
-  End: {fileID: 1133862136}
-  tempo: 9999999
 --- !u!114 &542492471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7449,8 +7429,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   metaPontuacao: 0
   tempoLimiteFase: 0
-  End: {fileID: 0}
-  tempo: 60
+  End: {fileID: 1133862136}
+  tempo: 99999
 --- !u!114 &542492472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8157,7 +8137,8 @@ Prefab:
       propertyPath: End
       value: 
       objectReference: {fileID: 1133862136}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11453854, guid: 2007bfc6eb9ffaa4799d44c9b91325b8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2007bfc6eb9ffaa4799d44c9b91325b8, type: 2}
   m_RootGameObject: {fileID: 542492464}
   m_IsPrefabParent: 0

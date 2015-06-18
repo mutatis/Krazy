@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: e704d667a06e33a419b59618d98408a0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bcd7b4360ae80c64aa4c06a84a75ac6f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -132,7 +132,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiro: {fileID: 160884, guid: 414b9305c9e13f747a0b7a2e5e30b072, type: 2}
   quadradoSelecionado: {fileID: 0}
-  box: {fileID: 5816910}
   quant: 3
   pode: 0
   playingAnimation: 0

@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 8206c11d7e66d4c479df715694e0ea1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9eedb230eeeb7494bb372a769fe9f864, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -130,7 +130,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiro: {fileID: 176740, guid: 7c9d835e133cca64a877d7f7f4e230c0, type: 2}
   quadradoSelecionado: {fileID: 0}
-  box: {fileID: 5817550}
   quant: 3
   pode: 0
   playingAnimation: 0
@@ -237,7 +236,6 @@ MonoBehaviour:
   noisePeriod: 15
   noiseAmplitude: 8
   timeArrival: .5
-  testTarget: {fileID: 0}
 --- !u!222 &22217550
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -252,14 +250,14 @@ RectTransform:
   m_GameObject: {fileID: 117548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .908494711, y: .908493578, z: 42.5110512}
+  m_LocalScale: {x: .159511372, y: .159511164, z: 7.46399117}
   m_Children: []
   m_Father: {fileID: 22417550}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 50, y: 50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 595, y: 565}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22417550
 RectTransform:
@@ -276,7 +274,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: .970000029, y: 1.60000002}
+  m_AnchoredPosition: {x: .458999991, y: 1.27699995}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
