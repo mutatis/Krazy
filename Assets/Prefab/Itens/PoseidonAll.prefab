@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnSound: {fileID: 8300000, guid: b05f7f9c8bcb5264e8e01fe732405d5a, type: 3}
+  valorPontos: 1
 --- !u!114 &11421718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,22 +136,22 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121730}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a863aa8c04641438cf99b1a9e4d34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiro: {fileID: 121038, guid: 58fdc466b48f4e74ba14816235a7415a, type: 2}
-  quadradoSelecionado: {fileID: 0}
-  box: {fileID: 5821730}
   quant: 3
   pode: 0
   playingAnimation: 0
+  tiro: {fileID: 121038, guid: 58fdc466b48f4e74ba14816235a7415a, type: 2}
+  quadradoSelecionado: {fileID: 0}
   soundFX:
   - {fileID: 8300000, guid: 5a2d47953d825464c9894acf3f6020ea, type: 3}
   - {fileID: 8300000, guid: f2da06a2e1e23c14582d2f42c3606c66, type: 3}
   - {fileID: 8300000, guid: e1123774f7b1a0647b4dfa30b7cba4b6, type: 3}
   squaresUnderBlock: []
+  sceneMaster: {fileID: 0}
 --- !u!114 &11421724
 MonoBehaviour:
   m_ObjectHideFlags: 1

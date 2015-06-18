@@ -2,9 +2,13 @@
 using System.Collections;
 
 public class SceneMaster : MonoBehaviour {
-    public int metaPontuacao;
+    public int meta1Estrela;
+    public int meta2Estrelas;
+    public int meta3Estrelas;
     public int tempoLimiteFase;
-    public GameObject telaGameOver;
+    public GameObject telaGameOver = null;
+    private int score;
+
 
 	GameObject[] grid;
 	GameObject[] Afrodite;
@@ -12,9 +16,9 @@ public class SceneMaster : MonoBehaviour {
 	GameObject[] Zeus;
 	GameObject[] Poseidon;
 	
-	public GameObject End;
+	//public GameObject End;
 	
-	public float tempo = 60;
+	//public float tempo = 60;
 	
 	int x;
 
@@ -43,20 +47,39 @@ public class SceneMaster : MonoBehaviour {
 
         if (x >= grid.Length)
         {
-            End.SetActive(true);
+            GameOver();
         }
     }
 
 
+    public int Score { get { return score; }  }
+
 	IEnumerator GO()
 	{
-		yield return new WaitForSeconds (tempo);
+		yield return new WaitForSeconds (tempoLimiteFase);
 		GameOver();
 	}
 
+    public void AumentarPontuacao(int qtd)
+    {
+        score += qtd;
+    }
+
     void GameOver()
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         GameObject.Instantiate(telaGameOver);
+        this.enabled = false;
+    }
+
+    public int GetStarCount()
+    {
+        if (score >= meta3Estrelas)
+            return 3;
+        if (score >= meta2Estrelas)
+            return 2;
+        if (score >= meta1Estrela)
+            return 1;
+        return 0;
     }
 }

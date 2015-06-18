@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class ShareFacebook : MonoBehaviour {
-
+    public string linkCaption;
+    public string picture;
+    public string linkName;
 	// Use this for initialization
 	void Start () {
 	
@@ -15,12 +17,12 @@ public class ShareFacebook : MonoBehaviour {
 
 	public void Share()
 	{
-		if(FB.IsLoggedIn)
+		if(/*FB.IsLoggedIn*/ true)
 		{
 			FB.Feed(                                                                                                                 
-			        linkCaption: "Play Game Man",               
-			        picture: "http://static.wixstatic.com/media/b5559f_f5c06b11d0c94058bf2eeaea5b239607.png_srz_p_600_356_75_22_0.50_1.20_0.00_png_srz",                                                     
-			        linkName: "Play linkname",                                                                 
+			        linkCaption: linkCaption,               
+			        picture: picture,                                                     
+			        linkName: linkName,                                                                 
 			        link: "http://apps.facebook.com/" + FB.AppId + "/?challenge_brag=" + (FB.IsLoggedIn ? FB.UserId : "guest")       
 			        ); 
 		}

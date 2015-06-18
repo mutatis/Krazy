@@ -5,38 +5,31 @@ using System.Linq;
 
 public class MovMouse : MonoBehaviour 
 {
-	public GameObject tiro;
-    public GameObject quadradoSelecionado;
-
 	public int quant = 3;
-
-	public bool pode = false;
+    private bool mouseDown;
+    public bool pode = false;
 	public bool playingAnimation;
-
-	public AudioClip[] soundFX;
-
-	GameObject quadradoTemp;
+    bool canLand = false;
+    bool verifica = true;
 	
-	Vector3 direction2;
-	Vector3 posInicial;	
+	GameObject quadradoTemp;
 
-   	bool canLand = false; 
-  	bool verifica = true;
-
+    public GameObject tiro;
+    public GameObject quadradoSelecionado;
+    public AudioClip[] soundFX;
     public List<GameObject> squaresUnderBlock;
+    public SceneMaster sceneMaster;
+
+    void Start()
+    {
+        sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>();
+    }
 
 	public void Kill()
 	{
         quadradoSelecionado.SendMessage("OnExit");
         pode = false;
-        print("Killed, stack: " + quadradoSelecionado.GetComponent<BlockSquare>().blockStack.ToString());
-        Score.score.Ponto(1);
-        Destroy(gameObject);
-	}
-
-	public void Destroy()
-	{
-        
+        SendMessage("OnKill");
 	}
 
 	public void Down()
@@ -45,17 +38,17 @@ public class MovMouse : MonoBehaviour
         {
 			AudioSource.PlayClipAtPoint(soundFX[0], transform.position, 1);
 			StartCoroutine("MovingBlock");
-            if (PlayerPrefs.GetInt("Click") == 0)
-            {
-                PlayerPrefs.SetInt("Click", 1);
-            }
+            //evitar situações em que o evento de Up() é disparado sem o Down().
+            mouseDown = true;
         }
 	}
 
 	public void Up()
 	{
-        if (!playingAnimation && pode)
+        //Checa pelo scene master caso o bloco seja solto após o game over.
+        if (!playingAnimation && pode && mouseDown && sceneMaster.enabled)
         {
+            mouseDown = false;
             if (canLand && quadradoSelecionado != null)
             {
 				quadradoTemp.SendMessage("UnlockBlock", gameObject);
@@ -65,12 +58,11 @@ public class MovMouse : MonoBehaviour
                 GameObject tempObj = Instantiate(tiro, transform.position, transform.rotation) as GameObject;
 				tempObj.GetComponent<Lista>().quant = quant;
             }
-            else
-            {
-				quadradoSelecionado = quadradoTemp;
-                verifica = false;
-            }
-            PlayerPrefs.SetInt("Click", 0);
+        }
+        else
+        {
+            quadradoSelecionado = quadradoTemp;
+            verifica = false;
         }
 	}
 
@@ -98,11 +90,6 @@ public class MovMouse : MonoBehaviour
         GetComponent<Block>().SetTarget(quadradoTemp);
     } 
 
-	void Segue()
-	{		
-		AudioSource.PlayClipAtPoint(soundFX[2], transform.position, 0.3f);
-	}
-
  	public bool CheckSelectedSquare()
     {        
         var candidato = squaresUnderBlock.OrderBy(d => Vector3.Distance(transform.position, d.transform.position)).FirstOrDefault();
@@ -111,8 +98,13 @@ public class MovMouse : MonoBehaviour
             quadradoSelecionado.SendMessage("OnDeselect");
         }
         quadradoSelecionado = candidato;
-        quadradoSelecionado.SendMessage("OnSelect");
-        return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
+        if (quadradoSelecionado)
+        {
+            quadradoSelecionado.SendMessage("OnSelect");
+            return quadradoSelecionado.GetComponent<BlockSquare>().CanLand();
+        }
+        else
+            return false;        
     }
 
 	void OnTriggerEnter2D(Collider2D collision)

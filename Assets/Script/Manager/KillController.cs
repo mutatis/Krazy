@@ -10,9 +10,4 @@ public class KillController : MonoBehaviour
 	{
 		mouse.Kill ();
 	}
-
-	public void Destroy()
-	{
-		mouse.Destroy ();
-	}
 }
