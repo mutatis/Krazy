@@ -46,7 +46,7 @@ public class UpdateFunds : MonoBehaviour
         //get current currency value
         int funds = DBManager.GetFunds(currency);
         //display value in the UILabel
-        label.text = funds.ToString();
+        label.text = "Ouro : " + funds.ToString();
         //store value
         curValue = funds;
     }
@@ -86,13 +86,13 @@ public class UpdateFunds : MonoBehaviour
         {
             float progress = timer / duration;
             curValue = (int)Mathf.Lerp(start, target, progress);
-            label.text = curValue + "";
+            label.text = "Ouro : " + curValue + "";
             yield return null;
         }
 
 	    //once the duration is over, directly set the value and text
 	    //to the targeted value to avoid rounding issues or inconsistency
         curValue = target;
-        label.text = curValue + "";
+		label.text = "Ouro : " + curValue + "";
     }
 }

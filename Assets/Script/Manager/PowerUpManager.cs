@@ -4,7 +4,7 @@ using System.Collections;
 public class PowerUpManager : MonoBehaviour 
 {
 	public string nome;
-	public GameObject shopPowerUp;
+	public CompraPower power;
 
 	// Use this for initialization
 	void Start () {
@@ -18,14 +18,14 @@ public class PowerUpManager : MonoBehaviour
 
 	public void Utiliza()
 	{
-		Time.timeScale = 0;
-		if(PlayerPrefs.GetInt(nome) == 1)
+		if(PlayerPrefs.GetInt(nome) >= 1)
 		{
 			//usa power up
 		}
 		else
 		{
-			shopPowerUp.SetActive(true);
+			Time.timeScale = 0;
+			power.OpenBuy();
 		}
 	}
 }

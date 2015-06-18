@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 97e6513c57913c045a230741484c7c2d
+guid: 0f013a3a534f6bb45b81ee9449802bcc
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -21,8 +21,8 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 256
+  textureFormat: 47
+  maxTextureSize: 1024
   textureSettings:
     filterMode: -1
     aniso: 16
@@ -43,5 +43,5 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites: []
-  spritePackingTag: AresNovo
+  spritePackingTag: 
   userData: 
