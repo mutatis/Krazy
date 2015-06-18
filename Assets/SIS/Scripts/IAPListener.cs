@@ -66,8 +66,17 @@ namespace SIS
             switch (id)
             {
                 //section for in app purchases
-				case "PowerUp1":
-					DBManager.IncreaseFunds("coins", 100000);
+				case "Pacote4":
+					DBManager.IncreaseFunds("coins", 10000);
+				break;
+				case "Pacote3":
+					DBManager.IncreaseFunds("coins", 1000);
+				break;
+				case "Pacote2":
+					DBManager.IncreaseFunds("coins", 100);
+				break;
+				case "Pacote1":
+					DBManager.IncreaseFunds("coins", 10);
 				break;
                 case "coins":
                     //the user bought the item "coins",
