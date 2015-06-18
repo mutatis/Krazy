@@ -13,4 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   counter: 3
+<<<<<<< HEAD
   lastCheck: 398509.12307718443
+=======
+  lastCheck: 398509.40425414447
+>>>>>>> 0b528fbbed7a9df4f9060a4111068d4aa7b58244

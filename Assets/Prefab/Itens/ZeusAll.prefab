@@ -180,6 +180,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a863aa8c04641438cf99b1a9e4d34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+  tiro: {fileID: 138854, guid: 3b79172f04d1b4f4485f28971756d36a, type: 2}
+  quadradoSelecionado: {fileID: 0}
+>>>>>>> 0b528fbbed7a9df4f9060a4111068d4aa7b58244
   quant: 3
   pode: 0
   playingAnimation: 0
@@ -204,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 09b086480d819164ca4d0097c6a9fcf8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0acae431786afbb4a83e3dd29524c986, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -270,14 +275,14 @@ RectTransform:
   m_GameObject: {fileID: 174288}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .908494711, y: .908493578, z: 42.5110512}
+  m_LocalScale: {x: .170599222, y: .170598999, z: 7.98282242}
   m_Children: []
   m_Father: {fileID: 22474288}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 50, y: 50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 576, y: 513}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
 Prefab:
