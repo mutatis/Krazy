@@ -37,6 +37,10 @@ public class ManagerBuyPower : MonoBehaviour
 	
 	public void Destroy()
 	{
+		if(Time.timeScale == 0)
+		{
+			Time.timeScale = 1;
+		}
 		Destroy (gameObject);
 	}
 }
