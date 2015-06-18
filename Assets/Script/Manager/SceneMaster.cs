@@ -4,6 +4,7 @@ using System.Collections;
 public class SceneMaster : MonoBehaviour {
     public int metaPontuacao;
     public int tempoLimiteFase;
+    public GameObject telaGameOver;
 
 	GameObject[] grid;
 	GameObject[] Afrodite;
@@ -22,35 +23,40 @@ public class SceneMaster : MonoBehaviour {
 	{
 		Time.timeScale = 0;
 		grid = GameObject.FindGameObjectsWithTag("Grid");
-		StartCoroutine("GO");	
-	}
+		StartCoroutine("GO");
+    }
 	
 	// Update is called once per frame
 	void Update () 
     {
-		Afrodite = GameObject.FindGameObjectsWithTag("Afrodite");
-		Ares = GameObject.FindGameObjectsWithTag("Ares");
-		Zeus = GameObject.FindGameObjectsWithTag ("Zeus");
-		Poseidon = GameObject.FindGameObjectsWithTag ("Poseidon");
-		
-		x = Afrodite.Length + Ares.Length + Zeus.Length + Poseidon.Length;
-		
-		if(x >= grid.Length)
-		{
-			End.SetActive(true);
-			Time.timeScale = 0;
-		}
+        ChecarGrid();
 	}
 
-    void GameOver()
+    private void ChecarGrid()
     {
+        Afrodite = GameObject.FindGameObjectsWithTag("Afrodite");
+        Ares = GameObject.FindGameObjectsWithTag("Ares");
+        Zeus = GameObject.FindGameObjectsWithTag("Zeus");
+        Poseidon = GameObject.FindGameObjectsWithTag("Poseidon");
 
+        x = Afrodite.Length + Ares.Length + Zeus.Length + Poseidon.Length;
+
+        if (x >= grid.Length)
+        {
+            End.SetActive(true);
+        }
     }
+
 
 	IEnumerator GO()
 	{
 		yield return new WaitForSeconds (tempo);
-		Time.timeScale = 0;
-		GameOver ();
+		GameOver();
 	}
+
+    void GameOver()
+    {
+        Time.timeScale = 0;
+        GameObject.Instantiate(telaGameOver);
+    }
 }
