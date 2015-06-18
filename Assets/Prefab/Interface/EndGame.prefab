@@ -479,9 +479,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estrelas:
-  - {fileID: 181354}
-  - {fileID: 181352}
-  - {fileID: 181350}
+  - {fileID: 181346}
+  - {fileID: 181344}
+  - {fileID: 181342}
 --- !u!114 &11428192
 MonoBehaviour:
   m_ObjectHideFlags: 1

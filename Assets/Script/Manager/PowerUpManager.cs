@@ -24,8 +24,8 @@ public class PowerUpManager : MonoBehaviour
 		}
 		else
 		{
-			Time.timeScale = 0;
 			power.OpenBuy();
+			Time.timeScale = 0;
 		}
 	}
 }

@@ -23,7 +23,7 @@ public class ShareFacebook : MonoBehaviour {
 			        linkCaption: linkCaption,               
 			        picture: picture,                                                     
 			        linkName: linkName,                                                                 
-			        link: "http://apps.facebook.com/" + FB.AppId + "/?challenge_brag=" + (FB.IsLoggedIn ? FB.UserId : "guest")       
+			        link: "http://www.dagonstudios.com/"       
 			        ); 
 		}
 		else
