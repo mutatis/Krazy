@@ -17,17 +17,18 @@ public class InviteFriends : MonoBehaviour
 
 	public void Invite()
 	{
-		if(FB.IsLoggedIn)
-		{
+		/*if(true)
+			//FB.IsLoggedIn)
+		{*/
 			FB.AppRequest(
 				message: "Come play this great game!", 
 				callback: LogCallback
 				);
-		}
+		/*}
 		else
 		{
 			FB.Login("user_about_me, user_relationships, user_birthday, user_location", FBLoginCallback);
-		}
+		}*/
 	}
 
 	private void FBLoginCallback(FBResult result) {
