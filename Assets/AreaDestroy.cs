@@ -1,26 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PowerUpManager : MonoBehaviour 
+public class AreaDestroy : MonoBehaviour 
 {
 	public string nome;
+
 	public CompraPower power;
 
-	// Use this for initialization
-	void Start () {
+	public GameObject destruidor;
 	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	public void Utiliza()
 	{
 		if(PlayerPrefs.GetInt(nome) >= 1)
 		{
-			//usa power up
+			PlayerPrefs.SetInt(nome, (PlayerPrefs.GetInt(nome) - 1));
+			Instantiate(destruidor);
 		}
 		else
 		{

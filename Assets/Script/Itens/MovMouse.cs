@@ -6,7 +6,7 @@ using System.Linq;
 public class MovMouse : MonoBehaviour 
 {
 	public int quant = 3;
-    private bool mouseDown;
+    public bool mouseDown;
     public bool pode = false;
 	public bool playingAnimation;
     bool canLand = false;

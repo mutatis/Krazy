@@ -203,6 +203,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3b6d49c25df784ba40ede8db389dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  linkCaption: 
+  picture: 
+  linkName: 
 --- !u!1 &127836695
 GameObject:
   m_ObjectHideFlags: 0
