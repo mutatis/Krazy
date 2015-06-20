@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
-public class SceneMaster : MonoBehaviour {
+public class SceneMaster : MonoBehaviour 
+{
     public int meta1Estrela;
     public int meta2Estrelas;
     public int meta3Estrelas;
@@ -34,6 +37,30 @@ public class SceneMaster : MonoBehaviour {
 	void Update () 
     {
         ChecarGrid();
+	}
+
+	public void Revive()
+	{
+		/*List<GameObject> obj;
+		for(int i = 0; i < Afrodite.Length; i++)
+		{
+			obj.Add = Afrodite[i];
+		}
+		for(int i = 0; i < Ares.Length; i++)
+		{
+			obj.Add = Ares[i];
+		}
+		for(int i = 0; i < Zeus.Length; i++)
+		{
+			obj.Add = Zeus[i];
+		}
+		for(int i = 0; i < Poseidon.Length; i++)
+		{
+			obj.Add = Poseidon[i];
+		}
+		
+		int x = obj.Count;*/
+		
 	}
 
     private void ChecarGrid()
