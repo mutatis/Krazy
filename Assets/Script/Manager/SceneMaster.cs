@@ -5,11 +5,15 @@ using System.Linq;
 
 public class SceneMaster : MonoBehaviour 
 {
+	public List<GameObject> obj;
+
     public int meta1Estrela;
     public int meta2Estrelas;
     public int meta3Estrelas;
     public int tempoLimiteFase;
+
     public GameObject telaGameOver = null;
+
     private int score;
 
 
@@ -18,6 +22,8 @@ public class SceneMaster : MonoBehaviour
 	GameObject[] Ares;
 	GameObject[] Zeus;
 	GameObject[] Poseidon;
+	GameObject[] Esqueleto;
+	GameObject[] Pena;
 	
 	//public GameObject End;
 	
@@ -41,25 +47,41 @@ public class SceneMaster : MonoBehaviour
 
 	public void Revive()
 	{
-		/*List<GameObject> obj;
+
 		for(int i = 0; i < Afrodite.Length; i++)
 		{
-			obj.Add = Afrodite[i];
+			obj.Add(Afrodite[i]);
 		}
 		for(int i = 0; i < Ares.Length; i++)
 		{
-			obj.Add = Ares[i];
+			obj.Add(Ares[i]);
 		}
 		for(int i = 0; i < Zeus.Length; i++)
 		{
-			obj.Add = Zeus[i];
+			obj.Add(Zeus[i]);
 		}
 		for(int i = 0; i < Poseidon.Length; i++)
 		{
-			obj.Add = Poseidon[i];
+			obj.Add(Poseidon[i]);
+		}
+		for(int i = 0; i < Esqueleto.Length; i++)
+		{
+			obj.Add(Esqueleto[i]);
+		}
+		for(int i = 0; i < Pena.Length; i++)
+		{
+			obj.Add(Pena[i]);
 		}
 		
-		int x = obj.Count;*/
+		int x = obj.Count;
+
+		float temp = x * 0.15f;
+
+		for(int i = 0; i < (int)temp; i++)
+		{
+			int randomTemp = Random.Range(0, x);
+			Destroy(obj[randomTemp].gameObject);
+		}
 		
 	}
 
@@ -69,8 +91,10 @@ public class SceneMaster : MonoBehaviour
         Ares = GameObject.FindGameObjectsWithTag("Ares");
         Zeus = GameObject.FindGameObjectsWithTag("Zeus");
         Poseidon = GameObject.FindGameObjectsWithTag("Poseidon");
+		Esqueleto = GameObject.FindGameObjectsWithTag("Esqueleto");
+		Pena = GameObject.FindGameObjectsWithTag("Pena");
 
-        x = Afrodite.Length + Ares.Length + Zeus.Length + Poseidon.Length;
+		x = Afrodite.Length + Ares.Length + Zeus.Length + Poseidon.Length + Esqueleto.Length + Pena.Length;
 
         if (x >= grid.Length)
         {
