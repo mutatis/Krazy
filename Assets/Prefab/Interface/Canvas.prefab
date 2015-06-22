@@ -99,6 +99,7 @@ GameObject:
   - 224: {fileID: 22488850}
   - 222: {fileID: 22288850}
   - 114: {fileID: 11488850}
+  - 114: {fileID: 11478674}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -265,6 +266,8 @@ MonoBehaviour:
   - {fileID: 117550, guid: d07cf489651880847a577ddcdf2b2e39, type: 2}
   - {fileID: 121730, guid: 2795a5b542934514b81aee58ea74c912, type: 2}
   - {fileID: 174290, guid: a4489094dd170b64dad22d4ea7c4ea37, type: 2}
+  - {fileID: 134362, guid: 53b3c72f05dc6084e89af246eed44c46, type: 2}
+  - {fileID: 101238, guid: f4a9b501ee6e8c64ea0de8c10cb6e794, type: 2}
   canvas: {fileID: 22475196}
   tempoWave: 5
   startingWave: 20
@@ -351,6 +354,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &11478674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49759f7fefa358f46a0e0669a6fe462e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneMaster: {fileID: 0}
+  text: {fileID: 11488850}
 --- !u!114 &11488850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -368,9 +384,9 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 193
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 200
     m_Alignment: 4
     m_RichText: 1
     m_HorizontalOverflow: 0

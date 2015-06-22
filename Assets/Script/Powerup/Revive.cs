@@ -9,6 +9,8 @@ public class Revive : MonoBehaviour
 
 	public GameObject endGame;
 
+	Animator anim;
+
 	GameObject[] Afrodite;
 	GameObject[] Ares;
 	GameObject[] Zeus;
@@ -71,8 +73,9 @@ public class Revive : MonoBehaviour
 		for(int i = 0; i < (int)temp; i++)
 		{
 			int randomTemp = Random.Range(0, x);
+			anim = obj[randomTemp].gameObject.GetComponentInChildren<Animator>();
+			anim.SetTrigger("Kill");
 			print("Destruiu");
-			Destroy(obj[randomTemp].gameObject);
 		}
 
 		sceneMaster.enabled = true;

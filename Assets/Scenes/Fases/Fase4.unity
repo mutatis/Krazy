@@ -3825,7 +3825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: []
-  meta1Estrela: 10
+  meta1Estrela: 15
   meta2Estrelas: 20
   meta3Estrelas: 30
   tempoLimiteFase: 50
@@ -4535,6 +4535,7 @@ GameObject:
   - 224: {fileID: 396746118}
   - 222: {fileID: 396746120}
   - 114: {fileID: 396746119}
+  - 114: {fileID: 396746121}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4594,6 +4595,20 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1755371880}
   m_GameObject: {fileID: 396746117}
+--- !u!114 &396746121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11478674, guid: 18ce1982f60fd6841b48d54e263e6b88,
+    type: 2}
+  m_PrefabInternal: {fileID: 1755371880}
+  m_GameObject: {fileID: 396746117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49759f7fefa358f46a0e0669a6fe462e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneMaster: {fileID: 330389477}
+  text: {fileID: 396746119}
 --- !u!1001 &405205844
 Prefab:
   m_ObjectHideFlags: 0
@@ -19832,7 +19847,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11448530, guid: 075f4485fbc891e46b300ada23e5b6f0, type: 2}
       propertyPath: meta1Estrela
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11448530, guid: 075f4485fbc891e46b300ada23e5b6f0, type: 2}
       propertyPath: meta2Estrelas
@@ -20763,6 +20778,10 @@ Prefab:
       propertyPath: tempoWave
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11478674, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: sceneMaster
+      value: 
+      objectReference: {fileID: 330389477}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
   m_RootGameObject: {fileID: 233977668}
