@@ -29,7 +29,7 @@ public class PaiDoDestruidor : MonoBehaviour
 			transform.position = new Vector3(pos.x, pos.y, 0);
 			StartCoroutine("GO");
 		}
-		if(objeto.GetComponent<MovMouse>().mouseDown)
+		if(objeto.GetComponent<MovMouse>().mouseDown && objeto != null)
 		{
 			transform.position = objeto.transform.position;
 			circle.enabled = true;

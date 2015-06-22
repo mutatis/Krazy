@@ -131,6 +131,8 @@ MonoBehaviour:
   - Ares
   - Poseidon
   - Zeus
+  - Esqueleto
+  - Pena
   pai: {fileID: 198664}
 --- !u!1001 &100100000
 Prefab:
