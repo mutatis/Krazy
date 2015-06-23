@@ -141,9 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a863aa8c04641438cf99b1a9e4d34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiro: {fileID: 121038, guid: 58fdc466b48f4e74ba14816235a7415a, type: 2}
-  quadradoSelecionado: {fileID: 0}
-  quant: 3
+  quant: 5
+  mouseDown: 0
   pode: 0
   playingAnimation: 0
   tiro: {fileID: 121038, guid: 58fdc466b48f4e74ba14816235a7415a, type: 2}

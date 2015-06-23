@@ -543,9 +543,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'PlayAgain
-
-'
+  m_Text: Revive
 --- !u!114 &11428194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -631,6 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad7977cd546304428f22d4fb9f78d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 1
 --- !u!114 &11456110
 MonoBehaviour:
   m_ObjectHideFlags: 1
