@@ -1685,6 +1685,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 49391968bbdfc4a42b76d1fec9c92400, type: 2}
+      propertyPath: googleStoreKey
+      value: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAutmBsoshzZfIXcCYfrkGHmkSTbprMlwJE2HOMKxCuR3W2Nro2fGIX6QLc9RiTA5qU1F2KUXN+uUAL4Ju9p7ywSrZWORGKihZPRVp2+ngZ3XdKzMMe/qmZzP8dymzDEjxDVk1Y1bo1esyVxamgFjjghh0+HOFgwIcgz9ZMr45QSj/HzZjUwHoftddHnwITEvoifCZeSipufksMgAR5PU4ShjCUV+TPFqiHdIHJ7iw8KIacTmvNJAHaaT/0JbniPBy7386hFaf+mpZ7P5MxZvqQ2rFyVX4yLoNd5b813whcLMCZLkLXJZI9NTxNXjyiA7qNvTVzL6aX6q8fy9oXQ2QnwIDAQAB
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49391968bbdfc4a42b76d1fec9c92400, type: 2}
   m_RootGameObject: {fileID: 1625066763}
@@ -2156,7 +2160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 0
-  googleStoreKey: 
+  googleStoreKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAutmBsoshzZfIXcCYfrkGHmkSTbprMlwJE2HOMKxCuR3W2Nro2fGIX6QLc9RiTA5qU1F2KUXN+uUAL4Ju9p7ywSrZWORGKihZPRVp2+ngZ3XdKzMMe/qmZzP8dymzDEjxDVk1Y1bo1esyVxamgFjjghh0+HOFgwIcgz9ZMr45QSj/HzZjUwHoftddHnwITEvoifCZeSipufksMgAR5PU4ShjCUV+TPFqiHdIHJ7iw8KIacTmvNJAHaaT/0JbniPBy7386hFaf+mpZ7P5MxZvqQ2rFyVX4yLoNd5b813whcLMCZLkLXJZI9NTxNXjyiA7qNvTVzL6aX6q8fy9oXQ2QnwIDAQAB
   serverUrl: 
   verificationType: 0
   verificationFileName: 

@@ -32,8 +32,16 @@ public class LogginFacebook : MonoBehaviour
 		Debug.Log(response.Text);
 	}
 
-	private void FBLogin() {
-		FB.Login("user_about_me, user_relationships, user_birthday, user_location", FBLoginCallback);
+	private void FBLogin() 
+	{
+		if(FB.IsLoggedIn)
+		{
+
+		}
+		else
+		{
+			FB.Login("user_about_me, user_relationships, user_birthday, user_location", FBLoginCallback);
+		}
 	}
 	
 	private void FBLoginCallback(FBResult result) {
