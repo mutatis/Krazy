@@ -68,6 +68,7 @@ namespace SIS
                 //section for in app purchases
 				case "Pacote4":
 					DBManager.IncreaseFunds("coins", 10000);
+				ShowMessage("Voce acabo de compra vlw");
 				break;
 				case "Pacote3":
 					DBManager.IncreaseFunds("coins", 1000);

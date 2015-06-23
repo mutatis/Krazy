@@ -17,7 +17,7 @@ public class ShareFacebook : MonoBehaviour {
 
 	public void Share()
 	{
-		if(/*FB.IsLoggedIn*/ true)
+		if(FB.IsLoggedIn true)
 		{
 			FB.Feed(                                                                                                                 
 			        linkCaption: linkCaption,               
