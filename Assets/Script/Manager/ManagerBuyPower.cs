@@ -34,7 +34,8 @@ public class ManagerBuyPower : MonoBehaviour
 		{
 			DBManager.IncreaseFunds("coins", (preco * -1));
 			PlayerPrefs.SetInt(titulo, PlayerPrefs.GetInt(titulo) + 1);
-			Instantiate(compro);
+			GameObject obj = Instantiate(compro) as GameObject;
+			obj.GetComponent<BoaCompraManager>().nomePowerup = titulo;
 		}
 	}
 	

@@ -283,6 +283,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0044457f0e72b48b92d8f9b1e06b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 11447502}
+  texto1: "Voc\xEA acabou de compra o "
+  nomePowerup: 
+  texto2: ' Parabens!!!'
 --- !u!222 &22247504
 CanvasRenderer:
   m_ObjectHideFlags: 1
