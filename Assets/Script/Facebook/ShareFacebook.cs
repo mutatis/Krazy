@@ -5,6 +5,7 @@ public class ShareFacebook : MonoBehaviour {
     public string linkCaption;
     public string picture;
     public string linkName;
+
 	// Use this for initialization
 	void Start () {
 	

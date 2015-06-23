@@ -643,7 +643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linkCaption: Purrtheon
   picture: http://i.imgur.com/cmgFVKM.jpg
-  linkName: Jogue nosso jogo!
+  linkName: "Acabei de ganhar a fase 1 jogo muito acha q \xE9 melhor q eu?"
 --- !u!114 &11461230
 MonoBehaviour:
   m_ObjectHideFlags: 1
