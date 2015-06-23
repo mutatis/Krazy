@@ -462,6 +462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c213d59fd1cf1a4b8702fa3af4d544a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compro: {fileID: 147502, guid: 66e2804b8ba028f46b35f43effe4e5b1, type: 2}
   textTitulo: {fileID: 11496440}
   textDescricao: {fileID: 11496436}
   textPreco: {fileID: 11496430}

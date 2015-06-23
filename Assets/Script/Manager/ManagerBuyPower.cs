@@ -5,6 +5,8 @@ using SIS;
 
 public class ManagerBuyPower : MonoBehaviour 
 {
+	public GameObject compro;	
+
 	public Text textTitulo;
 	public Text textDescricao;
 	public Text textPreco;
@@ -32,6 +34,7 @@ public class ManagerBuyPower : MonoBehaviour
 		{
 			DBManager.IncreaseFunds("coins", (preco * -1));
 			PlayerPrefs.SetInt(titulo, PlayerPrefs.GetInt(titulo) + 1);
+			Instantiate(compro);
 		}
 	}
 	
