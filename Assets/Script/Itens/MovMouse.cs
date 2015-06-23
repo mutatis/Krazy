@@ -38,6 +38,10 @@ public class MovMouse : MonoBehaviour
         {
 			AudioSource.PlayClipAtPoint(soundFX[0], transform.position, 1);
 			StartCoroutine("MovingBlock");
+			if (PlayerPrefs.GetInt("Click") == 0)
+			{
+				PlayerPrefs.SetInt("Click", 1);
+			}
             //evitar situações em que o evento de Up() é disparado sem o Down().
             mouseDown = true;
         }
@@ -58,12 +62,18 @@ public class MovMouse : MonoBehaviour
                 GameObject tempObj = Instantiate(tiro, transform.position, transform.rotation) as GameObject;
 				tempObj.GetComponent<Lista>().quant = quant;
             }
+			else
+			{
+				quadradoSelecionado = quadradoTemp;
+				verifica = false;
+			}
         }
         else
-        {
+		{
             quadradoSelecionado = quadradoTemp;
             verifica = false;
         }
+		PlayerPrefs.SetInt("Click", 0);
 	}
 
     IEnumerator MovingBlock()

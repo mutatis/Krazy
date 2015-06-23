@@ -80,6 +80,9 @@ public class Revive : MonoBehaviour
 
 		sceneMaster.enabled = true;
 
+		CreatedObj creat = GameObject.FindGameObjectWithTag ("Created").GetComponent<CreatedObj> ();
+		creat.StartCoroutine ("LaunchWave");
+
 		sceneMaster.StartCoroutine("GO");
 
 		Destroy (endGame);

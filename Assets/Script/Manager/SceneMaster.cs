@@ -45,46 +45,6 @@ public class SceneMaster : MonoBehaviour
         ChecarGrid();
 	}
 
-	public void Revive()
-	{
-
-		for(int i = 0; i < Afrodite.Length; i++)
-		{
-			obj.Add(Afrodite[i]);
-		}
-		for(int i = 0; i < Ares.Length; i++)
-		{
-			obj.Add(Ares[i]);
-		}
-		for(int i = 0; i < Zeus.Length; i++)
-		{
-			obj.Add(Zeus[i]);
-		}
-		for(int i = 0; i < Poseidon.Length; i++)
-		{
-			obj.Add(Poseidon[i]);
-		}
-		for(int i = 0; i < Esqueleto.Length; i++)
-		{
-			obj.Add(Esqueleto[i]);
-		}
-		for(int i = 0; i < Pena.Length; i++)
-		{
-			obj.Add(Pena[i]);
-		}
-		
-		int x = obj.Count;
-
-		float temp = x * 0.15f;
-
-		for(int i = 0; i < (int)temp; i++)
-		{
-			int randomTemp = Random.Range(0, x);
-			Destroy(obj[randomTemp].gameObject);
-		}
-		
-	}
-
     private void ChecarGrid()
     {
         Afrodite = GameObject.FindGameObjectsWithTag("Afrodite");
