@@ -15,6 +15,7 @@ public class SceneMaster : MonoBehaviour
     public GameObject telaGameOver = null;
 
     private int score;
+    GameMaster gameMaster;
 
 
 	GameObject[] grid;
@@ -37,6 +38,8 @@ public class SceneMaster : MonoBehaviour
 		Time.timeScale = 0;
 		grid = GameObject.FindGameObjectsWithTag("Grid");
 		StartCoroutine("GO");
+        gameMaster = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameMaster>();
+        gameMaster.faseAtual = Application.loadedLevel.ToString();
     }
 	
 	// Update is called once per frame
@@ -85,12 +88,19 @@ public class SceneMaster : MonoBehaviour
 
     public int GetStarCount()
     {
+        var count = 0;
         if (score >= meta3Estrelas)
-            return 3;
+            count = 3;
         if (score >= meta2Estrelas)
-            return 2;
+            count = 2;
         if (score >= meta1Estrela)
-            return 1;
-        return 0;
+            count = 1;
+
+        if (gameMaster.GetStarsForLevel(Application.loadedLevel) < count)
+        {
+            gameMaster.SetStarsForLevel(count);
+        }
+
+        return count;
     }
 }
