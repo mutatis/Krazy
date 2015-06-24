@@ -14724,6 +14724,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1249899787}
+    - target: {fileID: 175186, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: m_TagString
+      value: Created
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
   m_RootGameObject: {fileID: 233977668}
@@ -17267,7 +17271,7 @@ GameObject:
   - 212: {fileID: 1418618198}
   m_Layer: 0
   m_Name: Created
-  m_TagString: Untagged
+  m_TagString: Created
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
