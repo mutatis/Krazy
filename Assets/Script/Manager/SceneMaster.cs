@@ -39,7 +39,6 @@ public class SceneMaster : MonoBehaviour
 		grid = GameObject.FindGameObjectsWithTag("Grid");
 		StartCoroutine("GO");
         gameMaster = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameMaster>();
-        gameMaster.faseAtual = Application.loadedLevel.ToString();
     }
 	
 	// Update is called once per frame

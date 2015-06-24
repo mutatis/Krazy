@@ -6,11 +6,6 @@ public class Loading : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		Application.LoadLevel(PlayerPrefs.GetString("Loading"));
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		Application.LoadLevel(PlayerPrefs.GetInt("Loading"));
 	}
 }
