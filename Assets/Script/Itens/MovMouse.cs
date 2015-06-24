@@ -6,7 +6,7 @@ using System.Linq;
 public class MovMouse : MonoBehaviour 
 {
 	public int quant = 3;
-	public int life = 1;
+	public int life = 2;
 
 	public bool ancora;
     public bool mouseDown;
@@ -41,7 +41,6 @@ public class MovMouse : MonoBehaviour
 		if(x == 1)
 		{
 			life = 2;
-			print (life);
 		}
     }
 
