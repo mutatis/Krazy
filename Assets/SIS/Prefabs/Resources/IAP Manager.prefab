@@ -133,7 +133,7 @@ MonoBehaviour:
         labelText: 
         nextId: 
       platformFoldout: 0
-    - id: Pacote1
+    - id: pacote1
       localId:
       - overridden: 0
         id: 
@@ -156,7 +156,7 @@ MonoBehaviour:
         labelText: 
         nextId: 
       platformFoldout: 0
-    - id: Pacote2
+    - id: pacote2
       localId:
       - overridden: 0
         id: 
@@ -179,7 +179,7 @@ MonoBehaviour:
         labelText: 
         nextId: 
       platformFoldout: 0
-    - id: Pacote3
+    - id: pacote3
       localId:
       - overridden: 0
         id: 
@@ -202,7 +202,7 @@ MonoBehaviour:
         labelText: 
         nextId: 
       platformFoldout: 0
-    - id: Pacote4
+    - id: pacote4
       localId:
       - overridden: 0
         id: 

@@ -114,8 +114,8 @@ PlayerSettings:
   iOSLaunchScreenCustomXibPath: 
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: C:/Users/Pedro/Documents/GitHub/Krazy/user.keystore
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/Gabriel/Documents/GitHub/Krazy/user.keystore
+  AndroidKeyaliasName: gabriel
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:
   - m_BuildTarget: 
