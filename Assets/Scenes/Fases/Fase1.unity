@@ -3828,7 +3828,7 @@ MonoBehaviour:
   meta1Estrela: 1
   meta2Estrelas: 2
   meta3Estrelas: 3
-  tempoLimiteFase: 10
+  tempoLimiteFase: 999
   telaGameOver: {fileID: 106176, guid: e7b02b64ea43a1641a4cfde1faf94b27, type: 2}
 --- !u!4 &330389478
 Transform:
@@ -20047,7 +20047,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11448530, guid: 075f4485fbc891e46b300ada23e5b6f0, type: 2}
       propertyPath: tempoLimiteFase
-      value: 10
+      value: 999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 075f4485fbc891e46b300ada23e5b6f0, type: 2}

@@ -129,6 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quant: 4
+  life: 1
+  ancora: 0
   mouseDown: 0
   pode: 0
   playingAnimation: 0
@@ -211,6 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouse: {fileID: 11417544}
+  anim: {fileID: 9517550}
 --- !u!114 &11437882
 MonoBehaviour:
   m_ObjectHideFlags: 1

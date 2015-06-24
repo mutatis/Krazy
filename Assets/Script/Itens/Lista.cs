@@ -71,10 +71,14 @@ public class Lista : MonoBehaviour
 				for(int i = 0; i < obj.Count; i++)
 				{
 					objeto = (GameObject)obj[i];
-					if(objeto != null)
+					if(objeto != null && objeto.GetComponent<MovMouse>().life == 1)
 					{
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
+					}
+					else
+					{
+						objeto.GetComponent<MovMouse>().life --;
 					}
 					//Destroy ((GameObject)obj[i]);
 				}
@@ -118,20 +122,28 @@ public class Lista : MonoBehaviour
 				for(int i = 0; i < obj.Count; i++)
 				{
 					objeto = (GameObject)obj[i];
-					if(objeto != null)
+					if(objeto != null && objeto.GetComponent<MovMouse>().life == 1)
 					{
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
+					}
+					else
+					{
+						objeto.GetComponent<MovMouse>().life --;
 					}
 					//Destroy ((GameObject)obj[i]);
 				}
 				for(int i = 0; i < obj2.Count; i++)
 				{
 					objeto = (GameObject)obj2[i];
-					if(objeto != null)
+					if(objeto != null && objeto.GetComponent<MovMouse>().life == 1)
 					{
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
+					}
+					else
+					{
+						objeto.GetComponent<MovMouse>().life --;
 					}
 					//Destroy ((GameObject)obj2[i]);
 				}
@@ -175,10 +187,14 @@ public class Lista : MonoBehaviour
 				for(int i = 0; i < obj2.Count; i++)
 				{
 					objeto = (GameObject)obj2[i];
-					if(objeto != null)
+					if(objeto != null && objeto.GetComponent<MovMouse>().life == 1)
 					{
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
+					}
+					else
+					{
+						objeto.GetComponent<MovMouse>().life --;
 					}
 					//Destroy ((GameObject)obj2[i]);
 				}

@@ -6,9 +6,13 @@ using System.Linq;
 public class MovMouse : MonoBehaviour 
 {
 	public int quant = 3;
+	public int life = 1;
+
+	public bool ancora;
     public bool mouseDown;
     public bool pode = false;
 	public bool playingAnimation;
+
     bool canLand = false;
     bool verifica = true;
 	
@@ -16,13 +20,29 @@ public class MovMouse : MonoBehaviour
 
     public GameObject tiro;
     public GameObject quadradoSelecionado;
+
     public AudioClip[] soundFX;
+
     public List<GameObject> squaresUnderBlock;
+
     public SceneMaster sceneMaster;
 
     void Start()
     {
         sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>();
+
+		int x = Random.Range (0, 5);
+
+		if(x == 4)
+		{
+			ancora = true;
+		}
+
+		if(x == 1)
+		{
+			life = 2;
+			print (life);
+		}
     }
 
 	public void Kill()
@@ -34,46 +54,52 @@ public class MovMouse : MonoBehaviour
 
 	public void Down()
 	{
-        if (!playingAnimation && pode)
-        {
-			AudioSource.PlayClipAtPoint(soundFX[0], transform.position, 1);
-			StartCoroutine("MovingBlock");
-			if (PlayerPrefs.GetInt("Click") == 0)
-			{
-				PlayerPrefs.SetInt("Click", 1);
-			}
-            //evitar situações em que o evento de Up() é disparado sem o Down().
-            mouseDown = true;
-        }
+		if(!ancora)
+		{
+	        if (!playingAnimation && pode)
+	        {
+				AudioSource.PlayClipAtPoint(soundFX[0], transform.position, 1);
+				StartCoroutine("MovingBlock");
+				if (PlayerPrefs.GetInt("Click") == 0)
+				{
+					PlayerPrefs.SetInt("Click", 1);
+				}
+	            //evitar situações em que o evento de Up() é disparado sem o Down().
+	            mouseDown = true;
+	        }
+		}
 	}
 
 	public void Up()
 	{
-        //Checa pelo scene master caso o bloco seja solto após o game over.
-        if (!playingAnimation && pode && mouseDown && sceneMaster.enabled)
-        {
-            mouseDown = false;
-            if (canLand && quadradoSelecionado != null)
-            {
-				quadradoTemp.SendMessage("UnlockBlock", gameObject);
-				AudioSource.PlayClipAtPoint(soundFX[1], transform.position, 1); //som de erro
-                StopCoroutine("MovingBlock");
-                transform.position = quadradoSelecionado.transform.position;
-                GameObject tempObj = Instantiate(tiro, transform.position, transform.rotation) as GameObject;
-				tempObj.GetComponent<Lista>().quant = quant;
-            }
-			else
-			{
-				quadradoSelecionado = quadradoTemp;
-				verifica = false;
-			}
-        }
-        else
+		if(!ancora)
 		{
-            quadradoSelecionado = quadradoTemp;
-            verifica = false;
-        }
-		PlayerPrefs.SetInt("Click", 0);
+	        //Checa pelo scene master caso o bloco seja solto após o game over.
+	        if (!playingAnimation && pode && mouseDown && sceneMaster.enabled)
+	        {
+	            mouseDown = false;
+	            if (canLand && quadradoSelecionado != null)
+	            {
+					quadradoTemp.SendMessage("UnlockBlock", gameObject);
+					AudioSource.PlayClipAtPoint(soundFX[1], transform.position, 1); //som de erro
+	                StopCoroutine("MovingBlock");
+	                transform.position = quadradoSelecionado.transform.position;
+	                GameObject tempObj = Instantiate(tiro, transform.position, transform.rotation) as GameObject;
+					tempObj.GetComponent<Lista>().quant = quant;
+	            }
+				else
+				{
+					quadradoSelecionado = quadradoTemp;
+					verifica = false;
+				}
+	        }
+	        else
+			{
+	            quadradoSelecionado = quadradoTemp;
+	            verifica = false;
+	        }
+			PlayerPrefs.SetInt("Click", 0);
+		}
 	}
 
     IEnumerator MovingBlock()
