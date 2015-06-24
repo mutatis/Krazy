@@ -12,6 +12,7 @@ public class MovMouse : MonoBehaviour
     public bool mouseDown;
     public bool pode = false;
 	public bool playingAnimation;
+    public int Touch;
 
     bool canLand = false;
     bool verifica = true;
@@ -106,9 +107,20 @@ public class MovMouse : MonoBehaviour
 		Vector2 pos = new Vector2();
         quadradoTemp = quadradoSelecionado;
 		quadradoTemp.GetComponent<BlockSquare> ().LockBlock (gameObject, true);
+        Vector3 touchPosition;
+
+        try
+        {
+            touchPosition = Input.GetTouch(0).position;
+        }
+        catch
+        {
+            touchPosition = Input.mousePosition;
+        }
+        
         while (verifica)
         {
-			pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			pos = Camera.main.ScreenToWorldPoint (touchPosition);
             transform.position = new Vector3(pos.x, pos.y, 0);            
             canLand = CheckSelectedSquare();
             yield return new WaitForEndOfFrame();
