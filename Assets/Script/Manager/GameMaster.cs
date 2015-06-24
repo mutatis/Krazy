@@ -4,16 +4,22 @@ using SIS;
 
 public class GameMaster : MonoBehaviour {
     public bool enableEnergyLimit;
-    public string faseAtual;
+    private string faseAtual;
     public int[] powerUpTiers;
     public int idPrimeiraFase;
     public int idUltimaFase;
+
+    public static GameObject gameMaster;
 
     public int Energia
     {
         get
         {
             return PlayerPrefs.GetInt("Energia");
+        }
+        set
+        {
+            PlayerPrefs.SetInt("Energia", value);
         }
     }
     public int Coins {
@@ -76,4 +82,39 @@ public class GameMaster : MonoBehaviour {
         
     }
 
+    public void OnChangeLevel(int level)
+    {
+        if (level >= idPrimeiraFase)
+        {
+            if (CanPlay())
+            {
+                Energia--;
+                faseAtual = level.ToString();
+            }
+            else 
+            {
+                GetMoreEnergyPopUp();
+                return;
+            }
+        }
+        LoadScene(level, 0);
+    }
+
+    private void LoadScene(int level, int x)
+    {
+        if (x == 0)
+        {
+            PlayerPrefs.SetInt("Loading", level);
+            Application.LoadLevel("Loading");
+        }
+        else
+        {
+            Application.LoadLevel("Loading");
+        }
+    }
+
+    private void GetMoreEnergyPopUp()
+    {
+        print("GetMoreEnergyPopUp() has not been implemented yet");
+    }
 }

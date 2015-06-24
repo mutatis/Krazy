@@ -545,6 +545,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0a9f9b243c62546b5db73bee10e6fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &344986810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 120958, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
+  m_PrefabInternal: {fileID: 1512192222}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 344986812}
+  - 114: {fileID: 344986811}
+  m_Layer: 0
+  m_Name: GameMaster
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &344986811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420958, guid: 5dfb779719edcc7438dbb7ce26247225,
+    type: 2}
+  m_PrefabInternal: {fileID: 1512192222}
+  m_GameObject: {fileID: 344986810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242e54ce04607d047b38352201fb730f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableEnergyLimit: 1
+  powerUpTiers: 030000000600000009000000
+  idPrimeiraFase: 3
+  idUltimaFase: 6
+--- !u!4 &344986812
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 420958, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
+  m_PrefabInternal: {fileID: 1512192222}
+  m_GameObject: {fileID: 344986810}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.03000021, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &383804871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,16 +1859,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1513477718}
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 344986811}
+        m_MethodName: OnChangeLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: SelecaoDeFase
+          m_StringArgument: 1
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -2005,6 +2049,54 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1263118078}
   m_GameObject: {fileID: 1452298449}
+--- !u!1001 &1512192222
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 420958, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.03000021
+      objectReference: {fileID: 0}
+    - target: {fileID: 420958, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420958, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420958, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420958, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420958, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420958, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 420958, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11420958, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
+      propertyPath: enableEnergyLimit
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
+  m_RootGameObject: {fileID: 344986810}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1513477712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,7 +2109,6 @@ GameObject:
   - 92: {fileID: 1513477715}
   - 124: {fileID: 1513477714}
   - 81: {fileID: 1513477713}
-  - 114: {fileID: 1513477718}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2090,18 +2181,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &1513477718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1513477712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad7977cd546304428f22d4fb9f78d48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 0
 --- !u!1 &1625066763
 GameObject:
   m_ObjectHideFlags: 0
