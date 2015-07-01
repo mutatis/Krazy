@@ -120,7 +120,7 @@ public class MovMouse : MonoBehaviour
         
         while (verifica)
         {
-			pos = Camera.main.ScreenToWorldPoint (touchPosition);
+			pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
             transform.position = new Vector3(pos.x, pos.y, 0);            
             canLand = CheckSelectedSquare();
             yield return new WaitForEndOfFrame();
