@@ -29,7 +29,8 @@ public class GameMaster : MonoBehaviour {
         }
     }
 
-	void Start () {
+	void Start () 
+	{
         DontDestroyOnLoad(gameObject);
 	}
 
