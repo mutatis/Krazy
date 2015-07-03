@@ -192,11 +192,14 @@ public class Lista : MonoBehaviour
 			{
 				Destroy(gameObject);
 			}
+
+			StartCoroutine("GO");
 		}
 	}
 
 	IEnumerator GO()
 	{
+		x = 0;
 		yield return new WaitForSeconds(6);
 		Destroy(gameObject);
 	}

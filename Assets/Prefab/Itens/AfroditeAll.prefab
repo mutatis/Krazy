@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quant: 3
-  life: 2
+  life: 1
   ancora: 0
   mouseDown: 0
   pode: 0
@@ -229,7 +229,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouse: {fileID: 11416904}
-  ok: 1
 --- !u!114 &11494086
 MonoBehaviour:
   m_ObjectHideFlags: 1
