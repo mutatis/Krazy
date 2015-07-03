@@ -110,7 +110,6 @@ public class MovMouse : MonoBehaviour
         quadradoTemp = quadradoSelecionado;
 		quadradoTemp.GetComponent<BlockSquare> ().LockBlock (gameObject, true);
         Vector3 touchPosition;
-
         try
         {
             touchPosition = Input.GetTouch(0).position;
@@ -122,7 +121,7 @@ public class MovMouse : MonoBehaviour
         
         while (verifica)
         {
-			pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			pos = Camera.main.ScreenToWorldPoint (touchPosition);
             transform.position = new Vector3(pos.x, pos.y, 0);            
             canLand = CheckSelectedSquare();
             yield return new WaitForEndOfFrame();
