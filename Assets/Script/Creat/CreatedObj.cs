@@ -37,8 +37,14 @@ public class CreatedObj : MonoBehaviour
         AudioSource.PlayClipAtPoint(spawnPrimeiraWave, transform.position, 0.5f);
     }
 
-    IEnumerator LaunchWave()
+    public void StopWave()
     {
+        StopCoroutine("LaunchWave");
+    }
+
+    public IEnumerator LaunchWave()
+    {
+        print("wave " + Time.time);
         pode = 0;
         var rdm = new System.Random();
         var qtdWave = wave++ == 0 ? startingWave : rdm.Next(minWave, maxWave); //range não inclui o maior extremo

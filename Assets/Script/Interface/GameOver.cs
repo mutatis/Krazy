@@ -18,7 +18,7 @@ public class GameOver : MonoBehaviour {
 			PlayerPrefs.SetInt(PlayerPrefs.GetString("Loading"), qtdEstrelas);
 		}
 		CreatedObj obj = GameObject.FindGameObjectWithTag ("Created").GetComponent<CreatedObj> ();
-		obj.StopCoroutine ("LaunchWave");
+        obj.StopWave();
         StartCoroutine(MostrarEstrelas());
     }
 

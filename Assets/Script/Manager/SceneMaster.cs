@@ -25,7 +25,9 @@ public class SceneMaster : MonoBehaviour
 	GameObject[] Poseidon;
 	GameObject[] Esqueleto;
 	GameObject[] Pena;
-	
+
+    public int reviveRefCount = 0;
+
 	//public GameObject End;
 	
 	//public float tempo = 60;

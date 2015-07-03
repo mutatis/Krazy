@@ -27,10 +27,15 @@ public class Revive : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-	
+	    
 	}
 
-	public void Continue()
+    public void Continue()
+    {
+        StartCoroutine("ContinueCoroutine");
+    }
+
+	public IEnumerator ContinueCoroutine()
 	{
 		SceneMaster sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>();
 
@@ -74,9 +79,15 @@ public class Revive : MonoBehaviour
 		{
 			int randomTemp = Random.Range(0, x);
 			anim = obj[randomTemp].gameObject.GetComponentInChildren<Animator>();
-			anim.SetTrigger("Kill");
-			print("Destruiu");
+            sceneMaster.reviveRefCount++;
+            anim.SetTrigger("Kill");
+			print(sceneMaster.reviveRefCount);
 		}
+
+        while (sceneMaster.reviveRefCount > 0)
+        {
+            yield return new WaitForEndOfFrame();
+        }
 
 		sceneMaster.enabled = true;
 

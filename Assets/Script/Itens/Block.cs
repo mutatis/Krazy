@@ -15,6 +15,7 @@ public class Block : MonoBehaviour
     public void OnKill()
     {
         sceneMaster.AumentarPontuacao(valorPontos);
+        if (sceneMaster.reviveRefCount > 0) sceneMaster.reviveRefCount--;
         Destroy(gameObject);
     }
 
