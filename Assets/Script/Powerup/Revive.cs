@@ -37,6 +37,8 @@ public class Revive : MonoBehaviour
 
 	public IEnumerator ContinueCoroutine()
 	{
+		endGame.SetActive (false);
+
 		SceneMaster sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>();
 
 		Afrodite = GameObject.FindGameObjectsWithTag("Afrodite");
@@ -82,6 +84,8 @@ public class Revive : MonoBehaviour
             sceneMaster.reviveRefCount++;
             anim.SetTrigger("Kill");
 			print(sceneMaster.reviveRefCount);
+			x --;
+			obj.Remove(obj[randomTemp]);
 		}
 
         while (sceneMaster.reviveRefCount > 0)

@@ -4,7 +4,7 @@ using SIS;
 
 public class GameMaster : MonoBehaviour {
     public bool enableEnergyLimit;
-    private string faseAtual;
+    public string faseAtual;
     public int[] powerUpTiers;
     public int idPrimeiraFase;
     public int idUltimaFase;

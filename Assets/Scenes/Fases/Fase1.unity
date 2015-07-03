@@ -3830,6 +3830,7 @@ MonoBehaviour:
   meta3Estrelas: 3
   tempoLimiteFase: 999
   telaGameOver: {fileID: 106176, guid: e7b02b64ea43a1641a4cfde1faf94b27, type: 2}
+  reviveRefCount: 0
 --- !u!4 &330389478
 Transform:
   m_ObjectHideFlags: 0
@@ -14728,6 +14729,14 @@ Prefab:
       propertyPath: m_TagString
       value: Created
       objectReference: {fileID: 0}
+    - target: {fileID: 11475176, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: tempoWave
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475176, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: startingWave
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
   m_RootGameObject: {fileID: 233977668}
@@ -17297,8 +17306,8 @@ MonoBehaviour:
   - {fileID: 134362, guid: 53b3c72f05dc6084e89af246eed44c46, type: 2}
   - {fileID: 101238, guid: f4a9b501ee6e8c64ea0de8c10cb6e794, type: 2}
   canvas: {fileID: 233977672}
-  tempoWave: 5
-  startingWave: 20
+  tempoWave: 1
+  startingWave: 50
   minWave: 3
   maxWave: 5
   wave: 0

@@ -574,6 +574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableEnergyLimit: 1
+  faseAtual: 
   powerUpTiers: 030000000600000009000000
   idPrimeiraFase: 3
   idUltimaFase: 6
