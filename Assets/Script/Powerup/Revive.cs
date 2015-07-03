@@ -8,6 +8,7 @@ public class Revive : MonoBehaviour
 	public List<GameObject> obj;
 
 	public GameObject endGame;
+	public GameObject panelEnd;
 
 	Animator anim;
 
@@ -25,7 +26,7 @@ public class Revive : MonoBehaviour
 
 	public IEnumerator ContinueCoroutine()
 	{
-		//endGame.SetActive (false);
+		panelEnd.SetActive (false);
 
 		SceneMaster sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>();
 

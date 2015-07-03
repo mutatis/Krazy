@@ -65,6 +65,7 @@ GameObject:
   - 114: {fileID: 11406172}
   - 114: {fileID: 11406174}
   - 114: {fileID: 11427134}
+  - 114: {fileID: 11448190}
   m_Layer: 5
   m_Name: EndGame
   m_TagString: Untagged
@@ -135,7 +136,6 @@ GameObject:
   - 222: {fileID: 22228194}
   - 114: {fileID: 11428196}
   - 114: {fileID: 11428194}
-  - 114: {fileID: 11465398}
   m_Layer: 5
   m_Name: Revive
   m_TagString: Untagged
@@ -583,7 +583,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11465398}
+      - m_Target: {fileID: 11448190}
         m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
@@ -630,6 +630,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   x: 1
+--- !u!114 &11448190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a04128a19c7824da96ca21d5b5e235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: []
+  endGame: {fileID: 106176}
+  panelEnd: {fileID: 106174}
 --- !u!114 &11456110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -758,19 +772,6 @@ MonoBehaviour:
   m_Text: 'PlayAgain
 
 '
---- !u!114 &11465398
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 128194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8a04128a19c7824da96ca21d5b5e235, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: []
-  endGame: {fileID: 106176}
 --- !u!114 &11481342
 MonoBehaviour:
   m_ObjectHideFlags: 1
