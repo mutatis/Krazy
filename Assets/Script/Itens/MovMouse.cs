@@ -72,8 +72,10 @@ public class MovMouse : MonoBehaviour
 
 	public void Up()
 	{
+        print("up");
 		if(!ancora)
 		{
+            print("up2");
 	        //Checa pelo scene master caso o bloco seja solto após o game over.
 	        if (!playingAnimation && pode && mouseDown && sceneMaster.enabled)
 	        {

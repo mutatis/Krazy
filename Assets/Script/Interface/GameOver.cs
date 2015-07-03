@@ -20,6 +20,7 @@ public class GameOver : MonoBehaviour {
 		CreatedObj obj = GameObject.FindGameObjectWithTag ("Created").GetComponent<CreatedObj> ();
         obj.StopWave();
         StartCoroutine(MostrarEstrelas());
+        sceneMaster.enabled = false;
     }
 
     IEnumerator MostrarEstrelas()

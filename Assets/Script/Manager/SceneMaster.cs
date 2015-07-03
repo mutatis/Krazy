@@ -85,7 +85,7 @@ public class SceneMaster : MonoBehaviour
     {
         //Time.timeScale = 0;
         GameObject.Instantiate(telaGameOver);
-        this.enabled = false;
+        //this.enabled = false;
     }
 
     public int GetStarCount()

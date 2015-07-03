@@ -18,18 +18,6 @@ public class Revive : MonoBehaviour
 	GameObject[] Esqueleto;
 	GameObject[] Pena;
 
-	// Use this for initialization
-	void Start () 
-	{
-	
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	    
-	}
-
     public void Continue()
     {
         StartCoroutine("ContinueCoroutine");
@@ -37,7 +25,7 @@ public class Revive : MonoBehaviour
 
 	public IEnumerator ContinueCoroutine()
 	{
-		endGame.SetActive (false);
+		//endGame.SetActive (false);
 
 		SceneMaster sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>();
 
@@ -90,9 +78,11 @@ public class Revive : MonoBehaviour
 
         while (sceneMaster.reviveRefCount > 0)
         {
+            //print(Time.time);
             yield return new WaitForEndOfFrame();
         }
 
+        print("scene master");
 		sceneMaster.enabled = true;
 
 		CreatedObj creat = GameObject.FindGameObjectWithTag ("Created").GetComponent<CreatedObj> ();
