@@ -71,7 +71,7 @@ public class Revive : MonoBehaviour
 			int randomTemp = Random.Range(0, x);
 			anim = obj[randomTemp].gameObject.GetComponentInChildren<Animator>();
             sceneMaster.reviveRefCount++;
-            anim.SetTrigger("Kill");
+            anim.SetTrigger("Revive");
 			print(sceneMaster.reviveRefCount);
 			x --;
 			obj.Remove(obj[randomTemp]);
