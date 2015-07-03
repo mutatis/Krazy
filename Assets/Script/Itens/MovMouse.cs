@@ -47,7 +47,11 @@ public class MovMouse : MonoBehaviour
 
 	public void Kill()
 	{
-        quadradoSelecionado.SendMessage("OnExit");
+		if(quadradoSelecionado)
+		{
+        	quadradoSelecionado.SendMessage("OnExit");
+		}
+
         pode = false;
 		print("kill");
         SendMessage("OnKill");
