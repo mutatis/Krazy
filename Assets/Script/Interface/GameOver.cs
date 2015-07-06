@@ -25,6 +25,7 @@ public class GameOver : MonoBehaviour {
 
     IEnumerator MostrarEstrelas()
     {
+        print(qtdEstrelas);
         for (int i = 0; i < qtdEstrelas; i++)
         {
             yield return new WaitForSeconds(1);

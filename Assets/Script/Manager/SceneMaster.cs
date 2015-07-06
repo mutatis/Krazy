@@ -93,9 +93,9 @@ public class SceneMaster : MonoBehaviour
         var count = 0;
         if (score >= meta3Estrelas)
             count = 3;
-        if (score >= meta2Estrelas)
+        else if (score >= meta2Estrelas)
             count = 2;
-        if (score >= meta1Estrela)
+        else if (score >= meta1Estrela)
             count = 1;
 
         if (gameMaster.GetStarsForLevel(Application.loadedLevel) < count)
