@@ -41,6 +41,8 @@ public class GameMaster : MonoBehaviour {
         if (debug)
         {
             Time.timeScale = debugTimeScale;
+            var tempo = Time.timeSinceLevelLoad;
+            print(tempo);
         }
     }
 
