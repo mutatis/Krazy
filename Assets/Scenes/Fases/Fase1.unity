@@ -3891,7 +3891,7 @@ MonoBehaviour:
   meta1Estrela: 10
   meta2Estrelas: 20
   meta3Estrelas: 30
-  tempoLimiteFase: 999
+  tempoLimiteFase: 2
   telaGameOver: {fileID: 106176, guid: e7b02b64ea43a1641a4cfde1faf94b27, type: 2}
   reviveRefCount: 0
 --- !u!4 &330389478
@@ -20661,7 +20661,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11448530, guid: 075f4485fbc891e46b300ada23e5b6f0, type: 2}
       propertyPath: tempoLimiteFase
-      value: 999
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 075f4485fbc891e46b300ada23e5b6f0, type: 2}
