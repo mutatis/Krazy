@@ -34,10 +34,10 @@ public class MovMouse : MonoBehaviour
 
 		int x = Random.Range (0, 5);
 
-		if(x == 4)
+		/*if(x == 4)
 		{
 			ancora = true;
-		}
+		}*/
 
 		if(x == 1)
 		{
@@ -63,6 +63,7 @@ public class MovMouse : MonoBehaviour
 		{
 	        if (!playingAnimation && pode)
 	        {
+                print("down");
 				AudioSource.PlayClipAtPoint(soundFX[0], transform.position, 1);
 				StartCoroutine("MovingBlock");
 				if (PlayerPrefs.GetInt("Click") == 0)
@@ -77,40 +78,36 @@ public class MovMouse : MonoBehaviour
 
 	public void Up()
 	{
-        print("up");
+        //print("up");
 		if(!ancora)
 		{
-            print("up2");
+            //print("up2");
 	        //Checa pelo scene master caso o bloco seja solto após o game over.
-	        if (!playingAnimation && pode && mouseDown && sceneMaster.enabled)
-	        {
-	            mouseDown = false;
-	            if (canLand && quadradoSelecionado != null)
-	            {
-					quadradoTemp.SendMessage("UnlockBlock", gameObject);
-					AudioSource.PlayClipAtPoint(soundFX[1], transform.position, 1); //som de erro
-	                StopCoroutine("MovingBlock");
-	                transform.position = quadradoSelecionado.transform.position;
-	                GameObject tempObj = Instantiate(tiro, transform.position, transform.rotation) as GameObject;
-					tempObj.GetComponent<Lista>().quant = quant;
-	            }
-				else
-				{
-					quadradoSelecionado = quadradoTemp;
-					verifica = false;
-				}
-	        }
-	        else
-			{
-	            quadradoSelecionado = quadradoTemp;
-	            verifica = false;
-	        }
-			PlayerPrefs.SetInt("Click", 0);
+            if (!playingAnimation && pode && mouseDown && sceneMaster.enabled)
+            {
+                mouseDown = false;
+                if (canLand && quadradoSelecionado != null)
+                {
+                    quadradoTemp.SendMessage("UnlockBlock", gameObject);
+                    AudioSource.PlayClipAtPoint(soundFX[1], transform.position, 1); //som de erro
+                    StopCoroutine("MovingBlock");
+                    transform.position = quadradoSelecionado.transform.position;
+                    GameObject tempObj = Instantiate(tiro, transform.position, transform.rotation) as GameObject;
+                    tempObj.GetComponent<Lista>().quant = quant;
+                }
+                else
+                {
+                    quadradoSelecionado = quadradoTemp;
+                    verifica = false;
+                }
+            }
+			//PlayerPrefs.SetInt("Click", 0);
 		}
 	}
 
     IEnumerator MovingBlock()
     {
+        print("moving");
 		Vector2 pos = new Vector2();
         quadradoTemp = quadradoSelecionado;
 		quadradoTemp.GetComponent<BlockSquare> ().LockBlock (gameObject, true);

@@ -8,6 +8,8 @@ public class GameMaster : MonoBehaviour {
     public int[] powerUpTiers;
     public int idPrimeiraFase;
     public int idUltimaFase;
+    public float debugTimeScale;
+    public bool debug;
 
     public static GameObject gameMaster;
 
@@ -33,6 +35,14 @@ public class GameMaster : MonoBehaviour {
 	{
         DontDestroyOnLoad(gameObject);
 	}
+
+    void Update()
+    {
+        if (debug)
+        {
+            Time.timeScale = debugTimeScale;
+        }
+    }
 
     public bool CanPlay()
     {
