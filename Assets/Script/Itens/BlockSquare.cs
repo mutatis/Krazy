@@ -6,6 +6,7 @@ using System.Linq;
 public class BlockSquare : MonoBehaviour 
 {
 	public List<string> tagsBlock;
+    public float invokingTime;
 	public SpriteRenderer sprite;
     bool selectColorOK = true;
     Color cor;
@@ -28,6 +29,35 @@ public class BlockSquare : MonoBehaviour
             selectColorOK = false;
         }
     }
+
+    public void StartInvoking(GameObject block)
+    {
+        StartCoroutine(InvokeBlock(block));
+    }
+
+    public IEnumerator InvokeBlock(GameObject block)
+    {
+        while (Time.timeScale == 0)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        if (lockedBlock == block)
+        {
+            var particles = GetComponentInChildren<ParticleSystem>();
+            particles.Play();
+            block.transform.position = transform.position;
+            yield return new WaitForSeconds(invokingTime);
+            UnlockBlock(block);
+            var blockMovement = block.GetComponent<MovMouse>();
+            blockMovement.squaresUnderBlock.Add(gameObject);
+            blockMovement.quadradoSelecionado = gameObject;
+            blockMovement.pode = true;
+            particles.Stop();
+            
+        }
+        yield return null;
+    }
+
 
     public bool LockBlock(GameObject block, bool force = false)
     {

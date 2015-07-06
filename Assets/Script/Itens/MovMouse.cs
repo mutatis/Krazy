@@ -107,7 +107,7 @@ public class MovMouse : MonoBehaviour
 
     IEnumerator MovingBlock()
     {
-        print("moving");
+        transform.SetAsLastSibling(); //ensure it's on top of everybody
 		Vector2 pos = new Vector2();
         quadradoTemp = quadradoSelecionado;
 		quadradoTemp.GetComponent<BlockSquare> ().LockBlock (gameObject, true);
