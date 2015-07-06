@@ -38,6 +38,26 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!1101 &110104156
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110293116}
+  m_DstState: {fileID: 110205904}
+  m_TransitionDuration: .25
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 5
+    m_ConditionEvent: 
+    m_EventTreshold: 0
+    m_ExitTime: .75
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
 --- !u!1101 &110116268
 Transition:
   serializedVersion: 2
@@ -143,6 +163,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110293116
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Invocation Poseidon
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: e275f699576df464ba7facb3f693ca41, type: 2}
+  m_ParentStateMachine: {fileID: 110705904}
+  m_Position: {x: -36, y: -72, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1107 &110705904
 StateMachine:
   serializedVersion: 2
@@ -150,17 +185,19 @@ StateMachine:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Base Layer
-  m_DefaultState: {fileID: 110205904}
+  m_DefaultState: {fileID: 110293116}
   m_States:
   - {fileID: 110205904}
   - {fileID: 110240294}
   - {fileID: 110209572}
+  - {fileID: 110293116}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110209572}
-      second: []
+      first: {fileID: 110293116}
+      second:
+      - {fileID: 110104156}
     data:
       first: {fileID: 0}
       second:
@@ -173,6 +210,9 @@ StateMachine:
       first: {fileID: 110240294}
       second:
       - {fileID: 110116268}
+    data:
+      first: {fileID: 110209572}
+      second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 228, y: -24, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

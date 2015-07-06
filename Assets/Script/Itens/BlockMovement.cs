@@ -9,9 +9,10 @@ public class BlockMovement : MonoBehaviour {
 
     public IEnumerator GoToTarget(Transform target, bool useNoise)
     {
+        transform.SetAsLastSibling();
+
         var mouseInteraction = GetComponent<MovMouse>();
         mouseInteraction.pode = false; //can't grab while moving!
-
         mouseInteraction.quadradoSelecionado = target.gameObject;
         var bloco = mouseInteraction.quadradoSelecionado.GetComponent<BlockSquare>();
         var rnd = new System.Random();
@@ -38,6 +39,6 @@ public class BlockMovement : MonoBehaviour {
         mouseInteraction.pode = true;
         mouseInteraction.squaresUnderBlock.Add(target.gameObject);
         target.SendMessage("UnlockBlock", gameObject);
-        
+        bloco.blockStack++;
     }
 }
