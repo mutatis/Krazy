@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35923de35f2e3244886e37b6d68ac934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velX: 5
+  velX: 5.5
   velY: 0
   tipo: 2
   tag_: Zeus
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35923de35f2e3244886e37b6d68ac934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velX: -5
+  velX: -5.5
   velY: 0
   tipo: 2
   tag_: Zeus
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velX: 0
-  velY: -5
+  velY: -5.5
   tipo: 1
   tag_: Zeus
   lista: {fileID: 11438854}
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velX: 0
-  velY: 5
+  velY: 5.5
   tipo: 1
   tag_: Zeus
   lista: {fileID: 11438854}
@@ -365,7 +365,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 11e0d356ba7c3ed4b9923ab08d399eef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a08f2bf6668a6b44ba71b58ed5405722, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21287514
 SpriteRenderer:
@@ -387,7 +387,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 11e0d356ba7c3ed4b9923ab08d399eef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a08f2bf6668a6b44ba71b58ed5405722, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21287516
 SpriteRenderer:
@@ -409,7 +409,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 11e0d356ba7c3ed4b9923ab08d399eef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a08f2bf6668a6b44ba71b58ed5405722, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21287518
 SpriteRenderer:
@@ -431,7 +431,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 11e0d356ba7c3ed4b9923ab08d399eef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a08f2bf6668a6b44ba71b58ed5405722, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

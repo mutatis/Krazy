@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velX: 0
-  velY: 5
+  velY: 5.5
   tipo: 1
   tag_: Poseidon
   lista: {fileID: 11421038}
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velX: 0
-  velY: -5
+  velY: -5.5
   tipo: 1
   tag_: Poseidon
   lista: {fileID: 11421038}
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35923de35f2e3244886e37b6d68ac934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velX: -5
+  velX: -5.5
   velY: 0
   tipo: 2
   tag_: Poseidon
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35923de35f2e3244886e37b6d68ac934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velX: 5
+  velX: 5.5
   velY: 0
   tipo: 2
   tag_: Poseidon
@@ -365,7 +365,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1b4902550370d63479a25c711e62e758, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a08f2bf6668a6b44ba71b58ed5405722, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21244320
 SpriteRenderer:
@@ -387,7 +387,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1b4902550370d63479a25c711e62e758, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a08f2bf6668a6b44ba71b58ed5405722, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21244322
 SpriteRenderer:
@@ -409,7 +409,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1b4902550370d63479a25c711e62e758, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a08f2bf6668a6b44ba71b58ed5405722, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21244324
 SpriteRenderer:
@@ -431,7 +431,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1b4902550370d63479a25c711e62e758, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a08f2bf6668a6b44ba71b58ed5405722, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

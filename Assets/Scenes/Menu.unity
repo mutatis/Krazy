@@ -471,6 +471,8 @@ MonoBehaviour:
   powerUpTiers: 030000000600000009000000
   idPrimeiraFase: 3
   idUltimaFase: 6
+  debugTimeScale: 0
+  debug: 0
 --- !u!4 &344986812
 Transform:
   m_ObjectHideFlags: 0

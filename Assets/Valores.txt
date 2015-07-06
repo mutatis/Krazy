@@ -1,4 +1,0 @@
-zeus 6
-ares 5
-poseidon 4
-rosa 3

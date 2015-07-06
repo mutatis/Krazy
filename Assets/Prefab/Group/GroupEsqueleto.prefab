@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velX: 0
-  velY: 5
+  velY: 5.5
   tipo: 1
   tag_: Esqueleto
   lista: {fileID: 11467586}
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velX: 0
-  velY: -5
+  velY: -5.5
   tipo: 1
   tag_: Esqueleto
   lista: {fileID: 11467586}
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35923de35f2e3244886e37b6d68ac934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velX: -5
+  velX: -5.5
   velY: 0
   tipo: 2
   tag_: Esqueleto
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35923de35f2e3244886e37b6d68ac934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velX: 5
+  velX: 5.5
   velY: 0
   tipo: 2
   tag_: Esqueleto
