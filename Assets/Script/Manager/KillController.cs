@@ -6,9 +6,16 @@ public class KillController : MonoBehaviour
 
 	public MovMouse mouse;
 
+	public void Desativa()
+	{
+		if(mouse.life <= 1)
+		{
+			mouse.Desliga();
+		}
+	}
+
 	public void Cancela()
 	{
-		print("PORRA");
 		if(mouse.life > 1)
 		{
 			mouse.life --;

@@ -32,6 +32,7 @@ public class Lista : MonoBehaviour
 		{
 			if(obj.Count > quant + 1 && obj2.Count > quant + 1)
 			{
+				print(obj.Count + " " + obj2.Count);
 				int temp;
 				temp = obj.Count + obj2.Count;
 				if(!toca)
@@ -79,9 +80,22 @@ public class Lista : MonoBehaviour
 					}
 					//Destroy ((GameObject)obj[i]);
 				}
+
+				for(int i = 0; i < obj2.Count; i++)
+				{
+					objeto = (GameObject)obj2[i];
+					
+					if(objeto != null)
+					{
+						anim = objeto.GetComponentInChildren<Animator>();
+						anim.SetTrigger("Kill");
+					}
+					//Destroy ((GameObject)obj2[i]);
+				}
 			}
-			if(obj.Count > quant)
+			else if(obj.Count > quant)
 			{
+				print("Porra 1");
 				if(!toca)
 				{
 					switch(obj.Count)
@@ -127,20 +141,10 @@ public class Lista : MonoBehaviour
 					}
 					//Destroy ((GameObject)obj[i]);
 				}
-				for(int i = 0; i < obj2.Count; i++)
-				{
-					objeto = (GameObject)obj2[i];
-					
-					if(objeto != null)
-					{
-						anim = objeto.GetComponentInChildren<Animator>();
-						anim.SetTrigger("Kill");
-					}
-					//Destroy ((GameObject)obj2[i]);
-				}
 			}
-			if(obj2.Count > quant)
+			else if(obj2.Count > quant)
 			{
+				print("Porra 2");
 				if(!toca)
 				{
 					switch(obj2.Count)

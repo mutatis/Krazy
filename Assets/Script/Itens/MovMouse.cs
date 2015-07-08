@@ -45,6 +45,11 @@ public class MovMouse : MonoBehaviour
 		}
     }
 
+	public void Desliga()
+	{
+		gameObject.GetComponent<CircleCollider2D>().enabled = false;
+	}
+
 	public void Kill()
 	{
 		if(quadradoSelecionado)
@@ -63,7 +68,6 @@ public class MovMouse : MonoBehaviour
 		{
 	        if (!playingAnimation && pode)
 	        {
-                print("down");
 				AudioSource.PlayClipAtPoint(soundFX[0], transform.position, 1);
 				StartCoroutine("MovingBlock");
 				if (PlayerPrefs.GetInt("Click") == 0)
