@@ -6,7 +6,7 @@ using System.Linq;
 public class MovMouse : MonoBehaviour 
 {
 	public int quant = 3;
-	public int life = 2;
+	//public int life = 2;
 
 	public bool ancora;
     public bool mouseDown;
@@ -39,10 +39,10 @@ public class MovMouse : MonoBehaviour
 			ancora = true;
 		}*/
 
-		if(x == 1)
+	/*	if(x == 1)
 		{
 			life = 2;
-		}
+		}*/
     }
 
 	public void Desliga()

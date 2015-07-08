@@ -93,7 +93,7 @@ public class Lista : MonoBehaviour
 					//Destroy ((GameObject)obj2[i]);
 				}
 			}
-			else if(obj.Count > quant)
+			if(obj.Count > quant)
 			{
 				print("Porra 1");
 				if(!toca)
@@ -142,7 +142,7 @@ public class Lista : MonoBehaviour
 					//Destroy ((GameObject)obj[i]);
 				}
 			}
-			else if(obj2.Count > quant)
+			if(obj2.Count > quant)
 			{
 				print("Porra 2");
 				if(!toca)
