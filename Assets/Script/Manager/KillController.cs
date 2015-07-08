@@ -14,16 +14,15 @@ public class KillController : MonoBehaviour
 		//}
 	}
 
-/*	public void Cancela()
+	public void Cancela()
 	{
-		if(mouse.life > 1)
+		/*if(mouse.life > 1)
 		{
 			mouse.life --;
 			gameObject.GetComponent<Animator>().SetTrigger("Normal");
-		}
-		//mouse.life --;
+		}*/
 	}
-*/
+
 	public void Kill()
 	{
 		mouse.Kill ();
