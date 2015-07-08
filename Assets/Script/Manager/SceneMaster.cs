@@ -13,6 +13,7 @@ public class SceneMaster : MonoBehaviour
     public int tempoLimiteFase;
 
     public GameObject telaGameOver = null;
+    public Timer timer;
 
     private int score;
     GameMaster gameMaster;
@@ -42,6 +43,13 @@ public class SceneMaster : MonoBehaviour
 		StartCoroutine("GO");
         gameMaster = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameMaster>();
         gameMaster.faseAtual = Application.loadedLevel.ToString();
+    }
+
+    public void BeginLevel()
+    {
+        Time.timeScale = 1;
+        timer.SetTimer(tempoLimiteFase);
+        timer.StartTimer();
     }
 	
 	// Update is called once per frame
