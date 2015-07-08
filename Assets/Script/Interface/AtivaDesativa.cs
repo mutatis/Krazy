@@ -2,18 +2,17 @@
 using System.Collections;
 
 public class AtivaDesativa : MonoBehaviour
-{
-
-	// Use this for initialization
-	void Start () 
+{	
+	public void ControllAnim(Animator anim)
 	{
-	
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	
+		if(Time.timeScale == 1)
+		{
+			anim.SetTrigger("Desclico");
+		}
+		else
+		{
+			anim.SetTrigger("Clico");
+		}
 	}
 
 	public void AD(GameObject obj)
