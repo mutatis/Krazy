@@ -48,6 +48,7 @@ public class MovMouse : MonoBehaviour
 	public void Desliga()
 	{
 		gameObject.GetComponent<CircleCollider2D>().enabled = false;
+		ancora = true;
 	}
 
 	public void Kill()
