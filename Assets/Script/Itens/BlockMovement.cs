@@ -12,7 +12,7 @@ public class BlockMovement : MonoBehaviour {
         transform.SetAsLastSibling();
 
         var mouseInteraction = GetComponent<MovMouse>();
-        mouseInteraction.pode = false; //can't grab while moving!
+        //mouseInteraction.pode = false; //can't grab while moving!
         mouseInteraction.quadradoSelecionado = target.gameObject;
         var bloco = mouseInteraction.quadradoSelecionado.GetComponent<BlockSquare>();
         var rnd = new System.Random();

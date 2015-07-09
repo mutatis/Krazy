@@ -12,7 +12,7 @@ public class MovMouse : MonoBehaviour
     public bool mouseDown;
     public bool pode = false;
 	public bool playingAnimation;
-    public int Touch;
+	public int Touch; 
 
     bool canLand = false;
     bool verifica = true;
@@ -65,7 +65,7 @@ public class MovMouse : MonoBehaviour
 
 	public void Down()
 	{
-		if(!ancora)
+		if(!ancora && Time.timeScale != 0)
 		{
 	        if (!playingAnimation && pode)
 	        {
@@ -116,7 +116,7 @@ public class MovMouse : MonoBehaviour
 		Vector2 pos = new Vector2();
         quadradoTemp = quadradoSelecionado;
 		quadradoTemp.GetComponent<BlockSquare> ().LockBlock (gameObject, true);
-        Vector3 touchPosition;        
+        Vector3 touchPosition;    
         while (verifica)
         {
 			try
