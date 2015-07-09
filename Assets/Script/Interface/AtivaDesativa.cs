@@ -34,20 +34,6 @@ public class AtivaDesativa : MonoBehaviour
 		}
 	}
 
-	public void Liga(GameObject obj)
-	{
-		if(Time.timeScale == 0)
-		{
-			//	obj.SetActive(false);
-			Time.timeScale = 1;
-		}
-		else
-		{
-			//obj.SetActive(true);
-			Time.timeScale = 0;
-		}
-	}
-
 	public void AD(GameObject obj)
 	{
 		if(obj.active)

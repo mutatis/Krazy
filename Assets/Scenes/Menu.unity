@@ -444,10 +444,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 256867867}
-        m_MethodName: Liga
+        m_MethodName: AD
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 136879364}
+          m_ObjectArgument: {fileID: 509691396}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
@@ -674,7 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 242e54ce04607d047b38352201fb730f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableEnergyLimit: 1
+  enableEnergyLimit: 0
   faseAtual: 
   powerUpTiers: 030000000600000009000000
   idPrimeiraFase: 3
@@ -863,7 +863,7 @@ AudioSource:
   m_GameObject: {fileID: 406628207}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 6d7e9428ac25ddf4a9a8415a4cd8dcb8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5f4577170a296b242a30183643d4bcc8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -936,6 +936,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753ef7ff6fd75c749aceab2c4edb285d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &509691396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 186074, guid: cc92702d3f3078f43870f9ff4bc818dd, type: 2}
+  m_PrefabInternal: {fileID: 1771191266}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 509691397}
+  - 222: {fileID: 509691400}
+  - 114: {fileID: 509691399}
+  - 225: {fileID: 509691398}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &509691397
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22486074, guid: cc92702d3f3078f43870f9ff4bc818dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1771191266}
+  m_GameObject: {fileID: 509691396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1906063309}
+  m_RootOrder: 4
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!225 &509691398
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22586074, guid: cc92702d3f3078f43870f9ff4bc818dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1771191266}
+  m_GameObject: {fileID: 509691396}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &509691399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11486074, guid: cc92702d3f3078f43870f9ff4bc818dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1771191266}
+  m_GameObject: {fileID: 509691396}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: .39199999}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &509691400
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22286074, guid: cc92702d3f3078f43870f9ff4bc818dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1771191266}
+  m_GameObject: {fileID: 509691396}
 --- !u!1 &510402653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,7 +3002,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11420958, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
       propertyPath: enableEnergyLimit
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
@@ -4273,6 +4350,7 @@ RectTransform:
   - {fileID: 136879365}
   - {fileID: 1441492199}
   - {fileID: 1832946005}
+  - {fileID: 509691397}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
