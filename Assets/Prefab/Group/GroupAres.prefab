@@ -272,12 +272,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   somPontuacao:
-  - {fileID: 8300000, guid: aa81d5ab00f2fc54b8db94abcfa63c25, type: 3}
-  - {fileID: 8300000, guid: b37af6c375f152c40b1b2e436b6e1a63, type: 3}
-  - {fileID: 8300000, guid: 06874c726e8eecc469e333601d25b4c1, type: 3}
-  - {fileID: 8300000, guid: acc861b4b4f98e1479c18383b20dd268, type: 3}
-  - {fileID: 8300000, guid: 92fbb6918a6127743af7bb6c833c9291, type: 3}
-  - {fileID: 8300000, guid: ca33a79e259835c428c2667ad6399253, type: 3}
+  - {fileID: 8300000, guid: 0163af08cf68c304095232a2a7e2782c, type: 3}
+  - {fileID: 8300000, guid: ac83d38939014324f869bee140675967, type: 3}
+  - {fileID: 8300000, guid: c368f3b260d2b964faba014b0c97f0ba, type: 3}
+  - {fileID: 8300000, guid: 2f68094d1d9b10e4e88011b134c737ed, type: 3}
+  - {fileID: 8300000, guid: 0f7a77fed6e2c204da2424a00205c1e8, type: 3}
+  - {fileID: 8300000, guid: e983712cad44a4c4dbe967fef4b7ebac, type: 3}
   - {fileID: 8300000, guid: 877385a3efd4441448554a0e0870c516, type: 3}
   x: 0
   quant: 3

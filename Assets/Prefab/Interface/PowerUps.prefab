@@ -86,6 +86,7 @@ GameObject:
   - 114: {fileID: 11493660}
   - 114: {fileID: 11493658}
   - 114: {fileID: 11493656}
+  - 114: {fileID: 11487188}
   m_Layer: 5
   m_Name: PowerUps
   m_TagString: Untagged
@@ -207,6 +208,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11487188}
+        m_MethodName: Click
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 377e3f0e6b6af3a48a5c1d480c99b89c,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &11426414
@@ -222,7 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: PowerUp2
   power: {fileID: 11457878}
-  destruidor: {fileID: 123854, guid: 0c4028ef3e989e443a6a093a6825d2d4, type: 2}
+  destruidor: {fileID: 198664, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
 --- !u!114 &11457878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,6 +253,17 @@ MonoBehaviour:
   titulo: PowerUp2
   descricao: Power pq power
   preco: 2
+--- !u!114 &11487188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b616f4d2adf6481438ec2edf826e0a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11493634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -323,6 +348,19 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11487188}
+        m_MethodName: Click
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 377e3f0e6b6af3a48a5c1d480c99b89c,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
