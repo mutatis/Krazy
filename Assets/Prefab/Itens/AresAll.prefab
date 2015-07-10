@@ -128,12 +128,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a863aa8c04641438cf99b1a9e4d34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quant: 4
-  life: 1
+  quant: 3
   ancora: 0
   mouseDown: 0
   pode: 0
   playingAnimation: 0
+  Touch: 0
   tiro: {fileID: 176740, guid: 7c9d835e133cca64a877d7f7f4e230c0, type: 2}
   quadradoSelecionado: {fileID: 0}
   soundFX:
@@ -213,7 +213,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouse: {fileID: 11417544}
-  anim: {fileID: 9517550}
 --- !u!114 &11437882
 MonoBehaviour:
   m_ObjectHideFlags: 1
