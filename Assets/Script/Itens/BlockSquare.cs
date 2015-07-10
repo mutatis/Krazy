@@ -47,7 +47,7 @@ public class BlockSquare : MonoBehaviour
             particles.Play();
             block.transform.position = transform.position;
             yield return new WaitForSeconds(invokingTime);
-            UnlockBlock(block);
+            //UnlockBlock(block);
             /*var blockMovement = block.GetComponent<MovMouse>();
             blockMovement.squaresUnderBlock.Add(gameObject);
             blockMovement.quadradoSelecionado = gameObject;
