@@ -12,6 +12,7 @@ public class ScoreUI : MonoBehaviour
 	private float score = 0;
 
 	float pontoTemp;
+    float increaseSpeed = 1;
 
     void Start()
     {
@@ -22,10 +23,10 @@ public class ScoreUI : MonoBehaviour
 	void Update () 
 	{
         score = sceneMaster.Score;
-
+        increaseSpeed += 5 * Time.deltaTime;
 		if(pontoTemp < score)
 		{
-			pontoTemp += 1;
+			pontoTemp = Mathf.Clamp(pontoTemp + increaseSpeed, 0, score);
 		}
 		else
 		{

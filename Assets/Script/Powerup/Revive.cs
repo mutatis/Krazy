@@ -90,7 +90,7 @@ public class Revive : MonoBehaviour
 		creat.StartCoroutine ("LaunchWave");
 
 		sceneMaster.StartCoroutine("GO");
-
+        sceneMaster.timer.StartTimer();
 		Destroy (endGame);
 	}
 }

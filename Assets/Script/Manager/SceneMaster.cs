@@ -93,6 +93,7 @@ public class SceneMaster : MonoBehaviour
     {
         //Time.timeScale = 0;
         GameObject.Instantiate(telaGameOver);
+        timer.StopTimer();
         //this.enabled = false;
     }
 
