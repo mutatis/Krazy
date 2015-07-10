@@ -6,6 +6,10 @@ public class Block : MonoBehaviour
     public AudioClip spawnSound;
     SceneMaster sceneMaster;
     public int valorPontos = 1;
+    public int quantidadeCombo;
+    public bool ancora;
+    public GameObject selectionOverlay;
+    public GameObject tiro;
 
     void Start()
     {
@@ -26,4 +30,27 @@ public class Block : MonoBehaviour
         //target.GetComponent<BlockSquare>().ok = false;
     }
 
+    public void OnSelectBlock()
+    {
+        selectionOverlay.SetActive(true);
+        print(name + " is now selected");
+    }
+
+    public void OnDeselectBlock()
+    {
+        selectionOverlay.SetActive(false);
+        print(name + " was deselected");
+    }
+
+    public void Down()
+    {
+        if(!ancora)
+            sceneMaster.gameObject.SendMessage("OnClickBlock", gameObject);
+    }
+
+    public void ChecarCombo()
+    {
+        GameObject tempObj = Instantiate(tiro, transform.position, transform.rotation) as GameObject;
+        tempObj.GetComponent<Lista>().quant = quantidadeCombo;
+    }
 }

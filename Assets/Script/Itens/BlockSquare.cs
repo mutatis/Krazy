@@ -48,10 +48,10 @@ public class BlockSquare : MonoBehaviour
             block.transform.position = transform.position;
             yield return new WaitForSeconds(invokingTime);
             UnlockBlock(block);
-            var blockMovement = block.GetComponent<MovMouse>();
+            /*var blockMovement = block.GetComponent<MovMouse>();
             blockMovement.squaresUnderBlock.Add(gameObject);
             blockMovement.quadradoSelecionado = gameObject;
-            blockMovement.pode = true;
+            blockMovement.pode = true;*/
             particles.Stop();
             
         }
@@ -65,7 +65,7 @@ public class BlockSquare : MonoBehaviour
 		{
 			lockedBlock = block;
 		}
-        else if (lockedBlock != null || blockStack > 0) 
+        else if (lockedBlock != null /*|| blockStack > 0*/) 
         {
             return false;
         }
@@ -107,5 +107,10 @@ public class BlockSquare : MonoBehaviour
     public bool CanLand()
     {
         return blockStack == 1 && lockedBlock == null;
+    }
+
+    public void OnMouseDown()
+    {
+        GameObject.FindGameObjectWithTag("SceneMaster").SendMessage("OnClickSquare", gameObject);
     }
 }

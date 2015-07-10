@@ -59,7 +59,7 @@ public class MovMouse : MonoBehaviour
 		}
 
         pode = false;
-		print("kill");
+		//print("kill");
         SendMessage("OnKill");
 	}
 
