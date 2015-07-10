@@ -68,7 +68,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  iPhoneBundleIdentifier: com.DagonStudios.Purrtheon2
+  iPhoneBundleIdentifier: com.DagonStudios.Purrtheon
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 0ae785926ba0b174982a75ee3c1eb977

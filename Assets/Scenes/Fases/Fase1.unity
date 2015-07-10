@@ -22548,7 +22548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367969527f7a4e44fb79f8df0949a63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleport: 1
+  teleport: 0
 --- !u!1 &342434864
 GameObject:
   m_ObjectHideFlags: 0
@@ -115319,7 +115319,7 @@ Prefab:
       objectReference: {fileID: 1192901492}
     - target: {fileID: 11458382, guid: 075f4485fbc891e46b300ada23e5b6f0, type: 2}
       propertyPath: teleport
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 075f4485fbc891e46b300ada23e5b6f0, type: 2}
