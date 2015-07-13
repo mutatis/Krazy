@@ -20,9 +20,11 @@ public class AtivaDesativa : MonoBehaviour
 			{
 				anim3[i].SetTrigger("Desclico");
 			}
+			x = 0;
 		}
 		else
 		{
+			StartCoroutine("Va");
 			anim2.SetTrigger("Clico");
 		}
 	}
@@ -30,18 +32,13 @@ public class AtivaDesativa : MonoBehaviour
 	public IEnumerator Va()
 	{
 		float start = Time.realtimeSinceStartup;
-		if(x == 0)
-		{
-			anim[x].SetTrigger("Clico");
-		}
+
 		while (Time.realtimeSinceStartup < start + 0.5f)
 		{
 			yield return null;
 		}
-		if(x != 0)
-		{
 			anim[x].SetTrigger("Clico");
-		}
+
 		x++;
 		StartCoroutine ("Va");
 	}
