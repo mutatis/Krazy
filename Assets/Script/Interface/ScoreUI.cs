@@ -30,7 +30,7 @@ public class ScoreUI : MonoBehaviour
 		}
 		else
 		{
-			pontoTemp = score;
+			pontoTemp = (int)score;
 		}
 
 		scoreTextUI.text = pontoTemp.ToString();
