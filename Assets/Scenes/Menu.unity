@@ -3891,6 +3891,18 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 199130, guid: cc92702d3f3078f43870f9ff4bc818dd, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199132, guid: cc92702d3f3078f43870f9ff4bc818dd, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 186074, guid: cc92702d3f3078f43870f9ff4bc818dd, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc92702d3f3078f43870f9ff4bc818dd, type: 2}
   m_RootGameObject: {fileID: 1906063308}
