@@ -39,6 +39,9 @@ public class MouseInteraction : MonoBehaviour {
         {
             square.SendMessage("OnHover");
             blocoAtual.SendMessage("TeleportToTarget", square);
+            blocoAtual.SendMessage("OnDeselectBlock");
+            hasSelected = false;
+            blocoAtual = null;
         }
         else
         {
