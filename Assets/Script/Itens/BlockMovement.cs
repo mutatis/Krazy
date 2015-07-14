@@ -6,6 +6,7 @@ public class BlockMovement : MonoBehaviour {
     public float noisePeriod;
     public float noiseAmplitude;
     public float timeArrival;
+    public GameObject lockedSquare;
 
     public IEnumerator GoToTarget(Transform target, bool useNoise)
     {
@@ -13,8 +14,8 @@ public class BlockMovement : MonoBehaviour {
 
         var mouseInteraction = GetComponent<MovMouse>();
         //mouseInteraction.pode = false; //can't grab while moving!
-        mouseInteraction.quadradoSelecionado = target.gameObject;
-        var bloco = mouseInteraction.quadradoSelecionado.GetComponent<BlockSquare>();
+        //mouseInteraction.quadradoSelecionado = target.gameObject;
+        var bloco = target.GetComponent<BlockSquare>();
         var rnd = new System.Random();
         var dist = Vector3.Distance(target.transform.position, transform.position);
         var distInicial = dist;
@@ -36,9 +37,24 @@ public class BlockMovement : MonoBehaviour {
        
         transform.position = target.position; //ensure deltaTime errors are corrected
         blockCosmetic.transform.localPosition = Vector3.zero;
-        mouseInteraction.pode = true;
-        mouseInteraction.squaresUnderBlock.Add(target.gameObject);
-        target.SendMessage("UnlockBlock", gameObject);
+        //mouseInteraction.pode = true;
+        //mouseInteraction.squaresUnderBlock.Add(target.gameObject);
+        //target.SendMessage("UnlockBlock", gameObject);
         bloco.blockStack++;
+        GetComponentInChildren<Animator>().SetTrigger("Teleport");
+        SendMessage("ChecarCombo");
+    }
+
+    public void TeleportToTarget(GameObject target)
+    {
+        transform.position = target.transform.position;
+        GetComponentInChildren<Animator>().SetTrigger("Teleport");
+        SendMessage("ChecarCombo");
+        //StartCoroutine(TeleportBlock(target));
+    }
+
+    private IEnumerator TeleportBlock(GameObject target)
+    {
+        yield return null;
     }
 }
