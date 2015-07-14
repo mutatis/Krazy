@@ -5,7 +5,7 @@ public class MouseInteraction : MonoBehaviour {
     //public bool isSelected;
     public bool teleport;
     private GameObject blocoAtual;
-    private GameObject quadradoSelecionado;
+    //private GameObject quadradoSelecionado;
 	// Use this for initialization
 
     public void OnClickBlock(GameObject block)
@@ -28,12 +28,10 @@ public class MouseInteraction : MonoBehaviour {
         if (!blocoAtual)
             return;
 
+        blocoAtual.GetComponent<BlockMovement>().lockedSquare.GetComponent<BlockSquare>().UnlockBlock(blocoAtual);
+
         if(!square.GetComponent<BlockSquare>().LockBlock(blocoAtual)) 
             return;
-
-        if(quadradoSelecionado)
-            quadradoSelecionado.GetComponent<BlockSquare>().UnlockBlock(blocoAtual);
-        quadradoSelecionado = square;
 
         if (teleport)
         {

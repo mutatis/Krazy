@@ -6,6 +6,7 @@ public class BlockMovement : MonoBehaviour {
     public float noisePeriod;
     public float noiseAmplitude;
     public float timeArrival;
+    public GameObject lockedSquare;
 
     public IEnumerator GoToTarget(Transform target, bool useNoise)
     {

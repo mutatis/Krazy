@@ -64,20 +64,29 @@ public class BlockSquare : MonoBehaviour
 		if (force) 
 		{
 			lockedBlock = block;
+            block.GetComponent<BlockMovement>().lockedSquare = gameObject;
 		}
         else if (lockedBlock != null /*|| blockStack > 0*/) 
         {
             return false;
         }
         else
-			lockedBlock = block;
+        {
+            lockedBlock = block;
+            block.GetComponent<BlockMovement>().lockedSquare = gameObject;
+        }
+			
         return true;
     }
 
     public void UnlockBlock(GameObject key)
     {
         if (lockedBlock == key)
+        {
             lockedBlock = null;
+            key.GetComponent<BlockMovement>().lockedSquare = null;
+        }
+            
     }
 
 	public void OnSelect()
