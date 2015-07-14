@@ -29,12 +29,10 @@ GameObject:
   m_Component:
   - 224: {fileID: 22486706}
   - 50: {fileID: 5016910}
-  - 114: {fileID: 11416906}
   - 58: {fileID: 5816910}
   - 114: {fileID: 11416908}
   - 114: {fileID: 11416902}
   - 114: {fileID: 11457982}
-  - 114: {fileID: 11413030}
   m_Layer: 8
   m_Name: AfroditeAll
   m_TagString: Afrodite
@@ -101,18 +99,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11413030
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 367969527f7a4e44fb79f8df0949a63d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teleport: 1
 --- !u!114 &11416900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,36 +136,6 @@ MonoBehaviour:
   noiseAmplitude: 8
   timeArrival: .5
   lockedSquare: {fileID: 0}
---- !u!114 &11416906
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11457982}
-          m_MethodName: Down
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &11416908
 MonoBehaviour:
   m_ObjectHideFlags: 1

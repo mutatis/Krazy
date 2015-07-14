@@ -30,11 +30,9 @@ GameObject:
   - 224: {fileID: 22417550}
   - 58: {fileID: 5817550}
   - 50: {fileID: 5017550}
-  - 114: {fileID: 11417546}
   - 114: {fileID: 11417548}
   - 114: {fileID: 11485068}
   - 114: {fileID: 11437882}
-  - 114: {fileID: 11489010}
   m_Layer: 11
   m_Name: AresAll
   m_TagString: Ares
@@ -135,36 +133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sons:
   - {fileID: 8300000, guid: dc30c55f075560344a69d97406f81f9b, type: 3}
---- !u!114 &11417546
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 117550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11437882}
-          m_MethodName: Down
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &11417548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -241,18 +209,6 @@ MonoBehaviour:
   noiseAmplitude: 8
   timeArrival: .5
   lockedSquare: {fileID: 0}
---- !u!114 &11489010
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 117550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 367969527f7a4e44fb79f8df0949a63d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teleport: 1
 --- !u!212 &21220990
 SpriteRenderer:
   m_ObjectHideFlags: 1
