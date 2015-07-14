@@ -2,14 +2,21 @@
 using System.Collections;
 using SIS;
 
-public class GameMaster : MonoBehaviour {
-    public bool enableEnergyLimit;
+public class GameMaster : MonoBehaviour 
+{
+	public GameObject buyEnergy;
+
+	public bool enableEnergyLimit;
+	public bool debug;
+
     public string faseAtual;
+
     public int[] powerUpTiers;
+
     public int idPrimeiraFase;
     public int idUltimaFase;
+
     public float debugTimeScale;
-    public bool debug;
 
     public static GameObject gameMaster;
 
@@ -31,9 +38,18 @@ public class GameMaster : MonoBehaviour {
         }
     }
 
+	void Awake()
+	{
+		DontDestroyOnLoad(gameObject);
+	}
+
 	void Start () 
 	{
-        DontDestroyOnLoad(gameObject);
+        if(PlayerPrefs.GetInt("Primeira") == 0)
+		{
+			PlayerPrefs.SetInt("Energia", 100);
+			PlayerPrefs.SetInt("Primeira", 1);
+		}
 	}
 
     void Update()
@@ -42,7 +58,7 @@ public class GameMaster : MonoBehaviour {
         {
             Time.timeScale = debugTimeScale;
             var tempo = Time.timeSinceLevelLoad;
-            //print(tempo);
+            print(tempo);
         }
     }
 
@@ -110,7 +126,15 @@ public class GameMaster : MonoBehaviour {
                 return;
             }
         }
-        LoadScene(level, 0);
+		if(Energia > 0 || level < 3)
+		{
+        	LoadScene(level, 0);
+		}
+		else
+		{
+			GetMoreEnergyPopUp();
+			return;
+		}
     }
 
     private void LoadScene(int level, int x)
@@ -126,8 +150,12 @@ public class GameMaster : MonoBehaviour {
         }
     }
 
-    private void GetMoreEnergyPopUp()
+    void GetMoreEnergyPopUp()
     {
-        print("GetMoreEnergyPopUp() has not been implemented yet");
+		if(Energia < 0)
+		{
+			Energia = 0;
+		}
+		Instantiate(buyEnergy);
     }
 }

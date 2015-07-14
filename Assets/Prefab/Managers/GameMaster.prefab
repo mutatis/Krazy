@@ -39,10 +39,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 242e54ce04607d047b38352201fb730f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEnergy: {fileID: 123186, guid: cc2b8ac4833b17d428533929243c671e, type: 2}
   enableEnergyLimit: 0
+  debug: 0
+  faseAtual: 3
   powerUpTiers: 030000000600000009000000
   idPrimeiraFase: 3
   idUltimaFase: 6
+  debugTimeScale: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

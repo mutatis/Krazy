@@ -59,7 +59,6 @@ public class MovMouse : MonoBehaviour
 		}
 
         pode = false;
-		//print("kill");
         SendMessage("OnKill");
 	}
 
@@ -69,7 +68,7 @@ public class MovMouse : MonoBehaviour
 		{
 	        if (!playingAnimation && pode)
 	        {
-				AudioSource.PlayClipAtPoint(soundFX[0], transform.position, 1);
+				AudioSource.PlayClipAtPoint(soundFX[0], transform.position, 0.4f);
 				StartCoroutine("MovingBlock");
 				if (PlayerPrefs.GetInt("Click") == 0)
 				{
@@ -83,10 +82,8 @@ public class MovMouse : MonoBehaviour
 
 	public void Up()
 	{
-        //print("up");
 		if(!ancora)
 		{
-            //print("up2");
 	        //Checa pelo scene master caso o bloco seja solto após o game over.
             if (!playingAnimation && pode && mouseDown && sceneMaster.enabled)
             {

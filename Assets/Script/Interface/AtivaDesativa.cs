@@ -5,6 +5,7 @@ public class AtivaDesativa : MonoBehaviour
 {	
 	public Animator[] anim;
 	public Animator[] anim3;
+	int x;
 
 	public void ControllAnim(Animator anim2)
 	{
@@ -19,19 +20,27 @@ public class AtivaDesativa : MonoBehaviour
 			{
 				anim3[i].SetTrigger("Desclico");
 			}
+			x = 0;
 		}
 		else
 		{
+			StartCoroutine("Va");
 			anim2.SetTrigger("Clico");
 		}
 	}
 
-	public void Va()
+	public IEnumerator Va()
 	{
-		for(int i = 0; i < anim.Length; i++)
+		float start = Time.realtimeSinceStartup;
+
+		while (Time.realtimeSinceStartup < start + 0.5f)
 		{
-			anim[i].SetTrigger("Clico");
+			yield return null;
 		}
+			anim[x].SetTrigger("Clico");
+
+		x++;
+		StartCoroutine ("Va");
 	}
 
 	public void AD(GameObject obj)

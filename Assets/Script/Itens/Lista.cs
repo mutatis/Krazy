@@ -95,7 +95,6 @@ public class Lista : MonoBehaviour
 			}
 			if(obj.Count > quant)
 			{
-				print("Porra 1");
 				if(!toca)
 				{
 					switch(obj.Count)
@@ -144,7 +143,6 @@ public class Lista : MonoBehaviour
 			}
 			if(obj2.Count > quant)
 			{
-				print("Porra 2");
 				if(!toca)
 				{
 					switch(obj2.Count)
