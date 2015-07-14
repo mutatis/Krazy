@@ -45,6 +45,7 @@ public class MouseInteraction : MonoBehaviour {
             square.SendMessage("OnHover");
             blocoAtual.GetComponent<Block>().SetTarget(square);
             blocoAtual.SendMessage("OnDeselectBlock");
+            hasSelected = false;
             blocoAtual = null;
         }
     }   

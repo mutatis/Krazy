@@ -14,6 +14,7 @@ public class BlockSquare : MonoBehaviour
     public int blockStack = 0;
     private GameObject sceneMaster;
     private MouseInteraction mouseInteraction;
+    private bool selected;
 
 
     // Use this for initialization
@@ -27,11 +28,11 @@ public class BlockSquare : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (selectColorOK)
+        if (Input.GetMouseButtonUp(0) && selected)
         {
-            sprite.color = cor;
-            selectColorOK = false;
-        }*/
+            sceneMaster.SendMessage("OnClickSquare", gameObject);
+            OnDeselect();
+        }
     }
 
     public void StartInvoking(GameObject block)
@@ -96,13 +97,13 @@ public class BlockSquare : MonoBehaviour
 	public void OnSelect()
 	{
         sprite.color = Color.white;
-        selectColorOK = true;
+        selected = true;
 	}
 
     public void OnDeselect()
     {
         sprite.color = cor;
-        //selectColorOK = true;
+        selected = false;
     }
 
     public void OnHover()
@@ -120,12 +121,6 @@ public class BlockSquare : MonoBehaviour
     public bool CanLand()
     {
         return blockStack == 1 && lockedBlock == null;
-    }
-
-    public void OnMouseUp()
-    {
-        sceneMaster.SendMessage("OnClickSquare", gameObject);
-        OnDeselect();
     }
 
     void OnMouseEnter()
