@@ -42,7 +42,7 @@ public class GameMaster : MonoBehaviour {
         {
             Time.timeScale = debugTimeScale;
             var tempo = Time.timeSinceLevelLoad;
-            //print(tempo);
+            print(tempo);
         }
     }
 

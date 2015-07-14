@@ -4,13 +4,13 @@ using System.Collections;
 public class KillController : MonoBehaviour 
 {
 
-	//public MouseInteraction mouse;
+	public MovMouse mouse;
 
 	public void Desativa()
 	{
 //		if(mouse.life <= 1)
 //{
-			//mouse.Desliga();
+			mouse.Desliga();
 		//}
 	}
 
@@ -25,6 +25,6 @@ public class KillController : MonoBehaviour
 
 	public void Kill()
 	{
-        SendMessageUpwards("OnKill");
+		mouse.Kill ();
 	}
 }

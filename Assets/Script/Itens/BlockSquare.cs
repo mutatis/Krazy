@@ -52,11 +52,16 @@ public class BlockSquare : MonoBehaviour
             particles.Play();
             block.transform.position = transform.position;
             yield return new WaitForSeconds(invokingTime);
+<<<<<<< HEAD
             //UnlockBlock(block);
             /*var blockMovement = block.GetComponent<MovMouse>();
+=======
+            UnlockBlock(block);
+            var blockMovement = block.GetComponent<MovMouse>();
+>>>>>>> parent of 3a7feca... Click to move
             blockMovement.squaresUnderBlock.Add(gameObject);
             blockMovement.quadradoSelecionado = gameObject;
-            blockMovement.pode = true;*/
+            blockMovement.pode = true;
             particles.Stop();
             
         }
@@ -71,7 +76,7 @@ public class BlockSquare : MonoBehaviour
 			lockedBlock = block;
             block.GetComponent<BlockMovement>().lockedSquare = gameObject;
 		}
-        else if (lockedBlock != null /*|| blockStack > 0*/) 
+        else if (lockedBlock != null || blockStack > 0) 
         {
             return false;
         }
@@ -122,6 +127,7 @@ public class BlockSquare : MonoBehaviour
     {
         return blockStack == 1 && lockedBlock == null;
     }
+<<<<<<< HEAD
 
     void OnMouseEnter()
     {
@@ -133,4 +139,6 @@ public class BlockSquare : MonoBehaviour
     {
         OnDeselect();
     }
+=======
+>>>>>>> parent of 3a7feca... Click to move
 }
