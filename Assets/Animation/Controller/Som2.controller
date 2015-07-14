@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Som
+  m_Name: Som2
   serializedVersion: 2
   m_AnimatorParameters:
   - m_Name: Clico
@@ -109,16 +109,16 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110230708}
-      second: []
-    data:
-      first: {fileID: 110202108}
+      first: {fileID: 110267794}
       second: []
     data:
       first: {fileID: 110225088}
       second: []
     data:
-      first: {fileID: 110267794}
+      first: {fileID: 110202108}
+      second: []
+    data:
+      first: {fileID: 110230708}
       second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
