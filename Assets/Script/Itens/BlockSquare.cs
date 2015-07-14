@@ -23,11 +23,11 @@ public class BlockSquare : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Input.GetMouseButton(0) && selectColorOK)
+        /*if (selectColorOK)
         {
             sprite.color = cor;
             selectColorOK = false;
-        }
+        }*/
     }
 
     public void StartInvoking(GameObject block)
@@ -118,8 +118,19 @@ public class BlockSquare : MonoBehaviour
         return blockStack == 1 && lockedBlock == null;
     }
 
-    public void OnMouseDown()
+    public void OnMouseUp()
     {
         GameObject.FindGameObjectWithTag("SceneMaster").SendMessage("OnClickSquare", gameObject);
+    }
+
+    void OnMouseEnter()
+    {
+        print("enter");
+        OnSelect();
+    }
+
+    void OnMouseExit()
+    {
+        OnDeselect();
     }
 }
