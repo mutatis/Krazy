@@ -96,7 +96,7 @@ public class BlockSquare : MonoBehaviour
 
 	public void OnSelect()
 	{
-        sprite.color = Color.white;
+        sprite.color = Color.black;
         selected = true;
 	}
 
