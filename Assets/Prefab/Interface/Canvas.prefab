@@ -373,6 +373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0a9f9b243c62546b5db73bee10e6fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: []
+  anim3: []
 --- !u!114 &11446154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -783,7 +785,7 @@ MonoBehaviour:
   maxWave: 5
   wave: 0
   posCreated: []
-  spawnPrimeiraWave: {fileID: 8300000, guid: 33f5cf72f4cbbd84a92687ef6cdb355a, type: 3}
+  spawnPrimeiraWave: {fileID: 8300000, guid: 5dcadea47ec8cc6479a45b576371da4d, type: 3}
   gridRandom: 0
   minX: 0
   maxX: 0

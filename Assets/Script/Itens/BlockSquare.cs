@@ -12,26 +12,21 @@ public class BlockSquare : MonoBehaviour
     Color cor;
     public GameObject lockedBlock = null;
     public int blockStack = 0;
-    private GameObject sceneMaster;
-    private MouseInteraction mouseInteraction;
-    private bool selected;
 
 
     // Use this for initialization
     void Start()
     {
         cor = new Color(sprite.color.r, sprite.color.g, sprite.color.b, sprite.color.a);
-        sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster");
-        mouseInteraction = sceneMaster.GetComponent<MouseInteraction>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonUp(0) && selected)
+        if (!Input.GetMouseButton(0) && selectColorOK)
         {
-            sceneMaster.SendMessage("OnClickSquare", gameObject);
-            OnDeselect();
+            sprite.color = cor;
+            selectColorOK = false;
         }
     }
 
@@ -69,41 +64,32 @@ public class BlockSquare : MonoBehaviour
 		if (force) 
 		{
 			lockedBlock = block;
-            block.GetComponent<BlockMovement>().lockedSquare = gameObject;
 		}
         else if (lockedBlock != null || blockStack > 0) 
         {
             return false;
         }
         else
-        {
-            lockedBlock = block;
-            block.GetComponent<BlockMovement>().lockedSquare = gameObject;
-        }
-			
+			lockedBlock = block;
         return true;
     }
 
     public void UnlockBlock(GameObject key)
     {
         if (lockedBlock == key)
-        {
             lockedBlock = null;
-            key.GetComponent<BlockMovement>().lockedSquare = null;
-        }
-            
     }
 
 	public void OnSelect()
 	{
         sprite.color = Color.white;
-        selected = true;
+        selectColorOK = true;
 	}
 
     public void OnDeselect()
     {
         sprite.color = cor;
-        selected = false;
+        selectColorOK = true;
     }
 
     public void OnHover()

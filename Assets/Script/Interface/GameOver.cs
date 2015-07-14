@@ -2,8 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class GameOver : MonoBehaviour {
+public class GameOver : MonoBehaviour 
+{
     public List<GameObject> estrelas;
+
+	public AudioSource audio;
 
     int score;
     int qtdEstrelas;
@@ -16,6 +19,10 @@ public class GameOver : MonoBehaviour {
 		if(qtdEstrelas > PlayerPrefs.GetInt(PlayerPrefs.GetString("Loading")))
 		{
 			PlayerPrefs.SetInt(PlayerPrefs.GetString("Loading"), qtdEstrelas);
+		}
+		if(qtdEstrelas > 0)
+		{
+			audio.Play();
 		}
 		CreatedObj obj = GameObject.FindGameObjectWithTag ("Created").GetComponent<CreatedObj> ();
         obj.StopWave();

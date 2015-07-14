@@ -7,6 +7,8 @@ public class Direcao : MonoBehaviour
 	public float velX;
 	public float velY;
 
+	public float tempo = 0.2f;
+
 	public int tipo;
 
 	public string tag_;
@@ -27,7 +29,7 @@ public class Direcao : MonoBehaviour
 
 	IEnumerator Go()
 	{
-		yield return new WaitForSeconds (0.2f);
+		yield return new WaitForSeconds (tempo);
 		lista.x ++;
 		Destroy (gameObject);
 	}

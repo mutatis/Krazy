@@ -273,6 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velX: 5.5
   velY: 0
+  tempo: .200000003
   tipo: 2
   tag_: Zeus
   lista: {fileID: 11438854}
@@ -289,6 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velX: -5.5
   velY: 0
+  tempo: .200000003
   tipo: 2
   tag_: Zeus
   lista: {fileID: 11438854}
@@ -305,6 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velX: 0
   velY: -5.5
+  tempo: .200000003
   tipo: 1
   tag_: Zeus
   lista: {fileID: 11438854}
@@ -321,6 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velX: 0
   velY: 5.5
+  tempo: .200000003
   tipo: 1
   tag_: Zeus
   lista: {fileID: 11438854}
@@ -351,7 +355,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138848}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_LightmapIndex: 255
@@ -373,7 +377,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138846}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_LightmapIndex: 255
@@ -395,7 +399,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138852}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_LightmapIndex: 255
@@ -417,7 +421,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138850}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_LightmapIndex: 255
