@@ -83,7 +83,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 116910}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Radius: 49.6500015
   m_Center: {x: 0, y: 0}
 --- !u!95 &9516910
@@ -149,6 +149,7 @@ MonoBehaviour:
   noisePeriod: 15
   noiseAmplitude: 8
   timeArrival: .5
+  lockedSquare: {fileID: 0}
 --- !u!114 &11416906
 MonoBehaviour:
   m_ObjectHideFlags: 1
