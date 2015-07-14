@@ -33,7 +33,7 @@ public class Block : MonoBehaviour
     public void OnSelectBlock()
     {
         selectionOverlay.SetActive(true);
-        print(name + " is now selected");
+        //print(name + " is now selected");
     }
 
     public void OnDeselectBlock()
@@ -42,8 +42,9 @@ public class Block : MonoBehaviour
         print(name + " was deselected");
     }
 
-    public void Down()
+    public void OnMouseDown()
     {
+        print("down " + Time.time);
         if(!ancora)
             sceneMaster.gameObject.SendMessage("OnClickBlock", gameObject);
     }
