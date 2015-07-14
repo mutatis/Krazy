@@ -8,10 +8,7 @@ public class KillController : MonoBehaviour
 
 	public void Desativa()
 	{
-//		if(mouse.life <= 1)
-//{
-			//mouse.Desliga();
-		//}
+        transform.parent.GetComponent<CircleCollider2D>().enabled = false;
 	}
 
 	public void Cancela()
