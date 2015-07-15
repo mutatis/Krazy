@@ -78,7 +78,6 @@ public class Lista : MonoBehaviour
 
 					if(objeto != null)
 					{
-						camera.Atira(objeto.transform.position);
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
 					}
@@ -91,7 +90,6 @@ public class Lista : MonoBehaviour
 					
 					if(objeto != null)
 					{
-						camera.Atira(objeto.transform.position);
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
 					}
@@ -140,7 +138,6 @@ public class Lista : MonoBehaviour
 					
 					if(objeto != null)
 					{
-						camera.Atira(objeto.transform.position);
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
 					}
@@ -189,7 +186,6 @@ public class Lista : MonoBehaviour
 					
 					if(objeto != null)
 					{
-						camera.Atira(objeto.transform.position);
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
 					}
