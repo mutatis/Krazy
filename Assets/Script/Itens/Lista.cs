@@ -10,6 +10,8 @@ public class Lista : MonoBehaviour
 
 	public AudioClip[] somPontuacao;
 
+	public D2D_ClickToSpawn camera;
+
 	public int x;
 	public int quant = 3;
 
@@ -22,6 +24,7 @@ public class Lista : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		camera = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<D2D_ClickToSpawn> ();
 		StartCoroutine("GO");
 	}
 	
@@ -75,6 +78,7 @@ public class Lista : MonoBehaviour
 
 					if(objeto != null)
 					{
+						camera.Atira(objeto.transform.position);
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
 					}
@@ -87,6 +91,7 @@ public class Lista : MonoBehaviour
 					
 					if(objeto != null)
 					{
+						camera.Atira(objeto.transform.position);
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
 					}
@@ -135,6 +140,7 @@ public class Lista : MonoBehaviour
 					
 					if(objeto != null)
 					{
+						camera.Atira(objeto.transform.position);
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
 					}
@@ -183,6 +189,7 @@ public class Lista : MonoBehaviour
 					
 					if(objeto != null)
 					{
+						camera.Atira(objeto.transform.position);
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
 					}

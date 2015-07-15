@@ -26,7 +26,6 @@ GameObject:
   - 4: {fileID: 460886}
   - 114: {fileID: 11460892}
   - 58: {fileID: 5860884}
-  - 50: {fileID: 5060886}
   - 212: {fileID: 21256054}
   m_Layer: 0
   m_Name: Right
@@ -45,7 +44,6 @@ GameObject:
   - 4: {fileID: 460888}
   - 114: {fileID: 11460890}
   - 58: {fileID: 5860888}
-  - 50: {fileID: 5060890}
   - 212: {fileID: 21256056}
   m_Layer: 0
   m_Name: Left
@@ -64,7 +62,6 @@ GameObject:
   - 4: {fileID: 460890}
   - 114: {fileID: 11460888}
   - 58: {fileID: 5860890}
-  - 50: {fileID: 5060884}
   - 212: {fileID: 21256060}
   m_Layer: 0
   m_Name: Down
@@ -83,7 +80,6 @@ GameObject:
   - 4: {fileID: 460892}
   - 114: {fileID: 11460886}
   - 58: {fileID: 5860886}
-  - 50: {fileID: 5060888}
   - 212: {fileID: 21256058}
   m_Layer: 0
   m_Name: Up
@@ -156,66 +152,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 460884}
   m_RootOrder: 0
---- !u!50 &5060884
-Rigidbody2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160890}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!50 &5060886
-Rigidbody2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160886}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!50 &5060888
-Rigidbody2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160892}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!50 &5060890
-Rigidbody2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160888}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
 --- !u!58 &5860884
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -279,6 +215,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0f7a77fed6e2c204da2424a00205c1e8, type: 3}
   - {fileID: 8300000, guid: e983712cad44a4c4dbe967fef4b7ebac, type: 3}
   - {fileID: 8300000, guid: 62050336b7b094d4d869effff06eaf6d, type: 3}
+  camera: {fileID: 0}
   x: 0
   quant: 3
 --- !u!114 &11460886

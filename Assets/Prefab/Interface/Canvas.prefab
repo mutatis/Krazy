@@ -777,6 +777,7 @@ MonoBehaviour:
   - {fileID: 134362, guid: 53b3c72f05dc6084e89af246eed44c46, type: 2}
   - {fileID: 101238, guid: f4a9b501ee6e8c64ea0de8c10cb6e794, type: 2}
   - {fileID: 121730, guid: 2795a5b542934514b81aee58ea74c912, type: 2}
+  - {fileID: 174290, guid: a4489094dd170b64dad22d4ea7c4ea37, type: 2}
   canvas: {fileID: 22475196}
   tempoWave: 5
   startingWave: 50
