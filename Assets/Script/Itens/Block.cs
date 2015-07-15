@@ -16,6 +16,11 @@ public class Block : MonoBehaviour
         sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>();
     }
 
+	void Update()
+	{
+		transform.position = new Vector3 (transform.position.x, transform.position.y, -1);
+	}
+
     public void OnKill()
     {
         sceneMaster.AumentarPontuacao(valorPontos);
@@ -42,7 +47,7 @@ public class Block : MonoBehaviour
         print(name + " was deselected");
     }
 
-    public void OnMouseDown()
+    void OnMouseDown()
     {
         print("down " + Time.time);
         if(!ancora)

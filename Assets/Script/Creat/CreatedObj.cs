@@ -77,6 +77,7 @@ public class CreatedObj : MonoBehaviour
 
             target.SendMessage("OnHover");
             obj.transform.parent = this.gameObject.transform;
+			obj.transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y, 1);
             target.GetComponent<BlockSquare>().StartInvoking(obj);
             //obj.GetComponent<Block>().SetTarget(target, true);
             
