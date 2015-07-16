@@ -78,6 +78,9 @@ public class Lista : MonoBehaviour
 
 					if(objeto != null)
 					{
+						camera.Atira(objeto.transform.position);
+						Rigidbody2D sl = objeto.GetComponentInChildren<Rigidbody2D>();
+						sl.gravityScale = 1f;
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
 					}
@@ -90,6 +93,9 @@ public class Lista : MonoBehaviour
 					
 					if(objeto != null)
 					{
+						camera.Atira(objeto.transform.position);
+						Rigidbody2D sl = objeto.GetComponentInChildren<Rigidbody2D>();
+						sl.gravityScale = 1f;
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
 					}
@@ -138,6 +144,9 @@ public class Lista : MonoBehaviour
 					
 					if(objeto != null)
 					{
+						camera.Atira(objeto.transform.position);
+						Rigidbody2D sl = objeto.GetComponentInChildren<Rigidbody2D>();
+						sl.gravityScale = 1f;
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
 					}
@@ -186,6 +195,9 @@ public class Lista : MonoBehaviour
 					
 					if(objeto != null)
 					{
+						camera.Atira(objeto.transform.position);
+						Rigidbody2D sl = objeto.GetComponentInChildren<Rigidbody2D>();
+						sl.gravityScale = 1f;
 						anim = objeto.GetComponentInChildren<Animator>();
 						anim.SetTrigger("Kill");
 					}

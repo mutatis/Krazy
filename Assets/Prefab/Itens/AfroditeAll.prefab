@@ -12,8 +12,9 @@ GameObject:
   - 114: {fileID: 11494086}
   - 212: {fileID: 21280480}
   - 95: {fileID: 9516910}
-  - 114: {fileID: 11434344}
-  - 114: {fileID: 11434346}
+  - 114: {fileID: 11452106}
+  - 114: {fileID: 11452108}
+  - 50: {fileID: 5052108}
   m_Layer: 8
   m_Name: Afrodite
   m_TagString: Untagged
@@ -33,7 +34,7 @@ GameObject:
   - 114: {fileID: 11416908}
   - 114: {fileID: 11416902}
   - 114: {fileID: 11457982}
-  - 50: {fileID: 5016910}
+  - 50: {fileID: 5049710}
   m_Layer: 8
   m_Name: AfroditeAll
   m_TagString: Afrodite
@@ -95,7 +96,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 480478}
   m_RootOrder: 0
---- !u!50 &5016910
+--- !u!50 &5049710
 Rigidbody2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -106,6 +107,21 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 0
   m_FixedAngle: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!50 &5052108
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116908}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -163,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d19c70d8629e04e91f8dff2c5dcc6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11434344
+--- !u!114 &11452106
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -192,13 +208,13 @@ MonoBehaviour:
   alphaShiftX: 0
   alphaShiftY: 0
   cachedSolidPixelCount: 49437
-  SourceMaterial: {fileID: 0}
+  SourceMaterial: {fileID: 2100000, guid: 4f935b17ca3c4d84fbcb73997407334c, type: 2}
   Sharpness: 1
   spriteRenderer: {fileID: 21280480}
   expectedPixelsToUnits: 0
   expectedPivot: {x: 0, y: 0}
   clonedMaterial: {fileID: 0}
---- !u!114 &11434346
+--- !u!114 &11452108
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -210,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Threshold: .5
-  MinPixels: 20
+  MinPixels: 10
   SplitOrder: 0
 --- !u!114 &11457982
 MonoBehaviour:
