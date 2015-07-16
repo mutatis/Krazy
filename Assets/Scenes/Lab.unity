@@ -148,6 +148,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!21 &166305400
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites-Default (Destructible 2D)(Clone)
+  m_Shader: {fileID: 4800000, guid: 9c897ee6dc2bb7d40a4ad66067efa576, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 3a953bfd1b3566d458629d9855d15415, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AlphaTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AlphaMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AT
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .439999998
+      data:
+        first:
+          name: PixelSnap
+        second: 0
+      data:
+        first:
+          name: _Sharpness
+        second: 1
+      data:
+        first:
+          name: _AlphaThreshold
+        second: 0
+      data:
+        first:
+          name: _AlphaContrast
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _AlphaScale
+        second: {r: 1, g: 1, b: 0, a: 0}
+      data:
+        first:
+          name: _AlphaOffset
+        second: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &174587464
 Prefab:
   m_ObjectHideFlags: 0
@@ -187,6 +262,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 21208266, guid: 2795a5b542934514b81aee58ea74c912, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1871086666}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2795a5b542934514b81aee58ea74c912, type: 2}
   m_RootGameObject: {fileID: 697636022}
@@ -231,6 +310,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 21278200, guid: f4a9b501ee6e8c64ea0de8c10cb6e794, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1357788820}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4a9b501ee6e8c64ea0de8c10cb6e794, type: 2}
   m_RootGameObject: {fileID: 299815119}
@@ -275,6 +358,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 21238122, guid: a4489094dd170b64dad22d4ea7c4ea37, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 364238778}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4489094dd170b64dad22d4ea7c4ea37, type: 2}
   m_RootGameObject: {fileID: 967342408}
@@ -389,6 +476,81 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!21 &364238778
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites-Default (Destructible 2D)(Clone)
+  m_Shader: {fileID: 4800000, guid: 9c897ee6dc2bb7d40a4ad66067efa576, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 0acae431786afbb4a83e3dd29524c986, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AlphaTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AlphaMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AT
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .439999998
+      data:
+        first:
+          name: PixelSnap
+        second: 0
+      data:
+        first:
+          name: _Sharpness
+        second: 1
+      data:
+        first:
+          name: _AlphaThreshold
+        second: 0
+      data:
+        first:
+          name: _AlphaContrast
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _AlphaScale
+        second: {r: 1, g: 1, b: 0, a: 0}
+      data:
+        first:
+          name: _AlphaOffset
+        second: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &374036973
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +775,7 @@ SpriteRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 1871086666}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -635,7 +797,7 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 0
   m_FixedAngle: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -684,12 +846,12 @@ MonoBehaviour:
   alphaShiftX: 0
   alphaShiftY: 0
   cachedSolidPixelCount: 35192
-  SourceMaterial: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  SourceMaterial: {fileID: 2100000, guid: 4f935b17ca3c4d84fbcb73997407334c, type: 2}
   Sharpness: 1
   spriteRenderer: {fileID: 470609622}
   expectedPixelsToUnits: 0
   expectedPivot: {x: 0, y: 0}
-  clonedMaterial: {fileID: 0}
+  clonedMaterial: {fileID: 1871086666}
 --- !u!1 &579524651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,7 +1305,7 @@ SpriteRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 1357788820}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1165,7 +1327,7 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 0
   m_FixedAngle: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1214,12 +1376,87 @@ MonoBehaviour:
   alphaShiftX: 0
   alphaShiftY: 0
   cachedSolidPixelCount: 197386
-  SourceMaterial: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  SourceMaterial: {fileID: 2100000, guid: 4f935b17ca3c4d84fbcb73997407334c, type: 2}
   Sharpness: 1
   spriteRenderer: {fileID: 703126001}
   expectedPixelsToUnits: 0
   expectedPivot: {x: 0, y: 0}
-  clonedMaterial: {fileID: 0}
+  clonedMaterial: {fileID: 1357788820}
+--- !u!21 &760834573
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites-Default (Destructible 2D)(Clone)
+  m_Shader: {fileID: 4800000, guid: 9c897ee6dc2bb7d40a4ad66067efa576, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 87726d4b026ac9b4484e9fbd9b9bc5e9, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AlphaTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AlphaMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AT
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .439999998
+      data:
+        first:
+          name: PixelSnap
+        second: 0
+      data:
+        first:
+          name: _Sharpness
+        second: 1
+      data:
+        first:
+          name: _AlphaThreshold
+        second: 0
+      data:
+        first:
+          name: _AlphaContrast
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _AlphaScale
+        second: {r: 1, g: 1, b: 0, a: 0}
+      data:
+        first:
+          name: _AlphaOffset
+        second: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &806199944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,7 +1815,7 @@ SpriteRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 166305400}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1600,7 +1837,7 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 0
   m_FixedAngle: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1649,12 +1886,12 @@ MonoBehaviour:
   alphaShiftX: 0
   alphaShiftY: 0
   cachedSolidPixelCount: 35708
-  SourceMaterial: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  SourceMaterial: {fileID: 2100000, guid: 4f935b17ca3c4d84fbcb73997407334c, type: 2}
   Sharpness: 1
   spriteRenderer: {fileID: 1169320320}
   expectedPixelsToUnits: 0
   expectedPivot: {x: 0, y: 0}
-  clonedMaterial: {fileID: 0}
+  clonedMaterial: {fileID: 166305400}
 --- !u!1 &1315794333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1853,7 +2090,7 @@ SpriteRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 760834573}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1875,7 +2112,7 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 0
   m_FixedAngle: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1924,12 +2161,87 @@ MonoBehaviour:
   alphaShiftX: 0
   alphaShiftY: 0
   cachedSolidPixelCount: 177076
-  SourceMaterial: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  SourceMaterial: {fileID: 2100000, guid: 4f935b17ca3c4d84fbcb73997407334c, type: 2}
   Sharpness: 1
   spriteRenderer: {fileID: 1331486791}
   expectedPixelsToUnits: 0
   expectedPivot: {x: 0, y: 0}
-  clonedMaterial: {fileID: 0}
+  clonedMaterial: {fileID: 760834573}
+--- !u!21 &1357788820
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites-Default (Destructible 2D)(Clone)
+  m_Shader: {fileID: 4800000, guid: 9c897ee6dc2bb7d40a4ad66067efa576, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 09b605033e6dfbc4f93eafed63e76818, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AlphaTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AlphaMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AT
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .439999998
+      data:
+        first:
+          name: PixelSnap
+        second: 0
+      data:
+        first:
+          name: _Sharpness
+        second: 1
+      data:
+        first:
+          name: _AlphaThreshold
+        second: 0
+      data:
+        first:
+          name: _AlphaContrast
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _AlphaScale
+        second: {r: 1, g: 1, b: 0, a: 0}
+      data:
+        first:
+          name: _AlphaOffset
+        second: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &1508991904
 Prefab:
   m_ObjectHideFlags: 0
@@ -1969,6 +2281,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 21206798, guid: d07cf489651880847a577ddcdf2b2e39, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 166305400}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d07cf489651880847a577ddcdf2b2e39, type: 2}
   m_RootGameObject: {fileID: 687819682}
@@ -2047,7 +2363,7 @@ SpriteRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 364238778}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2085,7 +2401,7 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 0
   m_FixedAngle: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -2134,12 +2450,12 @@ MonoBehaviour:
   alphaShiftX: 0
   alphaShiftY: 0
   cachedSolidPixelCount: 19488
-  SourceMaterial: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  SourceMaterial: {fileID: 2100000, guid: 4f935b17ca3c4d84fbcb73997407334c, type: 2}
   Sharpness: 1
   spriteRenderer: {fileID: 1720351591}
   expectedPixelsToUnits: 0
   expectedPivot: {x: 0, y: 0}
-  clonedMaterial: {fileID: 0}
+  clonedMaterial: {fileID: 364238778}
 --- !u!1001 &1805093212
 Prefab:
   m_ObjectHideFlags: 0
@@ -2179,6 +2495,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 21215148, guid: 53b3c72f05dc6084e89af246eed44c46, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 760834573}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53b3c72f05dc6084e89af246eed44c46, type: 2}
   m_RootGameObject: {fileID: 1315794333}
@@ -2235,6 +2555,81 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: b80c74ddc42a2584e8798bd3ed8d5d5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!21 &1871086666
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites-Default (Destructible 2D)(Clone)
+  m_Shader: {fileID: 4800000, guid: 9c897ee6dc2bb7d40a4ad66067efa576, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: d8cb699568e1afe46a5fa36f087bc165, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AlphaTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AlphaMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AT
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .439999998
+      data:
+        first:
+          name: PixelSnap
+        second: 0
+      data:
+        first:
+          name: _Sharpness
+        second: 1
+      data:
+        first:
+          name: _AlphaThreshold
+        second: 0
+      data:
+        first:
+          name: _AlphaContrast
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _AlphaScale
+        second: {r: 1, g: 1, b: 0, a: 0}
+      data:
+        first:
+          name: _AlphaOffset
+        second: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1902276786
 GameObject:
   m_ObjectHideFlags: 0
@@ -2498,7 +2893,7 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 0
   m_FixedAngle: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
