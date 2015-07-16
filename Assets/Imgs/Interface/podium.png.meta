@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 09b605033e6dfbc4f93eafed63e76818
+guid: d26219c2b0eef9a4fb8c37d646b04722
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -21,8 +21,8 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 256
+  textureFormat: 47
+  maxTextureSize: 1024
   textureSettings:
     filterMode: -1
     aniso: 16
@@ -38,10 +38,10 @@ TextureImporter:
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   textureType: 5
   buildTargetSettings: []
   spriteSheet:
     sprites: []
-  spritePackingTag: Pena
+  spritePackingTag: 
   userData: 
