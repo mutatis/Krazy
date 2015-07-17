@@ -10,8 +10,6 @@ public class Lista : MonoBehaviour
 
 	public AudioClip[] somPontuacao;
 
-	public D2D_ClickToSpawn camera;
-
 	public int x;
 	public int quant = 3;
 
@@ -24,8 +22,13 @@ public class Lista : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		camera = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<D2D_ClickToSpawn> ();
 		StartCoroutine("GO");
+	}
+
+	void OnCombo (GameObject objeto)
+	{
+		anim = objeto.GetComponentInChildren<Animator> ();
+		anim.SetTrigger ("Kill");
 	}
 	
 	// Update is called once per frame
@@ -78,11 +81,7 @@ public class Lista : MonoBehaviour
 
 					if(objeto != null)
 					{
-						camera.Atira(objeto.transform.position);
-						Rigidbody2D sl = objeto.GetComponentInChildren<Rigidbody2D>();
-						sl.gravityScale = 1f;
-						anim = objeto.GetComponentInChildren<Animator>();
-						anim.SetTrigger("Kill");
+						OnCombo(objeto);
 					}
 					//Destroy ((GameObject)obj[i]);
 				}
@@ -93,11 +92,7 @@ public class Lista : MonoBehaviour
 					
 					if(objeto != null)
 					{
-						camera.Atira(objeto.transform.position);
-						Rigidbody2D sl = objeto.GetComponentInChildren<Rigidbody2D>();
-						sl.gravityScale = 1f;
-						anim = objeto.GetComponentInChildren<Animator>();
-						anim.SetTrigger("Kill");
+						OnCombo(objeto);
 					}
 					//Destroy ((GameObject)obj2[i]);
 				}
@@ -144,11 +139,7 @@ public class Lista : MonoBehaviour
 					
 					if(objeto != null)
 					{
-						camera.Atira(objeto.transform.position);
-						Rigidbody2D sl = objeto.GetComponentInChildren<Rigidbody2D>();
-						sl.gravityScale = 1f;
-						anim = objeto.GetComponentInChildren<Animator>();
-						anim.SetTrigger("Kill");
+						OnCombo(objeto);
 					}
 					//Destroy ((GameObject)obj[i]);
 				}
@@ -195,11 +186,7 @@ public class Lista : MonoBehaviour
 					
 					if(objeto != null)
 					{
-						camera.Atira(objeto.transform.position);
-						Rigidbody2D sl = objeto.GetComponentInChildren<Rigidbody2D>();
-						sl.gravityScale = 1f;
-						anim = objeto.GetComponentInChildren<Animator>();
-						anim.SetTrigger("Kill");
+						OnCombo(objeto);
 					}
 					//Destroy ((GameObject)obj2[i]);
 				}
