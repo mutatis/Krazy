@@ -5,13 +5,13 @@ using System.Collections.Generic;
 
 public class ScoreUI : MonoBehaviour 
 {
-    List<GameObject> digits;
-    SceneMaster sceneMaster;
+    public List<GameObject> digits;
+    public SceneMaster sceneMaster;
     private int score = 0;
 
     void Start()
     {
-        sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>();
+		sceneMaster = GetComponent<SceneMaster> ();
     }
 
     void Update()
@@ -47,8 +47,8 @@ public class ScoreUI : MonoBehaviour
     }
 
     
-    void SetDigit(int digit, int value)
+    void SetDigit(int index, int value)
     {
-
+		digits [index].SendMessage ("SetValue", value);
     }
 }
