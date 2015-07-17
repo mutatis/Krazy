@@ -1,38 +1,54 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class ScoreUI : MonoBehaviour 
 {
-
-	//public static ScoreUI score;
+    List<GameObject> digits;
     SceneMaster sceneMaster;
-	public Text scoreTextUI;
-
-	private float score = 0;
-
-	float pontoTemp;
-    float increaseSpeed = 1;
+    private int score = 0;
 
     void Start()
     {
         sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>();
     }
 
-	// Update is called once per frame
-	void Update () 
-	{
-        score = sceneMaster.Score;
-        increaseSpeed += 5 * Time.deltaTime;
-		if(pontoTemp < score)
-		{
-			pontoTemp = Mathf.Clamp(pontoTemp + increaseSpeed, 0, score);
-		}
-		else
-		{
-			pontoTemp = (int)score;
-		}
+    void Update()
+    {
+        if (score != sceneMaster.Score)
+        {
+            OnChangeScore(score, sceneMaster.Score);
+            score = sceneMaster.Score;
+        }
+    }
 
-		scoreTextUI.text = pontoTemp.ToString();
-	}
+    void OnChangeScore(int _oldScore, int _newScore)
+    {
+        var scoreboardLength = digits.Count;
+        string oldScore = AddTrailingZeroes(_oldScore, scoreboardLength);
+        string newScore = AddTrailingZeroes(_newScore, scoreboardLength);
+
+        for (int i = 0; i < scoreboardLength; i++)
+        {
+            if (oldScore[i] != newScore[i])
+                SetDigit(i, newScore[i]);
+        }
+    }
+
+    private string AddTrailingZeroes(int value, int expectedLength) 
+    {
+        string svalue = value.ToString();
+        while (svalue.Length < expectedLength)
+        {
+            svalue = svalue.Insert(0, "0");
+        }
+        return svalue;
+    }
+
+    
+    void SetDigit(int digit, int value)
+    {
+
+    }
 }
