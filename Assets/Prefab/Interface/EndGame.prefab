@@ -783,6 +783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: []
+  audio: {fileID: 8300000, guid: 16c4d6e8e12300341ba842b8096133be, type: 3}
   endGame: {fileID: 106176}
   panelEnd: {fileID: 106174}
 --- !u!114 &11456110

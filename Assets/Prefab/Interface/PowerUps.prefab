@@ -217,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: PowerUp1
   power: {fileID: 11426408}
+  audio: {fileID: 8300000, guid: 660062a79c0e99040bc3be3f7b039570, type: 3}
 --- !u!114 &11493644
 MonoBehaviour:
   m_ObjectHideFlags: 1

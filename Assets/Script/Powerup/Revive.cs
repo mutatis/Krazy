@@ -7,6 +7,8 @@ public class Revive : MonoBehaviour
 {
 	public List<GameObject> obj;
 
+	public AudioClip audio;
+
 	public GameObject endGame;
 	public GameObject panelEnd;
 
@@ -27,6 +29,8 @@ public class Revive : MonoBehaviour
 	public IEnumerator ContinueCoroutine()
 	{
 		panelEnd.SetActive (false);
+
+		AudioSource.PlayClipAtPoint (audio, transform.position);
 
 		SceneMaster sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>();
 
