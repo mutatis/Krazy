@@ -5,13 +5,13 @@ using System.Collections.Generic;
 
 public class ScoreUI : MonoBehaviour 
 {
-    List<GameObject> digits;
+    public List<GameObject> digits;
     SceneMaster sceneMaster;
     private int score = 0;
 
     void Start()
     {
-        sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>();
+        sceneMaster = GetComponent<SceneMaster>();
     }
 
     void Update()
@@ -32,7 +32,10 @@ public class ScoreUI : MonoBehaviour
         for (int i = 0; i < scoreboardLength; i++)
         {
             if (oldScore[i] != newScore[i])
-                SetDigit(i, newScore[i]);
+            {
+                SetDigit(i, int.Parse(newScore[i].ToString()));
+            }
+                
         }
     }
 
@@ -41,7 +44,7 @@ public class ScoreUI : MonoBehaviour
         string svalue = value.ToString();
         while (svalue.Length < expectedLength)
         {
-            svalue = svalue.Insert(0, "0");
+            svalue = svalue.Insert(svalue.Length, "0");
         }
         return svalue;
     }
@@ -49,6 +52,6 @@ public class ScoreUI : MonoBehaviour
     
     void SetDigit(int digit, int value)
     {
-
+        digits[digit].SendMessage("SetValue", value);
     }
 }
