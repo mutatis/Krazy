@@ -1708,14 +1708,14 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 40188634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: .159999952, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 7.25684049e-06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 57155251}
-  m_RootOrder: 0
+  m_Father: {fileID: 848910688}
+  m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: .254000008}
+  m_AnchoredPosition: {x: 0, y: .0300012678}
   m_SizeDelta: {x: 1.91999996, y: 1}
   m_Pivot: {x: .5, y: .5}
 --- !u!95 &40188636
@@ -4221,8 +4221,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 6.25000191, z: 1}
-  m_Children:
-  - {fileID: 40188635}
+  m_Children: []
   m_Father: {fileID: 848910688}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
@@ -44870,7 +44869,7 @@ GameObject:
   - 114: {fileID: 725550661}
   - 114: {fileID: 725550660}
   m_Layer: 5
-  m_Name: ']'
+  m_Name: SM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44891,7 +44890,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 219, y: 146.699997}
+  m_AnchoredPosition: {x: 218.800003, y: 126.599998}
   m_SizeDelta: {x: 544, y: 545}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &725550660
@@ -53894,15 +53893,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 848910687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -40682.9258}
+  m_LocalPosition: {x: 0, y: 0, z: -40683}
   m_LocalScale: {x: 538.28656, y: 538.285217, z: 538.285217}
   m_Children:
   - {fileID: 57155251}
+  - {fileID: 40188635}
   m_Father: {fileID: 725550659}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -120.459, y: -327.62912}
+  m_AnchoredPosition: {x: -120, y: -400}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &848910689
@@ -53916,9 +53916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59c8a034b675524c9fc7d974e794be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxScale: 3.05999994
-  liquidBody: {fileID: 57155251}
-  tip: {fileID: 40188635}
+  maxHeight: 150
 --- !u!1001 &852012009
 Prefab:
   m_ObjectHideFlags: 0
