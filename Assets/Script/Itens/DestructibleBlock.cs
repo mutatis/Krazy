@@ -16,6 +16,11 @@ public class DestructibleBlock : MonoBehaviour
         }
     }
 
+	public void Explodir()
+	{
+		StartCoroutine("Explode");
+	}
+
     public IEnumerator Explode()
     {
         var rotationDir = Random.rotation;
