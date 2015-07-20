@@ -19,7 +19,10 @@ public class ScoreMeter : MonoBehaviour {
     }
 	
 	void Update () {
-        liquidBody.transform.localScale = new Vector3(1, maxScale * (score / scoreGoal) + 1, 1);
-        tip.transform.localPosition = new Vector3(0, (maxScale / 2) * (score / scoreGoal), 0);
+        if (score <= scoreGoal)
+        {
+            liquidBody.transform.localScale = new Vector3(1, maxScale * (score / scoreGoal) + 1, 1);
+            tip.transform.localPosition = new Vector3(0, (maxScale / 2) * (score / scoreGoal), 0);
+        }
 	}
 }
