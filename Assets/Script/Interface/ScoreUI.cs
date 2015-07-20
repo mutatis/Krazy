@@ -48,7 +48,6 @@ public class ScoreUI : MonoBehaviour
         {
             svalue = svalue.Insert(0, "0");
         }
-		print (svalue);
         return svalue;
     }
 
