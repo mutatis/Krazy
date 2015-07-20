@@ -6,20 +6,14 @@ using System.Collections.Generic;
 public class ScoreUI : MonoBehaviour 
 {
     public List<GameObject> digits;
-<<<<<<< HEAD
+
+
     public SceneMaster sceneMaster;
-=======
-    SceneMaster sceneMaster;
->>>>>>> 70a022da83cab5c448e565a9ea27f6eed1a1964e
     private int score = 0;
 
     void Start()
     {
-<<<<<<< HEAD
 		sceneMaster = GetComponent<SceneMaster> ();
-=======
-        sceneMaster = GetComponent<SceneMaster>();
->>>>>>> 70a022da83cab5c448e565a9ea27f6eed1a1964e
     }
 
     void Update()
@@ -52,18 +46,15 @@ public class ScoreUI : MonoBehaviour
         string svalue = value.ToString();
         while (svalue.Length < expectedLength)
         {
-            svalue = svalue.Insert(svalue.Length, "0");
+            svalue = svalue.Insert(0, "0");
         }
+		print (svalue);
         return svalue;
     }
 
     
     void SetDigit(int index, int value)
     {
-<<<<<<< HEAD
 		digits [index].SendMessage ("SetValue", value);
-=======
-        digits[digit].SendMessage("SetValue", value);
->>>>>>> 70a022da83cab5c448e565a9ea27f6eed1a1964e
     }
 }

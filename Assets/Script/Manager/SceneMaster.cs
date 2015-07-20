@@ -15,7 +15,7 @@ public class SceneMaster : MonoBehaviour
     public GameObject telaGameOver = null;
     public Timer timer;
 
-    private int score;
+    public int score;
     GameMaster gameMaster;
 
 
