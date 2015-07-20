@@ -64,6 +64,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 467816}
+  - 114: {fileID: 11497148}
   m_Layer: 0
   m_Name: PoseidonQuebrado
   m_TagString: Untagged
@@ -420,6 +421,21 @@ MonoBehaviour:
   noiseAmplitude: 8
   timeArrival: .5
   lockedSquare: {fileID: 0}
+--- !u!114 &11497148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a84809cd855fc42a4615f5109c9411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fragmentSpeed: 10
+  rotation: 15
+  timeLimit: .100000001
+  padrao: {fileID: 21208266}
 --- !u!212 &21200054
 SpriteRenderer:
   m_ObjectHideFlags: 1

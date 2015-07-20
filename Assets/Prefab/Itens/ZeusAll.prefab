@@ -120,6 +120,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 441622}
+  - 114: {fileID: 11410492}
   m_Layer: 0
   m_Name: ZeusQuebrado
   m_TagString: Untagged
@@ -397,6 +398,21 @@ MonoBehaviour:
   noiseAmplitude: 8
   timeArrival: .5
   lockedSquare: {fileID: 0}
+--- !u!114 &11410492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a84809cd855fc42a4615f5109c9411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fragmentSpeed: 10
+  rotation: 15
+  timeLimit: .100000001
+  padrao: {fileID: 21238122}
 --- !u!114 &11474288
 MonoBehaviour:
   m_ObjectHideFlags: 1
