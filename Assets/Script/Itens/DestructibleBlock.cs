@@ -5,9 +5,13 @@ using System.Collections.Generic;
 public class DestructibleBlock : MonoBehaviour
 {
     List<Transform> shards = new List<Transform>();
+
     public float fragmentSpeed;
     public float rotation;
     public float timeLimit;
+
+	public SpriteRenderer padrao;
+
     void Start()
     {
         for (int i = 0; i < transform.childCount; i++)
@@ -19,6 +23,7 @@ public class DestructibleBlock : MonoBehaviour
 	public void Explodir()
 	{
 		StartCoroutine("Explode");
+		padrao.enabled = false;
 	}
 
     public IEnumerator Explode()
