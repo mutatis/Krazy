@@ -14,6 +14,7 @@ public class SceneMaster : MonoBehaviour
 
     public GameObject telaGameOver = null;
     public Timer timer;
+    public ScoreMeter scoreMeter;
 
     public int score;
     GameMaster gameMaster;
@@ -43,6 +44,8 @@ public class SceneMaster : MonoBehaviour
 		StartCoroutine("GO");
         gameMaster = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameMaster>();
         gameMaster.faseAtual = Application.loadedLevel.ToString();
+        if(scoreMeter)
+            scoreMeter.SetGoal(meta3Estrelas);
     }
 
     public void BeginLevel()
@@ -56,6 +59,8 @@ public class SceneMaster : MonoBehaviour
 	void Update () 
     {
         ChecarGrid();
+        if(scoreMeter)
+            scoreMeter.SetScore(score);
 	}
 
     private void ChecarGrid()
