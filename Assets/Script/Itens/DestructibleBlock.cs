@@ -6,7 +6,7 @@ public class DestructibleBlock : MonoBehaviour
 {
     List<Transform> shards = new List<Transform>();
 
-    public float fragmentSpeed;
+    public float range;
     public float rotation;
     public float timeLimit;
 
@@ -31,19 +31,23 @@ public class DestructibleBlock : MonoBehaviour
         var rotationDir = Random.rotation;
         var timeAtExplosion = Time.time;
         List<Vector3> direcoes = new List<Vector3>();
+        var velocities = new List<Vector3>();
 
         for (int i = 0; i < shards.Count; i++)
         {
             direcoes.Add(Random.insideUnitCircle);
+            velocities.Add(Vector3.zero);
         }
 
         while (Time.time - timeAtExplosion < timeLimit)
         {
             for (int i = 0; i < shards.Count; i++)
             {
-                var velocity = direcoes[i] * fragmentSpeed;
+                var target = direcoes[i] * range;
+                var velocity = velocities[i];
                 Quaternion.Lerp(shards[i].rotation, rotationDir, Time.deltaTime * rotation);
-                shards[i].Translate(velocity * Time.deltaTime);
+                Vector3.SmoothDamp(shards[i].position, target, ref velocity, timeLimit);
+                velocities[i] = velocity;
             }
             yield return new WaitForEndOfFrame();
         }
