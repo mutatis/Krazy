@@ -15,6 +15,8 @@ public class Lista : MonoBehaviour
 
 	GameObject objeto;
 
+	DestructibleBlock des;
+
 	Animator anim;
 
 	bool toca;
@@ -28,6 +30,8 @@ public class Lista : MonoBehaviour
 	void OnCombo (GameObject objeto)
 	{
 		anim = objeto.GetComponentInChildren<Animator> ();
+		des = objeto.GetComponentInChildren<DestructibleBlock> ();
+		des.Explodir();
 		anim.SetTrigger ("Kill");
 	}
 	

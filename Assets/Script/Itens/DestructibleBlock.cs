@@ -15,6 +15,11 @@ public class DestructibleBlock : MonoBehaviour {
         }
     }
 
+	public void Explodir()
+	{
+		StartCoroutine("Explode");
+	}
+
     public IEnumerator Explode()
     {
         var rotationDir = Random.rotation;
@@ -23,7 +28,7 @@ public class DestructibleBlock : MonoBehaviour {
         {
             foreach (var shard in shards)
             {
-                var velocity = (shard.position - transform.position).normalized * fragmentSpeed;
+                var velocity = Random.insideUnitCircle * fragmentSpeed;
                 Quaternion.Lerp(shard.rotation, rotationDir, Time.deltaTime * rotation);
                 shard.Translate(velocity * Time.deltaTime);
             }
