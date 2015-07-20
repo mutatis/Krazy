@@ -1,12 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ScoreMeter : MonoBehaviour {
     private float score;
     public float maxScale;
     private float scoreGoal;
-    public GameObject liquidBody;
-    public GameObject tip;
+    public RectTransform liquidBody;
+    public RectTransform tip;
+
+	void Start()
+	{
+		print (transform.localPosition);
+	}
+
 	// Use this for initialization
     public void SetScore(float score)
     {
@@ -19,7 +26,8 @@ public class ScoreMeter : MonoBehaviour {
     }
 	
 	void Update () {
-        liquidBody.transform.localScale = new Vector3(1, maxScale * (score / scoreGoal) + 1, 1);
-        tip.transform.localPosition = new Vector3(0, (maxScale / 2) * (score / scoreGoal), 0);
+		var szd = liquidBody.sizeDelta;
+        liquidBody.sizeDelta = new Vector2(szd.x, maxScale * (score / scoreGoal) + 1);
+        tip.position = new Vector3(0, (maxScale / 2) * (score / scoreGoal), 0);
 	}
 }
