@@ -1000,6 +1000,7 @@ GameObject:
   - 114: {fileID: 510402657}
   - 95: {fileID: 510402655}
   - 114: {fileID: 510402656}
+  - 82: {fileID: 510402659}
   m_Layer: 5
   m_Name: FogoPai
   m_TagString: Untagged
@@ -1055,6 +1056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1293612279}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!114 &510402657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1084,6 +1086,64 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1930933848}
   m_GameObject: {fileID: 510402653}
+--- !u!82 &510402659
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510402653}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &536408933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,6 +2242,7 @@ GameObject:
   - 114: {fileID: 1075994871}
   - 95: {fileID: 1075994869}
   - 114: {fileID: 1075994870}
+  - 82: {fileID: 1075994873}
   m_Layer: 5
   m_Name: FogoPai
   m_TagString: Untagged
@@ -2237,6 +2298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1387135832}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!114 &1075994871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2266,6 +2328,64 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1930933848}
   m_GameObject: {fileID: 1075994867}
+--- !u!82 &1075994873
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1075994867}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1125319010
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,6 +2479,7 @@ GameObject:
   - 114: {fileID: 1214173099}
   - 95: {fileID: 1214173097}
   - 114: {fileID: 1214173098}
+  - 82: {fileID: 1214173101}
   m_Layer: 5
   m_Name: FogoPai
   m_TagString: Untagged
@@ -2414,6 +2535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1496306101}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!114 &1214173099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2443,6 +2565,64 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1930933848}
   m_GameObject: {fileID: 1214173095}
+--- !u!82 &1214173101
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1214173095}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1293612277
 GameObject:
   m_ObjectHideFlags: 0
@@ -3184,6 +3364,7 @@ GameObject:
   - 114: {fileID: 1546233608}
   - 95: {fileID: 1546233606}
   - 114: {fileID: 1546233607}
+  - 82: {fileID: 1546233610}
   m_Layer: 5
   m_Name: FogoPai
   m_TagString: Untagged
@@ -3239,6 +3420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 158141194}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!114 &1546233608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3268,6 +3450,64 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1930933848}
   m_GameObject: {fileID: 1546233604}
+--- !u!82 &1546233610
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1546233604}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1554902984
 GameObject:
   m_ObjectHideFlags: 0
@@ -4013,6 +4253,7 @@ GameObject:
   - 114: {fileID: 1829698716}
   - 95: {fileID: 1829698714}
   - 114: {fileID: 1829698715}
+  - 82: {fileID: 1829698718}
   m_Layer: 5
   m_Name: FogoPai
   m_TagString: Untagged
@@ -4068,6 +4309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1647603476}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!114 &1829698716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4097,6 +4339,64 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1930933848}
   m_GameObject: {fileID: 1829698712}
+--- !u!82 &1829698718
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1829698712}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1832946004
 GameObject:
   m_ObjectHideFlags: 0
@@ -4433,6 +4733,14 @@ Prefab:
       value: 
       objectReference: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
     - target: {fileID: 11423104, guid: cc92702d3f3078f43870f9ff4bc818dd, type: 2}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
+    - target: {fileID: 11413310, guid: cc92702d3f3078f43870f9ff4bc818dd, type: 2}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
+    - target: {fileID: 11413318, guid: cc92702d3f3078f43870f9ff4bc818dd, type: 2}
       propertyPath: audio
       value: 
       objectReference: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}

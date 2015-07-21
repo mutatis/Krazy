@@ -36,19 +36,44 @@ public class AtivaDesativa : MonoBehaviour
 	{
 		float start = Time.realtimeSinceStartup;
 
-		while (Time.realtimeSinceStartup < start + 0.3f)
+		while (Time.realtimeSinceStartup < start + 0.5f)
 		{
 			yield return null;
 		}
-
+		start = Time.realtimeSinceStartup;
 		anim[x].SetTrigger("Clico");
+
+		print("PORRRRAAAAAAA");
 
 		Time.timeScale = 1f;
 		AudioSource.PlayClipAtPoint (audio, transform.position);
 		Time.timeScale = 0;
 
 		x++;
+		StartCoroutine ("Vo");
+		StopCoroutine ("Va");
+	}
+
+	public IEnumerator Vo()
+	{
+		float start = Time.realtimeSinceStartup;
+		
+		while (Time.realtimeSinceStartup < start + 0.5f)
+		{
+			yield return null;
+		}
+		start = Time.realtimeSinceStartup;
+		anim[x].SetTrigger("Clico");
+		
+		print("PORRRRAAAAAAA");
+		
+		Time.timeScale = 1f;
+		AudioSource.PlayClipAtPoint (audio, transform.position);
+		Time.timeScale = 0;
+		
+		x++;
 		StartCoroutine ("Va");
+		StopCoroutine ("Vo");
 	}
 
 	public void AD(GameObject obj)
