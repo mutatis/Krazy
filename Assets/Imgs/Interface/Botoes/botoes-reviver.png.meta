@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 96e7ec6b649918e47afb23ab45faa4cf
+guid: d7b4f0f1901628c43913207bb06a4d0e
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -21,8 +21,8 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: 47
-  maxTextureSize: 256
+  textureFormat: -1
+  maxTextureSize: 512
   textureSettings:
     filterMode: -1
     aniso: 16
@@ -43,5 +43,5 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites: []
-  spritePackingTag: ZeusNew
+  spritePackingTag: Botao
   userData: 
