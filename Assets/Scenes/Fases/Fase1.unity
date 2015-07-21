@@ -10328,6 +10328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1787331670}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!95 &234075116
 Animator:
   serializedVersion: 3
@@ -33844,6 +33845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1569727697}
+  audio: {fileID: 0}
 --- !u!95 &577944772
 Animator:
   serializedVersion: 3
@@ -38734,6 +38736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 470460540}
+  audio: {fileID: 0}
 --- !u!95 &676156900
 Animator:
   serializedVersion: 3
@@ -40004,6 +40007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 357537366}
+  audio: {fileID: 0}
 --- !u!95 &695498793
 Animator:
   serializedVersion: 3
@@ -44773,6 +44777,7 @@ MonoBehaviour:
   - {fileID: 470460540}
   - {fileID: 1569727697}
   - {fileID: 1787331670}
+  audio: {fileID: 0}
 --- !u!114 &719023770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56741,6 +56746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: []
   anim3: []
+  audio: {fileID: 0}
 --- !u!114 &941306040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99275,6 +99281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: []
   anim3: []
+  audio: {fileID: 0}
 --- !u!1001 &1536926800
 Prefab:
   m_ObjectHideFlags: 0
@@ -107418,6 +107425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1571246697}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!95 &1632461293
 Animator:
   serializedVersion: 3
