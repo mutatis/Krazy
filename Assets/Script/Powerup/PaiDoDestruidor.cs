@@ -14,6 +14,8 @@ public class PaiDoDestruidor : MonoBehaviour
 
 	GameObject objeto;
 
+	AreaDestroy quebra;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -27,13 +29,14 @@ public class PaiDoDestruidor : MonoBehaviour
 			Vector2 pos = new Vector2();
 			pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			transform.position = new Vector3(pos.x, pos.y, 0);
-			StartCoroutine("GO");
 		}
-		if(objeto.GetComponent<MovMouse>().mouseDown && objeto != null)
+		if(objeto != null)
 		{
 			transform.position = objeto.transform.position;
 			circle.enabled = true;
 			dest.StartCoroutine("GO");
+			quebra = GameObject.FindGameObjectWithTag("Quebra").GetComponent<AreaDestroy>();
+			quebra.Volta();
 		}
 	}
 

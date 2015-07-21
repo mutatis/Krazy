@@ -11,22 +11,13 @@ public class Destruidor : MonoBehaviour
 
 	public GameObject pai;
 
+	DestructibleBlock des;
+
 	GameObject objeto;
 	
 	Animator anim;
 	
 	bool pode;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-
-	}
 
 	public IEnumerator GO()
 	{
@@ -41,8 +32,10 @@ public class Destruidor : MonoBehaviour
 			objeto = collision.gameObject;
 			if(objeto != null)
 			{
-				anim = objeto.GetComponentInChildren<Animator>();
-				anim.SetTrigger("Kill");
+				anim = objeto.GetComponentInChildren<Animator> ();
+				des = objeto.GetComponentInChildren<DestructibleBlock> ();
+				des.Explodir();
+				anim.SetTrigger ("Kill");
 			}
 		}
 	}
@@ -54,8 +47,10 @@ public class Destruidor : MonoBehaviour
 			objeto = collision.gameObject;
 			if(objeto != null)
 			{
-				anim = objeto.GetComponentInChildren<Animator>();
-				anim.SetTrigger("Kill");
+				anim = objeto.GetComponentInChildren<Animator> ();
+				des = objeto.GetComponentInChildren<DestructibleBlock> ();
+				des.Explodir();
+				anim.SetTrigger ("Kill");
 			}
 		}
 	}

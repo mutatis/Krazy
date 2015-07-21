@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class AreaDestroy : MonoBehaviour 
 {
@@ -9,11 +10,19 @@ public class AreaDestroy : MonoBehaviour
 
 	public GameObject destruidor;
 	
+	public Sprite sprite;
+	
+	public Image image;
+	
+	Sprite temp;
+	
 	public void Utiliza()
 	{
 		if(PlayerPrefs.GetInt(nome) >= 1)
 		{
 			PlayerPrefs.SetInt(nome, (PlayerPrefs.GetInt(nome) - 1));
+			temp = image.sprite;
+			image.sprite = sprite;
 			Instantiate(destruidor);
 		}
 		else
@@ -21,5 +30,10 @@ public class AreaDestroy : MonoBehaviour
 			power.OpenBuy();
 			Time.timeScale = 0;
 		}
+	}
+
+	public void Volta()
+	{
+		image.sprite = temp;
 	}
 }

@@ -866,6 +866,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753ef7ff6fd75c749aceab2c4edb285d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &504615864
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 11401958, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+      propertyPath: tagsBlock.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 498664, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8.94999981
+      objectReference: {fileID: 0}
+    - target: {fileID: 498664, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.61999989
+      objectReference: {fileID: 0}
+    - target: {fileID: 498664, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498664, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498664, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498664, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498664, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 498664, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898666, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401958, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+      propertyPath: tagsBlock.Array.data[4]
+      value: Esqueleto
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401958, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+      propertyPath: tagsBlock.Array.data[5]
+      value: Pena
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+  m_RootGameObject: {fileID: 509954566}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &509691396
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +1003,69 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1771191266}
   m_GameObject: {fileID: 509691396}
+--- !u!1 &509954566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 198664, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+  m_PrefabInternal: {fileID: 504615864}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 509954567}
+  - 61: {fileID: 509954569}
+  - 114: {fileID: 509954568}
+  m_Layer: 0
+  m_Name: PaiDoDestruidor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &509954567
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 498664, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+  m_PrefabInternal: {fileID: 504615864}
+  m_GameObject: {fileID: 509954566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.94999981, y: -5.61999989, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 724902118}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+--- !u!114 &509954568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11401958, guid: a2604581fc8fc3248b56f96b7fa9d3fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 504615864}
+  m_GameObject: {fileID: 509954566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb2cf448874d4b4b9fa6fc000a71b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsBlock:
+  - Afrodite
+  - Ares
+  - Zeus
+  - Poseidon
+  - Esqueleto
+  - Pena
+  circle: {fileID: 724902115}
+  dest: {fileID: 724902117}
+--- !u!61 &509954569
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6101958, guid: a2604581fc8fc3248b56f96b7fa9d3fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 504615864}
+  m_GameObject: {fileID: 509954566}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .600000024, y: .600000024}
+  m_Center: {x: 0, y: 0}
 --- !u!1001 &509974982
 Prefab:
   m_ObjectHideFlags: 0
@@ -1456,6 +1579,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: []
   anim3: []
+--- !u!1 &724902114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 198666, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+  m_PrefabInternal: {fileID: 504615864}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 724902118}
+  - 114: {fileID: 724902117}
+  - 50: {fileID: 724902116}
+  - 58: {fileID: 724902115}
+  m_Layer: 0
+  m_Name: Destruidor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &724902115
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5898666, guid: a2604581fc8fc3248b56f96b7fa9d3fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 504615864}
+  m_GameObject: {fileID: 724902114}
+  m_Enabled: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0}
+--- !u!50 &724902116
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5098666, guid: a2604581fc8fc3248b56f96b7fa9d3fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 504615864}
+  m_GameObject: {fileID: 724902114}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!114 &724902117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11498666, guid: a2604581fc8fc3248b56f96b7fa9d3fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 504615864}
+  m_GameObject: {fileID: 724902114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 874a3700e025bfd43bcbf49510865627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsBlock:
+  - Afrodite
+  - Ares
+  - Poseidon
+  - Zeus
+  - Esqueleto
+  - Pena
+  pai: {fileID: 509954566}
+--- !u!4 &724902118
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 498666, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+  m_PrefabInternal: {fileID: 504615864}
+  m_GameObject: {fileID: 724902114}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 509954567}
+  m_RootOrder: 0
 --- !u!1 &747281562
 GameObject:
   m_ObjectHideFlags: 0
@@ -3594,7 +3795,7 @@ MonoBehaviour:
       platformFoldout: 0
   currency:
   - name: coins
-    amount: 0
+    amount: 2000
   IGCs: []
 --- !u!1 &1628077997
 GameObject:
@@ -4593,7 +4794,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1334003360}
   m_GameObject: {fileID: 2041245158}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20a3624475fe7d74292ab7640dc0ba31, type: 3}
   m_Name: 
@@ -4646,7 +4847,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1334003360}
   m_GameObject: {fileID: 2112194331}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63d9ab6456c839448bd269e6b3c831ae, type: 3}
   m_Name: 

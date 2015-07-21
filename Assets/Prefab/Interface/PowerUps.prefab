@@ -35,7 +35,7 @@ GameObject:
   - 114: {fileID: 11426414}
   m_Layer: 5
   m_Name: PowerUp2
-  m_TagString: Untagged
+  m_TagString: Quebra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 818a7a54e0564fc43af03d0a5f4e130a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e2162597ac6d8614ba82f5de57138508, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -177,6 +177,8 @@ MonoBehaviour:
   nome: PowerUp2
   power: {fileID: 11457878}
   destruidor: {fileID: 198664, guid: a2604581fc8fc3248b56f96b7fa9d3fe, type: 2}
+  sprite: {fileID: 21300000, guid: 0d209601c6a28c34f853aa1d1747c17d, type: 3}
+  image: {fileID: 11493646}
 --- !u!114 &11457878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,6 +220,8 @@ MonoBehaviour:
   nome: PowerUp1
   power: {fileID: 11426408}
   audio: {fileID: 8300000, guid: 660062a79c0e99040bc3be3f7b039570, type: 3}
+  sprite: {fileID: 21300000, guid: c39b75fa80ff9ad408a2ea1e9fc2bea3, type: 3}
+  image: {fileID: 11426410}
 --- !u!114 &11493644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,7 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 67d30c7120f0b9442a20be67b8ce1f28, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 814109ad7908c3b4eacaf2bdb095e53d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -390,13 +394,13 @@ RectTransform:
   m_GameObject: {fileID: 126414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .0823029429, y: .0823029354, z: .0823029354}
+  m_LocalScale: {x: .0812839195, y: .0812839121, z: .0812839121}
   m_Children: []
   m_Father: {fileID: 22493648}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: .712000012}
   m_AnchorMax: {x: 0, y: .712000012}
-  m_AnchoredPosition: {x: 34.5, y: 2.5}
+  m_AnchoredPosition: {x: 36.3670006, y: 2.49650002}
   m_SizeDelta: {x: 599, y: 565}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22493640
@@ -407,13 +411,13 @@ RectTransform:
   m_GameObject: {fileID: 193640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .0819752589, y: .0819752514, z: .0819752514}
+  m_LocalScale: {x: .0809602886, y: .0809602812, z: .0809602812}
   m_Children: []
   m_Father: {fileID: 22493648}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: .712000012}
   m_AnchorMax: {x: 0, y: .712000012}
-  m_AnchoredPosition: {x: 88.7000122, y: 2.30000305}
+  m_AnchoredPosition: {x: 87.4250031, y: 2.31019998}
   m_SizeDelta: {x: 599, y: 565}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22493648
