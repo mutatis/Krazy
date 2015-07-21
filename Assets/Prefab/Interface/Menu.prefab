@@ -1002,6 +1002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 9589462}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!114 &11413312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1014,6 +1015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 9501888}
+  audio: {fileID: 0}
 --- !u!114 &11413314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1026,6 +1028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 9501882}
+  audio: {fileID: 0}
 --- !u!114 &11413316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1038,6 +1041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 9512952}
+  audio: {fileID: 0}
 --- !u!114 &11413318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1050,6 +1054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 9508918}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!114 &11423098
 MonoBehaviour:
   m_ObjectHideFlags: 1

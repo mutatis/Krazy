@@ -5,6 +5,9 @@ public class AtivaDesativa : MonoBehaviour
 {	
 	public Animator[] anim;
 	public Animator[] anim3;
+
+	public AudioClip audio;
+
 	int x;
 
 	public void ControllAnim(Animator anim2)
@@ -33,11 +36,16 @@ public class AtivaDesativa : MonoBehaviour
 	{
 		float start = Time.realtimeSinceStartup;
 
-		while (Time.realtimeSinceStartup < start + 0.5f)
+		while (Time.realtimeSinceStartup < start + 0.3f)
 		{
 			yield return null;
 		}
-			anim[x].SetTrigger("Clico");
+
+		anim[x].SetTrigger("Clico");
+
+		Time.timeScale = 1f;
+		AudioSource.PlayClipAtPoint (audio, transform.position);
+		Time.timeScale = 0;
 
 		x++;
 		StartCoroutine ("Va");
