@@ -6,6 +6,7 @@ public class ScoreMeter : MonoBehaviour
 {
     private float score;
     public float maxHeight;
+	private float scoreFloor;
     private float scoreGoal;
     private RectTransform rectTransform;
     private Vector2 initialPosition;
@@ -27,11 +28,19 @@ public class ScoreMeter : MonoBehaviour
         this.scoreGoal = scoreGoal;
     }
 
+	public void SetFloor(float scoreFloor) 
+	{
+		this.scoreFloor = scoreFloor;
+	}
+
     void Update()
     {
-        if (score <= scoreGoal)
+        if (score >= scoreFloor && score <= scoreGoal)
         {
-            rectTransform.localPosition = Vector2.Lerp(rectTransform.localPosition, (initialPosition + new Vector2(0, maxHeight * (score / scoreGoal))), Time.deltaTime);
+            rectTransform.localPosition = Vector2.Lerp(
+				rectTransform.localPosition, 
+				(initialPosition + new Vector2(0, maxHeight * ((score - scoreFloor) / (scoreGoal - scoreFloor)))), 
+				Time.deltaTime);
         }
     }
 }

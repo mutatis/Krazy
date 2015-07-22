@@ -14,11 +14,10 @@ public class SceneMaster : MonoBehaviour
 
     public GameObject telaGameOver = null;
     public Timer timer;
-    public ScoreMeter scoreMeter;
+    public ScoreMeter[] scoreMeters;
 
     public int score;
     GameMaster gameMaster;
-
 
 	GameObject[] grid;
 	GameObject[] Afrodite;
@@ -44,23 +43,38 @@ public class SceneMaster : MonoBehaviour
 		StartCoroutine("GO");
         gameMaster = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameMaster>();
         gameMaster.faseAtual = Application.loadedLevel.ToString();
-        if(scoreMeter)
-            scoreMeter.SetGoal(meta3Estrelas);
+        if (scoreMeters.Length == 3) 
+		{
+			scoreMeters[0].SetGoal(meta1Estrela);
+			scoreMeters[0].SetFloor(0);
+			scoreMeters[1].SetGoal(meta2Estrelas);
+			scoreMeters[1].SetFloor(meta1Estrela);
+			scoreMeters[2].SetGoal(meta3Estrelas);
+			scoreMeters[2].SetFloor(meta2Estrelas);
+		}
+            
     }
 
-    public void BeginLevel()
+    public void BeginLevel(bool restart = false)
     {
         Time.timeScale = 1;
-        timer.SetTimer(tempoLimiteFase);
+		if(!restart)
+        	timer.SetTimer(tempoLimiteFase);
         timer.StartTimer();
+		gameObject.GetComponent<MouseInteraction> ().isPaused = false;
     }
 	
 	// Update is called once per frame
 	void Update () 
     {
         ChecarGrid();
-        if(scoreMeter)
-            scoreMeter.SetScore(score);
+        if (scoreMeters.Length == 3) 
+		{
+			foreach(var smeter in scoreMeters) 
+			{
+				smeter.SetScore(score);
+			}
+		}
 	}
 
     private void ChecarGrid()
@@ -101,6 +115,7 @@ public class SceneMaster : MonoBehaviour
         timer.StopTimer();
 		var spawner = GameObject.FindGameObjectWithTag ("Created").GetComponent<CreatedObj> ();
 		spawner.StopWave ();
+		gameObject.GetComponent<MouseInteraction> ().isPaused = true;
         //this.enabled = false;
     }
 

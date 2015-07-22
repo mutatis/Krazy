@@ -89,6 +89,7 @@ public class Revive : MonoBehaviour
 
         print("scene master");
 		sceneMaster.enabled = true;
+		sceneMaster.BeginLevel (true);
 
 		CreatedObj creat = GameObject.FindGameObjectWithTag ("Created").GetComponent<CreatedObj> ();
 		creat.StartCoroutine ("LaunchWave");

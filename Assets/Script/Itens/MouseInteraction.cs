@@ -7,9 +7,12 @@ public class MouseInteraction : MonoBehaviour {
     private GameObject blocoAtual;
     private bool hasSelected;
     public bool HasSelected { get { return hasSelected; } }
+	public bool isPaused;
 
     public void OnClickBlock(GameObject block)
     {
+		if (isPaused)
+			return;
         if (block == blocoAtual)
         {
             blocoAtual.SendMessage("OnDeselectBlock");
@@ -27,6 +30,8 @@ public class MouseInteraction : MonoBehaviour {
 
     public void OnClickSquare(GameObject square)
     {
+		if (isPaused)
+			return;
         if (!blocoAtual)
             return;
 
