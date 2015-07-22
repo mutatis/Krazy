@@ -111,6 +111,11 @@ public class GameMaster : MonoBehaviour
         
     }
 
+	public void NextLevel() 
+	{
+		OnChangeLevel (int.Parse(faseAtual) + 1);
+	}
+
     public void OnChangeLevel(int level)
     {
         if (level >= idPrimeiraFase)
@@ -126,7 +131,8 @@ public class GameMaster : MonoBehaviour
                 return;
             }
         }
-		if(Energia > 0 || level < 3)
+		//redundante?
+		if(CanPlay() || level < idPrimeiraFase)
 		{
         	LoadScene(level, 0);
 		}

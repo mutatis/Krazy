@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class GameOver : MonoBehaviour 
 {
     public List<GameObject> estrelas;
-
+	public GameObject nextLevelButton;
 	public AudioSource audio;
 
     int score;
@@ -24,20 +24,22 @@ public class GameOver : MonoBehaviour
 		{
 			audio.Play();
 		}
-		CreatedObj obj = GameObject.FindGameObjectWithTag ("Created").GetComponent<CreatedObj> ();
-        obj.StopWave();
+		//CreatedObj obj = GameObject.FindGameObjectWithTag ("Created").GetComponent<CreatedObj> ();
+        //obj.StopWave();
         StartCoroutine(MostrarEstrelas());
         sceneMaster.enabled = false;
     }
 
     IEnumerator MostrarEstrelas()
     {
-        print(qtdEstrelas);
         for (int i = 0; i < qtdEstrelas; i++)
         {
             yield return new WaitForSeconds(1);
             estrelas[i].SetActive(true);
         }
+
+		if(qtdEstrelas > 0) 
+			nextLevelButton.SetActive (true);
     }
 
 

@@ -18,7 +18,7 @@ public class ScoreUI : MonoBehaviour
 
     void Update()
     {
-        if (score != sceneMaster.Score && sceneMaster)
+        if (sceneMaster && score != sceneMaster.Score)
         {
             OnChangeScore(score, sceneMaster.Score);
             score = sceneMaster.Score;

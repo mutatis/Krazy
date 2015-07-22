@@ -99,6 +99,8 @@ public class SceneMaster : MonoBehaviour
         //Time.timeScale = 0;
         GameObject.Instantiate(telaGameOver);
         timer.StopTimer();
+		var spawner = GameObject.FindGameObjectWithTag ("Created").GetComponent<CreatedObj> ();
+		spawner.StopWave ();
         //this.enabled = false;
     }
 
