@@ -716,7 +716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1021,6 +1021,7 @@ GameObject:
   - 114: {fileID: 82581824}
   - 95: {fileID: 82581822}
   - 114: {fileID: 82581823}
+  - 82: {fileID: 82581826}
   m_Layer: 5
   m_Name: FogoPai
   m_TagString: Untagged
@@ -1076,6 +1077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 877465043}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!114 &82581824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1105,6 +1107,65 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1981695632}
   m_GameObject: {fileID: 82581820}
+--- !u!82 &82581826
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8227200, guid: cc92702d3f3078f43870f9ff4bc818dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1981695632}
+  m_GameObject: {fileID: 82581820}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &122201419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,6 +1382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: []
   anim3: []
+  audio: {fileID: 0}
 --- !u!1 &146127857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,7 +1726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2135,6 +2197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: []
   anim3: []
+  audio: {fileID: 0}
 --- !u!114 &232683690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3176,6 +3239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: []
   anim3: []
+  audio: {fileID: 0}
 --- !u!114 &439455901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3600,6 +3664,25 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11465926, guid: ad2f80c995a6faa47a53e78c0f2e9123, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9,
+        type: 3}
+    - target: {fileID: 11465918, guid: ad2f80c995a6faa47a53e78c0f2e9123, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9,
+        type: 3}
+    - target: {fileID: 11465896, guid: ad2f80c995a6faa47a53e78c0f2e9123, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9,
+        type: 3}
+    - target: {fileID: 11465904, guid: ad2f80c995a6faa47a53e78c0f2e9123, type: 2}
+      propertyPath: idFase
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad2f80c995a6faa47a53e78c0f2e9123, type: 2}
   m_RootGameObject: {fileID: 441452225}
@@ -3617,6 +3700,7 @@ GameObject:
   - 114: {fileID: 478338788}
   - 95: {fileID: 478338786}
   - 114: {fileID: 478338787}
+  - 82: {fileID: 478338790}
   m_Layer: 5
   m_Name: FogoPai
   m_TagString: Untagged
@@ -3672,6 +3756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1360549656}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!114 &478338788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3701,6 +3786,65 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1981695632}
   m_GameObject: {fileID: 478338784}
+--- !u!82 &478338790
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8227204, guid: cc92702d3f3078f43870f9ff4bc818dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1981695632}
+  m_GameObject: {fileID: 478338784}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &529523085
 GameObject:
   m_ObjectHideFlags: 0
@@ -4047,7 +4191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 60248c12cfb84cf43a2d0dd2fe3dc8de, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4177,7 +4321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4311,7 +4455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46002dc40f8bddc4288e73b3b8aed9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeFase: Fase3
+  idFase: 5
   estrelas:
   - {fileID: 2014024388}
   - {fileID: 1979135683}
@@ -4720,6 +4864,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11465904, guid: ad2f80c995a6faa47a53e78c0f2e9123, type: 2}
+      propertyPath: idFase
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad2f80c995a6faa47a53e78c0f2e9123, type: 2}
   m_RootGameObject: {fileID: 2096978643}
@@ -5068,7 +5216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: ae526eb32b83f4a49a961876213872fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5134,6 +5282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: []
   anim3: []
+  audio: {fileID: 0}
 --- !u!114 &750957858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5569,7 +5718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46002dc40f8bddc4288e73b3b8aed9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeFase: Fase3
+  idFase: 5
   estrelas:
   - {fileID: 73138817}
   - {fileID: 1646879321}
@@ -5822,7 +5971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -7624,7 +7773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -7688,7 +7837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -7822,7 +7971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46002dc40f8bddc4288e73b3b8aed9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeFase: Fase5
+  idFase: 7
   estrelas:
   - {fileID: 1282420104}
   - {fileID: 1073823407}
@@ -8001,6 +8150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: []
   anim3: []
+  audio: {fileID: 0}
 --- !u!114 &1140430430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8461,7 +8611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -8526,7 +8676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46002dc40f8bddc4288e73b3b8aed9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeFase: Fase2
+  idFase: 4
   estrelas:
   - {fileID: 779445500}
   - {fileID: 889905540}
@@ -8902,6 +9052,7 @@ MonoBehaviour:
   - {fileID: 1360549656}
   - {fileID: 877465043}
   - {fileID: 1434034658}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!114 &1238999373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9175,7 +9326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -9240,7 +9391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46002dc40f8bddc4288e73b3b8aed9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeFase: Fase5
+  idFase: 7
   estrelas:
   - {fileID: 1460371153}
   - {fileID: 1931369156}
@@ -9627,6 +9778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: []
   anim3: []
+  audio: {fileID: 0}
 --- !u!114 &1337759838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9921,7 +10073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46002dc40f8bddc4288e73b3b8aed9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeFase: Fase1
+  idFase: 3
   estrelas:
   - {fileID: 577493916}
   - {fileID: 1755641485}
@@ -10612,6 +10764,7 @@ GameObject:
   - 114: {fileID: 1541924696}
   - 95: {fileID: 1541924694}
   - 114: {fileID: 1541924695}
+  - 82: {fileID: 1541924698}
   m_Layer: 5
   m_Name: FogoPai
   m_TagString: Untagged
@@ -10667,6 +10820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1033826206}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!114 &1541924696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10696,6 +10850,65 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1981695632}
   m_GameObject: {fileID: 1541924692}
+--- !u!82 &1541924698
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8227206, guid: cc92702d3f3078f43870f9ff4bc818dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1981695632}
+  m_GameObject: {fileID: 1541924692}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1573974927
 GameObject:
   m_ObjectHideFlags: 0
@@ -11258,6 +11471,7 @@ GameObject:
   - 114: {fileID: 1633764964}
   - 95: {fileID: 1633764963}
   - 114: {fileID: 1633764962}
+  - 82: {fileID: 1633764966}
   m_Layer: 5
   m_Name: FogoPai
   m_TagString: Untagged
@@ -11297,6 +11511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 533812958}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!95 &1633764963
 Animator:
   serializedVersion: 3
@@ -11342,6 +11557,65 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1981695632}
   m_GameObject: {fileID: 1633764960}
+--- !u!82 &1633764966
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8227202, guid: cc92702d3f3078f43870f9ff4bc818dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1981695632}
+  m_GameObject: {fileID: 1633764960}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1643182241
 GameObject:
   m_ObjectHideFlags: 0
@@ -12398,7 +12672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46002dc40f8bddc4288e73b3b8aed9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeFase: Fase4
+  idFase: 6
   estrelas:
   - {fileID: 252474466}
   - {fileID: 240737517}
@@ -12610,7 +12884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: ea36a43c4621cdb44a97bb66a0f8ffde, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -12674,7 +12948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -12739,7 +13013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46002dc40f8bddc4288e73b3b8aed9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeFase: Fase1
+  idFase: 3
   estrelas:
   - {fileID: 1760011912}
   - {fileID: 598109742}
@@ -13001,7 +13275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -13332,6 +13606,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.0200237
       objectReference: {fileID: 0}
+    - target: {fileID: 11465904, guid: ad2f80c995a6faa47a53e78c0f2e9123, type: 2}
+      propertyPath: idFase
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad2f80c995a6faa47a53e78c0f2e9123, type: 2}
   m_RootGameObject: {fileID: 370872510}
@@ -13456,6 +13734,7 @@ GameObject:
   - 114: {fileID: 1906326151}
   - 95: {fileID: 1906326149}
   - 114: {fileID: 1906326150}
+  - 82: {fileID: 1906326153}
   m_Layer: 5
   m_Name: FogoPai
   m_TagString: Untagged
@@ -13511,6 +13790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1434034658}
+  audio: {fileID: 8300000, guid: c2cd54ebb24723e459fe9b598ccf312e, type: 3}
 --- !u!114 &1906326151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13540,6 +13820,65 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1981695632}
   m_GameObject: {fileID: 1906326147}
+--- !u!82 &1906326153
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8227208, guid: cc92702d3f3078f43870f9ff4bc818dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1981695632}
+  m_GameObject: {fileID: 1906326147}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1914115753
 GameObject:
   m_ObjectHideFlags: 0
@@ -13866,7 +14205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -14007,7 +14346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -14228,6 +14567,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11465892, guid: ad2f80c995a6faa47a53e78c0f2e9123, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465904, guid: ad2f80c995a6faa47a53e78c0f2e9123, type: 2}
+      propertyPath: idFase
       value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -14506,7 +14849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46002dc40f8bddc4288e73b3b8aed9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeFase: Fase2
+  idFase: 4
   estrelas:
   - {fileID: 164242719}
   - {fileID: 1064139231}
@@ -14636,7 +14979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -14700,7 +15043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -14991,6 +15334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: []
   anim3: []
+  audio: {fileID: 0}
 --- !u!1 &2028978999
 GameObject:
   m_ObjectHideFlags: 0
@@ -15609,6 +15953,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11465904, guid: ad2f80c995a6faa47a53e78c0f2e9123, type: 2}
+      propertyPath: idFase
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad2f80c995a6faa47a53e78c0f2e9123, type: 2}
   m_RootGameObject: {fileID: 2028978999}
@@ -15745,7 +16093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 4196f507f34bf974c8e2722cedb57537, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b64c3833c51f2864c9d5f16e7e3d2aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -15959,7 +16307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46002dc40f8bddc4288e73b3b8aed9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeFase: Fase4
+  idFase: 6
   estrelas:
   - {fileID: 1194927913}
   - {fileID: 2101067775}
