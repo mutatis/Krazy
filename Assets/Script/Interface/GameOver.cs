@@ -44,3 +44,9 @@ public class GameOver : MonoBehaviour
 
 
 }
+
+public enum GameOverType
+{
+    Timeout,
+    FullBoard
+}

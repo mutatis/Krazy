@@ -776,10 +776,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: []
-  audio: {fileID: 8300000, guid: b536eac7dc553824696675a608d91db1, type: 3}
+  audio: {fileID: 8300000, guid: 75cbc47c0cd7849428cd6fcbe3a41220, type: 3}
   endGame: {fileID: 106176}
   panelEnd: {fileID: 106174}
   gameMaster: {fileID: 0}
+  extraTime: 30
+  reviveMode: 0
 --- !u!114 &11456110
 MonoBehaviour:
   m_ObjectHideFlags: 1

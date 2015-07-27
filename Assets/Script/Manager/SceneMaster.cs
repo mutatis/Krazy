@@ -90,7 +90,7 @@ public class SceneMaster : MonoBehaviour
 
         if (x >= grid.Length)
         {
-            GameOver();
+            GameOver(GameOverType.FullBoard);
         }
     }
 
@@ -99,12 +99,13 @@ public class SceneMaster : MonoBehaviour
 
 	IEnumerator GO()
 	{
-		
-        while(true)
+        var timer = .0f;
+        while(timer < tempoLimiteFase)
         {
             yield return new WaitForEndOfFrame();
+            timer += Time.deltaTime;
         }
-		GameOver();
+		GameOver(GameOverType.Timeout);
 	}
 
     public void AumentarPontuacao(int qtd)
@@ -112,14 +113,16 @@ public class SceneMaster : MonoBehaviour
         score += qtd;
     }
 
-    void GameOver()
+    void GameOver(GameOverType mode)
     {
         //Time.timeScale = 0;
         GameObject.Instantiate(telaGameOver);
+        telaGameOver.GetComponent<Revive>().SetReviveMode(mode);
         timer.StopTimer();
 		var spawner = GameObject.FindGameObjectWithTag ("Created").GetComponent<CreatedObj> ();
 		spawner.StopWave ();
 		gameObject.GetComponent<MouseInteraction> ().isPaused = true;
+        print("oooohhh");
         //this.enabled = false;
     }
 

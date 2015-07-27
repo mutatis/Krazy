@@ -190,6 +190,21 @@ public class GameMaster : MonoBehaviour
                     powerUpTag = "PowerUp3";
                     break;
                 }
+            case PowerUps.Slow:
+                {
+                    powerUpTag = "PowerUp1";
+                    break;
+                }
+            case PowerUps.Bomba:
+                {
+                    powerUpTag = "PowerUp2";
+                    break;
+                }
+            case PowerUps.ExtraTime:
+                {
+                    powerUpTag = "PowerUp4";
+                    break;
+                }
         }
 
         return powerUpTag;
@@ -200,6 +215,7 @@ public class GameMaster : MonoBehaviour
 public enum PowerUps
 {
     Revive,
+    ExtraTime,
     Bomba,
     Slow
 }
