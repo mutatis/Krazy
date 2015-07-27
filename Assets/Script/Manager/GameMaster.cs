@@ -50,6 +50,7 @@ public class GameMaster : MonoBehaviour
 			PlayerPrefs.SetInt("Energia", 100);
 			PlayerPrefs.SetInt("Primeira", 1);
 		}
+        //DBManager.SetFunds("coins", 1000000000);
 	}
 
     void Update()
@@ -164,4 +165,41 @@ public class GameMaster : MonoBehaviour
 		}
 		Instantiate(buyEnergy);
     }
+
+    public int GetPowerUpCount(PowerUps powerup)
+    {
+        var tag = GetPowerUpTag(powerup);
+        return PlayerPrefs.GetInt(tag);
+    }
+
+    public void ConsumePowerUp(PowerUps powerup)
+    {
+        var tag = GetPowerUpTag(powerup);
+        var val = PlayerPrefs.GetInt(tag);
+        val--;
+        PlayerPrefs.SetInt(tag, val);
+    }
+
+    private string GetPowerUpTag(PowerUps powerup)
+    {
+        string powerUpTag = "";
+        switch (powerup)
+        {
+            case PowerUps.Revive:
+                {
+                    powerUpTag = "PowerUp3";
+                    break;
+                }
+        }
+
+        return powerUpTag;
+    }
+}
+
+
+public enum PowerUps
+{
+    Revive,
+    Bomba,
+    Slow
 }

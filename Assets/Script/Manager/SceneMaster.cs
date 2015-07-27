@@ -99,7 +99,11 @@ public class SceneMaster : MonoBehaviour
 
 	IEnumerator GO()
 	{
-		yield return new WaitForSeconds (tempoLimiteFase);
+		
+        while(true)
+        {
+            yield return new WaitForEndOfFrame();
+        }
 		GameOver();
 	}
 

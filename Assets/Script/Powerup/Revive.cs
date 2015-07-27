@@ -11,6 +11,7 @@ public class Revive : MonoBehaviour
 
 	public GameObject endGame;
 	public GameObject panelEnd;
+    public GameMaster gameMaster;
 
 	Animator anim;
 
@@ -21,9 +22,21 @@ public class Revive : MonoBehaviour
 	GameObject[] Esqueleto;
 	GameObject[] Pena;
 
+    void Start()
+    {
+        gameMaster = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameMaster>();
+    }
+
     public void Continue()
     {
-        StartCoroutine("ContinueCoroutine");
+        if (gameMaster && gameMaster.GetPowerUpCount(PowerUps.Revive) > 0)
+        {
+            StartCoroutine("ContinueCoroutine");
+            gameMaster.ConsumePowerUp(PowerUps.Revive);
+        }
+        else
+            print("You don't have a revive power up.");
+        
     }
 
 	public IEnumerator ContinueCoroutine()
@@ -86,8 +99,6 @@ public class Revive : MonoBehaviour
             //print(Time.time);
             yield return new WaitForEndOfFrame();
         }
-
-        print("scene master");
 		sceneMaster.enabled = true;
 		sceneMaster.BeginLevel (true);
 

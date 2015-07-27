@@ -42,9 +42,6 @@ public class AtivaDesativa : MonoBehaviour
 		}
 		start = Time.realtimeSinceStartup;
 		anim[x].SetTrigger("Clico");
-
-		print("PORRRRAAAAAAA");
-
 		Time.timeScale = 1f;
 		AudioSource.PlayClipAtPoint (audio, transform.position);
 		Time.timeScale = 0;
@@ -63,10 +60,7 @@ public class AtivaDesativa : MonoBehaviour
 			yield return null;
 		}
 		start = Time.realtimeSinceStartup;
-		anim[x].SetTrigger("Clico");
-		
-		print("PORRRRAAAAAAA");
-		
+        anim[x].SetTrigger("Clico");		
 		Time.timeScale = 1f;
 		AudioSource.PlayClipAtPoint (audio, transform.position);
 		Time.timeScale = 0;
@@ -89,4 +83,6 @@ public class AtivaDesativa : MonoBehaviour
 			Time.timeScale = 0;
 		}
 	}
+
+    
 }
