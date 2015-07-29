@@ -11,14 +11,14 @@ public class KillController : MonoBehaviour
         transform.parent.GetComponent<CircleCollider2D>().enabled = false;
 	}
 
-	public void Cancela()
-	{
-		/*if(mouse.life > 1)
-		{
-			mouse.life --;
-			gameObject.GetComponent<Animator>().SetTrigger("Normal");
-		}*/
-	}
+    public void Cancela()
+    {
+    }
+
+	public void Shatter()
+    {
+        transform.parent.GetComponentInChildren<DestructibleBlock>().Explodir();
+    }
 
 	public void Kill()
 	{

@@ -364,7 +364,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a84809cd855fc42a4615f5109c9411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fragmentSpeed: 10
+  fragmentSpeed: .600000024
+  deceleration: .100000001
   rotation: 15
   timeLimit: .100000001
   padrao: {fileID: 21215148}
