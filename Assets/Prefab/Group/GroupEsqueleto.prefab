@@ -215,7 +215,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0f7a77fed6e2c204da2424a00205c1e8, type: 3}
   - {fileID: 8300000, guid: e983712cad44a4c4dbe967fef4b7ebac, type: 3}
   - {fileID: 8300000, guid: 62050336b7b094d4d869effff06eaf6d, type: 3}
-  camera: {fileID: 0}
   x: 0
   quant: 3
 --- !u!114 &11467588
@@ -230,8 +229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velX: 0
-  velY: 5.5
-  tempo: .200000003
+  velY: 11
+  tempo: .100000001
   tipo: 1
   tag_: Esqueleto
   lista: {fileID: 11467586}
@@ -247,8 +246,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velX: 0
-  velY: -5.5
-  tempo: .200000003
+  velY: -11
+  tempo: .100000001
   tipo: 1
   tag_: Esqueleto
   lista: {fileID: 11467586}
@@ -263,9 +262,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35923de35f2e3244886e37b6d68ac934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velX: -5.5
+  velX: -11
   velY: 0
-  tempo: .200000003
+  tempo: .100000001
   tipo: 2
   tag_: Esqueleto
   lista: {fileID: 11467586}
@@ -280,9 +279,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35923de35f2e3244886e37b6d68ac934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velX: 5.5
+  velX: 11
   velY: 0
-  tempo: .200000003
+  tempo: .100000001
   tipo: 2
   tag_: Esqueleto
   lista: {fileID: 11467586}

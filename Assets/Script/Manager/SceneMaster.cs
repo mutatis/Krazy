@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 public class SceneMaster : MonoBehaviour 
 {
@@ -17,11 +18,18 @@ public class SceneMaster : MonoBehaviour
     public ScoreMeter[] scoreMeters;
 
     public int score;
+    public float standardScaleFactor;
     GameMaster gameMaster;
 
 	GameObject[] grid;
 	GameObject[] Afrodite;
-	GameObject[] Ares;
+
+    public float GetScaleFactor()
+    {
+        return GameObject.Find("RectGrid").transform.localScale.x / standardScaleFactor;
+    }
+
+    GameObject[] Ares;
 	GameObject[] Zeus;
 	GameObject[] Poseidon;
 	GameObject[] Esqueleto;

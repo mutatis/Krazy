@@ -1012,7 +1012,7 @@ MonoBehaviour:
   - {fileID: 174290, guid: a4489094dd170b64dad22d4ea7c4ea37, type: 2}
   canvas: {fileID: 22475196}
   tempoWave: 5
-  startingWave: 50
+  startingWave: 10
   minWave: 3
   maxWave: 5
   wave: 0

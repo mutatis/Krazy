@@ -45,7 +45,7 @@ MonoBehaviour:
   faseAtual: 3
   powerUpTiers: 030000000600000009000000
   idPrimeiraFase: 3
-  idUltimaFase: 6
+  idUltimaFase: 13
   debugTimeScale: 0
 --- !u!1001 &100100000
 Prefab:

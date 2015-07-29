@@ -19,6 +19,9 @@ public class Direcao : MonoBehaviour
 	void Start () 
 	{
 		StartCoroutine("Go");
+        var scaleFactor = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>().GetScaleFactor();
+        velX *= scaleFactor;
+        velY *= scaleFactor;
 	}
 	
 	// Update is called once per frame

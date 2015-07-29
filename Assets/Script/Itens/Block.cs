@@ -14,6 +14,7 @@ public class Block : MonoBehaviour
     void Start()
     {
         sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>();
+        transform.localScale = transform.localScale * sceneMaster.GetScaleFactor();
     }
 
 	void Update()

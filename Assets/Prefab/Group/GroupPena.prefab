@@ -215,7 +215,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0f7a77fed6e2c204da2424a00205c1e8, type: 3}
   - {fileID: 8300000, guid: e983712cad44a4c4dbe967fef4b7ebac, type: 3}
   - {fileID: 8300000, guid: 62050336b7b094d4d869effff06eaf6d, type: 3}
-  camera: {fileID: 0}
   x: 0
   quant: 3
 --- !u!114 &11472464
@@ -247,8 +246,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velX: 0
-  velY: -5.5
-  tempo: .200000003
+  velY: -11
+  tempo: .100000001
   tipo: 1
   tag_: Pena
   lista: {fileID: 11472462}
