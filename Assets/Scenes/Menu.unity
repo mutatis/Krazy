@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buyEnergy: {fileID: 123186, guid: cc2b8ac4833b17d428533929243c671e, type: 2}
-  enableEnergyLimit: 0
+  enableEnergyLimit: 1
   debug: 0
   faseAtual: 3
   powerUpTiers: 030000000600000009000000

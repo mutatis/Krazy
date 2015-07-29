@@ -3,8 +3,10 @@ using System.Collections;
 
 public class LoadingRetry : MonoBehaviour 
 {
+    //public int idCenaLoading;
+
 	public void Retry()
 	{
-		Application.LoadLevel("Loading");
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameMaster>().OnChangeLevel(Application.loadedLevel);
 	}
 }

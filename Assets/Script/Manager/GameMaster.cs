@@ -119,29 +119,17 @@ public class GameMaster : MonoBehaviour
 
     public void OnChangeLevel(int level)
     {
-        if (level >= idPrimeiraFase)
+        if(CanPlay() || level < idPrimeiraFase)
         {
-            if (CanPlay())
-            {
+            if(level >= idPrimeiraFase)
                 Energia--;
-                faseAtual = level.ToString();
-            }
-            else 
-            {
-                GetMoreEnergyPopUp();
-                return;
-            }
+            faseAtual = level.ToString();
+            LoadScene(level, 0);
         }
-		//redundante?
-		if(CanPlay() || level < idPrimeiraFase)
-		{
-        	LoadScene(level, 0);
-		}
-		else
-		{
-			GetMoreEnergyPopUp();
-			return;
-		}
+        else if(!CanPlay())
+        {
+            GetMoreEnergyPopUp();
+        }
     }
 
     private void LoadScene(int level, int x)
