@@ -7961,7 +7961,7 @@ MonoBehaviour:
   meta1Estrela: 10
   meta2Estrelas: 20
   meta3Estrelas: 30
-  tempoLimiteFase: 90
+  tempoLimiteFase: 75
   telaGameOver: {fileID: 106176, guid: e7b02b64ea43a1641a4cfde1faf94b27, type: 2}
   timer: {fileID: 1192901492}
   scoreMeters:
@@ -7969,6 +7969,7 @@ MonoBehaviour:
   - {fileID: 230573493}
   - {fileID: 1063575343}
   score: 0
+  standardScaleFactor: .00564023387
   reviveRefCount: 0
 --- !u!4 &330389478
 Transform:
@@ -27702,6 +27703,10 @@ Prefab:
       propertyPath: digits.Array.data[6]
       value: 
       objectReference: {fileID: 1620212136}
+    - target: {fileID: 11448530, guid: 075f4485fbc891e46b300ada23e5b6f0, type: 2}
+      propertyPath: tempoLimiteFase
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 075f4485fbc891e46b300ada23e5b6f0, type: 2}
   m_RootGameObject: {fileID: 330389476}

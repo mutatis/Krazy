@@ -27764,7 +27764,7 @@ MonoBehaviour:
   - {fileID: 230573493}
   - {fileID: 1063575343}
   score: 0
-  standardScaleFactor: 0
+  standardScaleFactor: .00564023387
   reviveRefCount: 0
 --- !u!4 &330389478
 Transform:
@@ -66226,7 +66226,7 @@ GameObject:
   - 114: {fileID: 907369802}
   m_Layer: 0
   m_Name: RectGrid
-  m_TagString: Grid
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -18,18 +18,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fases/3 - 2 fileiras.unity
   - enabled: 1
+    path: Assets/Scenes/Fases/4 - 2 fileiras menos tempo.unity
+  - enabled: 1
+    path: Assets/Scenes/Fases/5 - duas fileiras mais blocos.unity
+  - enabled: 1
     path: Assets/Scenes/Fases/6 - 3 fileiras.unity
   - enabled: 1
     path: Assets/Scenes/Fases/7 - 4 fileiras.unity
   - enabled: 1
-    path: Assets/Scenes/Fases/6 - tempo menor.unity
+    path: Assets/Scenes/Fases/8 - 4 fileiras menos tempo.unity
   - enabled: 1
-    path: "Assets/Scenes/Fases/7 - mais pe\xE7as por wave.unity"
-  - enabled: 1
-    path: "Assets/Scenes/Fases/8 - tempo menor com mais pe\xE7as.unity"
-  - enabled: 1
-    path: "Assets/Scenes/Fases/9 - tabuleiro menor com mais pe\xE7as.unity"
-  - enabled: 1
-    path: Assets/Scenes/Fases/10 - tabuleiro menor com tempo menor.unity
-  - enabled: 1
-    path: "Assets/Scenes/Fases/11 - tabuleiro menor com tempo menor e mais pe\xE7as.unity"
+    path: Assets/Scenes/Fases/9 - 4 fileiras mais blocos.unity
