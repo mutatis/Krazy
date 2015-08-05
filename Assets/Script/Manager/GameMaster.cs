@@ -114,16 +114,20 @@ public class GameMaster : MonoBehaviour
 
 	public void NextLevel() 
 	{
+        print("Next Level: " + faseAtual);
 		OnChangeLevel (int.Parse(faseAtual) + 1);
 	}
 
     public void OnChangeLevel(int level)
     {
+        print("OnChangeLevel: " + level);
         if(CanPlay() || level < idPrimeiraFase)
         {
             if(level >= idPrimeiraFase)
                 Energia--;
+            
             faseAtual = level.ToString();
+            Debug.LogError(faseAtual + "." + gameObject.GetInstanceID());
             LoadScene(level, 0);
         }
         else if(!CanPlay())
@@ -134,6 +138,7 @@ public class GameMaster : MonoBehaviour
 
     private void LoadScene(int level, int x)
     {
+        print(level);
         if (x == 0)
         {
             PlayerPrefs.SetInt("Loading", level);

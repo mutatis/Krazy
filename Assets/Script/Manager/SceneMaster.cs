@@ -50,7 +50,7 @@ public class SceneMaster : MonoBehaviour
 		grid = GameObject.FindGameObjectsWithTag("Grid");
 		StartCoroutine("GO");
         gameMaster = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameMaster>();
-        gameMaster.faseAtual = Application.loadedLevel.ToString();
+        //gameMaster.faseAtual = Application.loadedLevel.ToString();
         if (scoreMeters.Length == 3) 
 		{
 			scoreMeters[0].SetGoal(meta1Estrela);
