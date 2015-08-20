@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using SIS;
+//using SIS;
 
 public class GameMaster : MonoBehaviour
 {
@@ -35,7 +35,8 @@ public class GameMaster : MonoBehaviour
     {
         get
         {
-            return DBManager.GetFunds("coins");
+            //return DBManager.GetFunds("coins");
+            return 99999;
         }
     }
 
