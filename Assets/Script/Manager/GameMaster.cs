@@ -2,14 +2,14 @@
 using System.Collections;
 using SIS;
 
-public class GameMaster : MonoBehaviour 
+public class GameMaster : MonoBehaviour
 {
-	public GameObject buyEnergy;
+    public GameObject buyEnergy;
 
-	public bool enableEnergyLimit;
-	public bool debug;
+    public bool enableEnergyLimit;
+    public bool debug;
 
-    public string faseAtual;
+    public int faseAtual;
 
     public int[] powerUpTiers;
 
@@ -31,27 +31,28 @@ public class GameMaster : MonoBehaviour
             PlayerPrefs.SetInt("Energia", value);
         }
     }
-    public int Coins {
-        get 
+    public int Coins
+    {
+        get
         {
-            return SIS.DBManager.GetFunds("coins");
+            return DBManager.GetFunds("coins");
         }
     }
 
-	void Awake()
-	{
-		DontDestroyOnLoad(gameObject);
-	}
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
-	void Start () 
-	{
-        if(PlayerPrefs.GetInt("Primeira") == 0)
-		{
-			PlayerPrefs.SetInt("Energia", 100);
-			PlayerPrefs.SetInt("Primeira", 1);
-		}
+    void Start()
+    {
+        if (PlayerPrefs.GetInt("Primeira") == 0)
+        {
+            PlayerPrefs.SetInt("Energia", 100);
+            PlayerPrefs.SetInt("Primeira", 1);
+        }
         //DBManager.SetFunds("coins", 1000000000);
-	}
+    }
 
     void Update()
     {
@@ -96,7 +97,7 @@ public class GameMaster : MonoBehaviour
         }
     }
 
-    void GetFreePowerUp() 
+    void GetFreePowerUp()
     {
         print("GetFreePowerUp() has not been implemented yet");
     }
@@ -109,28 +110,28 @@ public class GameMaster : MonoBehaviour
     public void SetStarsForLevel(int stars)
     {
         PlayerPrefs.SetInt("Stars_" + faseAtual, stars);
-        
+
     }
 
-	public void NextLevel() 
-	{
+    public void NextLevel()
+    {
         print("Next Level: " + faseAtual);
-		OnChangeLevel (int.Parse(faseAtual) + 1);
-	}
+        OnChangeLevel(Application.loadedLevel + 1);
+    }
 
     public void OnChangeLevel(int level)
     {
         print("OnChangeLevel: " + level);
-        if(CanPlay() || level < idPrimeiraFase)
+        if (CanPlay() || level < idPrimeiraFase)
         {
-            if(level >= idPrimeiraFase)
+            if (level >= idPrimeiraFase)
                 Energia--;
-            
-            faseAtual = level.ToString();
+
+            faseAtual = level;
             Debug.LogError(faseAtual + "." + gameObject.GetInstanceID());
             LoadScene(level, 0);
         }
-        else if(!CanPlay())
+        else if (!CanPlay())
         {
             GetMoreEnergyPopUp();
         }
@@ -152,11 +153,11 @@ public class GameMaster : MonoBehaviour
 
     void GetMoreEnergyPopUp()
     {
-		if(Energia < 0)
-		{
-			Energia = 0;
-		}
-		Instantiate(buyEnergy);
+        if (Energia < 0)
+        {
+            Energia = 0;
+        }
+        Instantiate(buyEnergy);
     }
 
     public int GetPowerUpCount(PowerUps powerup)
@@ -202,8 +203,12 @@ public class GameMaster : MonoBehaviour
 
         return powerUpTag;
     }
-}
 
+    void OnLevelWasLoaded(int level)
+    {
+        faseAtual = Application.loadedLevel;
+    }
+}
 
 public enum PowerUps
 {

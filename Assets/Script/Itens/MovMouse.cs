@@ -30,7 +30,7 @@ public class MovMouse : MonoBehaviour
 
     void Start()
     {
-        sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>();
+        sceneMaster = GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>(); 
 
 		int x = Random.Range (0, 5);
 

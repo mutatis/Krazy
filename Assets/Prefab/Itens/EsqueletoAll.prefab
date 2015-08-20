@@ -8,11 +8,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 415152}
-  - 58: {fileID: 5834364}
   - 114: {fileID: 11434354}
   - 114: {fileID: 11434356}
   - 114: {fileID: 11434358}
   - 50: {fileID: 5034364}
+  - 61: {fileID: 6157084}
   m_Layer: 12
   m_Name: EsqueletoAll
   m_TagString: Esqueleto
@@ -327,8 +327,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!58 &5834364
-CircleCollider2D:
+--- !u!61 &6157084
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -336,7 +336,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Radius: 2.75
+  m_Size: {x: 6, y: 6}
   m_Center: {x: 0, y: 0}
 --- !u!95 &9534364
 Animator:

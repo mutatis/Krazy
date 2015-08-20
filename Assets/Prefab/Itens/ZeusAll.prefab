@@ -176,7 +176,7 @@ GameObject:
   - 114: {fileID: 11474290}
   - 114: {fileID: 11409790}
   - 114: {fileID: 11481116}
-  - 58: {fileID: 5874288}
+  - 61: {fileID: 6167426}
   m_Layer: 9
   m_Name: ZeusAll
   m_TagString: Zeus
@@ -356,16 +356,16 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!58 &5874288
-CircleCollider2D:
+--- !u!61 &6167426
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174290}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Radius: 2.75
+  m_IsTrigger: 0
+  m_Size: {x: 6, y: 6}
   m_Center: {x: 0, y: 0}
 --- !u!95 &9574288
 Animator:

@@ -28,11 +28,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 480478}
-  - 58: {fileID: 5816910}
   - 114: {fileID: 11416908}
   - 114: {fileID: 11416902}
   - 114: {fileID: 11457982}
   - 50: {fileID: 5049710}
+  - 61: {fileID: 6141018}
   m_Layer: 8
   m_Name: AfroditeAll
   m_TagString: Afrodite
@@ -277,7 +277,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.529999971, y: 2.45000005, z: 1}
+  m_LocalPosition: {x: -.860000014, y: 2.41899991, z: 1}
   m_LocalScale: {x: .143855974, y: .143855676, z: 314.982849}
   m_Children:
   - {fileID: 480480}
@@ -327,8 +327,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!58 &5816910
-CircleCollider2D:
+--- !u!61 &6141018
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -336,7 +336,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Radius: 2.75
+  m_Size: {x: 6, y: 6}
   m_Center: {x: 0, y: 0}
 --- !u!95 &9516910
 Animator:

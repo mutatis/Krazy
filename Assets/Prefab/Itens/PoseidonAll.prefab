@@ -48,7 +48,7 @@ GameObject:
   - 114: {fileID: 11421726}
   - 114: {fileID: 11421730}
   - 114: {fileID: 11404836}
-  - 58: {fileID: 5821730}
+  - 61: {fileID: 6129920}
   m_Layer: 10
   m_Name: PoseidonAll
   m_TagString: Poseidon
@@ -327,8 +327,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!58 &5821730
-CircleCollider2D:
+--- !u!61 &6129920
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -336,7 +336,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Radius: 2.75
+  m_Size: {x: 6, y: 6}
   m_Center: {x: 0, y: 0}
 --- !u!95 &9521730
 Animator:
