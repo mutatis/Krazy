@@ -19,17 +19,15 @@ public class DicasUI : MonoBehaviour {
 	void Update () {
         var deltaTime = Time.realtimeSinceStartup - realTime;
         realTime = Time.realtimeSinceStartup;
-        //print(deltaTime);
-	    if(Input.GetMouseButtonDown(0))
+        if (painel >= textoDica.Length)
         {
-            if (painel >= textoDica.Length)
-            {
-                //gameObject.GetComponent<Animator>().SetTrigger("Close");
-                GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>().BeginLevel();
-                gameObject.SetActive(false);
-                return;
-            }
-            
+            GameObject.FindGameObjectWithTag("SceneMaster").GetComponent<SceneMaster>().BeginLevel();
+            gameObject.SetActive(false);
+            return;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {            
             if (charCount < textoDica[painel].Length)
             {
                 charCount = textoDica[painel].Length;
