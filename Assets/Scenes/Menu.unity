@@ -3794,8 +3794,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede593cb3d7afa745b31541dc1b842f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefsKey: 64617461
+  remoteKey: 72656d6f7465
+  idPrefix: 5349535f
+  keepLegacy: 1
   encrypt: 0
   obfuscKey: 
+  currency: 43757272656e6379
+  content: 436f6e74656e74
+  selected: 53656c6563746564
+  player: 506c61796572
 --- !u!114 &1625066766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3809,18 +3817,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 0
-  googleStoreKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAutmBsoshzZfIXcCYfrkGHmkSTbprMlwJE2HOMKxCuR3W2Nro2fGIX6QLc9RiTA5qU1F2KUXN+uUAL4Ju9p7ywSrZWORGKihZPRVp2+ngZ3XdKzMMe/qmZzP8dymzDEjxDVk1Y1bo1esyVxamgFjjghh0+HOFgwIcgz9ZMr45QSj/HzZjUwHoftddHnwITEvoifCZeSipufksMgAR5PU4ShjCUV+TPFqiHdIHJ7iw8KIacTmvNJAHaaT/0JbniPBy7386hFaf+mpZ7P5MxZvqQ2rFyVX4yLoNd5b813whcLMCZLkLXJZI9NTxNXjyiA7qNvTVzL6aX6q8fy9oXQ2QnwIDAQAB
+  googleStoreKey: 4d494942496a414e42676b71686b6947397730424151454641414f43415138414d49494243674b434151454175746d42736f73687a5a66495863435966726b47486d6b53546270724d6c774a4532484f4d4b784375523357324e726f326647495836514c6339526954413571553146324b55584e2b7555414c344a75397037797753725a574f52474b69685a50525670322b6e675a3358644b7a4d4d652f716d5a7a503864796d7a44456a7844566b315931626f316573795678616d67466a6a676868302b484f4667774963677a395a4d72343551536a2f487a5a6a5577486f66746464486e77495445766f6966435a6553697075666b734d6741523550553453686a4355562b5450467169486449484a376977384b496163546d764e4a41486161542f304a626e6950427937333836684661662b6d705a3750354d785a76715132724679565834794c6f4e6435623831337768634c4d435a4c6b4c584a5a49394e54784e586a79694137714e7654567a4c3661583671386679396f585132516e77494441514142
   serverUrl: 
   verificationType: 0
   verificationFileName: 
   remoteType: 0
   remoteFileName: 
   androidPlatform: 0
+  ids: []
   IAPs:
-  - id: 1405262948.9577788
-    name: IAP
+  - id: 313430353236323934382e39353737373838
+    name: 494150
     items:
-    - id: restore
+    - id: 726573746f7265
       localId:
       - overridden: 0
         id: 
@@ -3832,9 +3841,9 @@ MonoBehaviour:
         id: 
       fetch: 0
       type: 0
-      title: restore
-      description: restore purchases
-      realPrice: X
+      title: 726573746f7265
+      description: 726573746f726520707572636861736573
+      realPrice: 58
       icon: {fileID: 21300000, guid: e165572b11ad6214a9cf46afd0eaa1fd, type: 3}
       virtualPrice: []
       req:
@@ -3843,7 +3852,7 @@ MonoBehaviour:
         labelText: 
         nextId: 
       platformFoldout: 0
-    - id: pacote1
+    - id: 7061636f746531
       localId:
       - overridden: 0
         id: 
@@ -3866,7 +3875,7 @@ MonoBehaviour:
         labelText: 
         nextId: 
       platformFoldout: 0
-    - id: pacote2
+    - id: 7061636f746532
       localId:
       - overridden: 0
         id: 
@@ -3889,7 +3898,7 @@ MonoBehaviour:
         labelText: 
         nextId: 
       platformFoldout: 0
-    - id: pacote3
+    - id: 7061636f746533
       localId:
       - overridden: 0
         id: 
@@ -3912,7 +3921,7 @@ MonoBehaviour:
         labelText: 
         nextId: 
       platformFoldout: 0
-    - id: pacote4
+    - id: 7061636f746534
       localId:
       - overridden: 0
         id: 
@@ -3936,7 +3945,7 @@ MonoBehaviour:
         nextId: 
       platformFoldout: 0
   currency:
-  - name: coins
+  - name: 636f696e73
     amount: 2000
   IGCs: []
 --- !u!1 &1628077997

@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using SIS;
 
 public class GameMaster : MonoBehaviour
 {
@@ -29,13 +28,6 @@ public class GameMaster : MonoBehaviour
         set
         {
             PlayerPrefs.SetInt("Energia", value);
-        }
-    }
-    public int Coins
-    {
-        get
-        {
-            return DBManager.GetFunds("coins");
         }
     }
 

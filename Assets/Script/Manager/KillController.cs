@@ -8,7 +8,7 @@ public class KillController : MonoBehaviour
 
 	public void Desativa()
 	{
-        transform.parent.GetComponent<CircleCollider2D>().enabled = false;
+        transform.parent.GetComponent<BoxCollider2D>().enabled = false;
 	}
 
     public void Cancela()

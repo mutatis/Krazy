@@ -52,7 +52,6 @@ public class CreatedObj : MonoBehaviour
 
         for (int i = 0; i < qtdWave; i++)
         {
-
             createdRandom = Random.Range(0, created.Length);
             GameObject obj = Instantiate(created[createdRandom], posCreated[Random.Range(0, posCreated.Length)].transform.position, transform.rotation) as GameObject;
 
@@ -62,7 +61,7 @@ public class CreatedObj : MonoBehaviour
             do
             {
                 var blockSquare = grid[gridRandom].GetComponent<BlockSquare>();
-                if (!blockSquare) Debug.LogError("There is no bloackSquare in " + target.name); //check if there is an object with the wrong tag
+                if (!blockSquare) Debug.LogError("There is no blockSquare in " + target.name); //check if there is an object with the wrong tag
                 if (blockSquare.blockStack == 0 && blockSquare.LockBlock(obj))
                 {
                     target = grid[gridRandom];
