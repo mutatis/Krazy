@@ -4,8 +4,7 @@ using System.Collections;
 public class AtivaDesativa : MonoBehaviour
 {	
 	public Animator[] anim;
-	public Animator[] anim3;
-
+    public Animator[] anim3;
 	public AudioClip audio;
 
 	int x;
@@ -34,37 +33,43 @@ public class AtivaDesativa : MonoBehaviour
 
 	public IEnumerator Va()
 	{
-		float start = Time.realtimeSinceStartup;
+        if (x >= anim.Length)
+            yield break;
 
+		float start = Time.realtimeSinceStartup;
 		while (Time.realtimeSinceStartup < start + 0.5f)
 		{
 			yield return null;
 		}
+
 		start = Time.realtimeSinceStartup;
 		anim[x].SetTrigger("Clico");
 		Time.timeScale = 1f;
-		AudioSource.PlayClipAtPoint (audio, transform.position);
+        AudioSource.PlayClipAtPoint(audio, transform.position);
 		Time.timeScale = 0;
-
 		x++;
-		StartCoroutine ("Vo");
-		StopCoroutine ("Va");
+		StartCoroutine("Vo");
+		StopCoroutine("Va");
 	}
 
 	public IEnumerator Vo()
-	{
-		float start = Time.realtimeSinceStartup;
+    { 
+        if (x >= anim.Length)
+            yield break;
+
+        float start = Time.realtimeSinceStartup;
 		
-		while (Time.realtimeSinceStartup < start + 0.5f)
+		while (Time.realtimeSinceStartup < start + 0.5f) //wait for 0.5 seconds while game is frozen
 		{
 			yield return null;
 		}
-		start = Time.realtimeSinceStartup;
+
+        start = Time.realtimeSinceStartup;
         anim[x].SetTrigger("Clico");		
 		Time.timeScale = 1f;
 		AudioSource.PlayClipAtPoint (audio, transform.position);
 		Time.timeScale = 0;
-		
+        
 		x++;
 		StartCoroutine ("Va");
 		StopCoroutine ("Vo");
