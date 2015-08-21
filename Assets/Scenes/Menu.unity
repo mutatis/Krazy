@@ -3794,6 +3794,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede593cb3d7afa745b31541dc1b842f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  encrypt: 0
+  obfuscKey: 
 --- !u!114 &1625066766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3806,6 +3808,137 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cafc064c316f49744b1ae08c43a9a12e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
+  googleStoreKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAutmBsoshzZfIXcCYfrkGHmkSTbprMlwJE2HOMKxCuR3W2Nro2fGIX6QLc9RiTA5qU1F2KUXN+uUAL4Ju9p7ywSrZWORGKihZPRVp2+ngZ3XdKzMMe/qmZzP8dymzDEjxDVk1Y1bo1esyVxamgFjjghh0+HOFgwIcgz9ZMr45QSj/HzZjUwHoftddHnwITEvoifCZeSipufksMgAR5PU4ShjCUV+TPFqiHdIHJ7iw8KIacTmvNJAHaaT/0JbniPBy7386hFaf+mpZ7P5MxZvqQ2rFyVX4yLoNd5b813whcLMCZLkLXJZI9NTxNXjyiA7qNvTVzL6aX6q8fy9oXQ2QnwIDAQAB
+  serverUrl: 
+  verificationType: 0
+  verificationFileName: 
+  remoteType: 0
+  remoteFileName: 
+  androidPlatform: 0
+  IAPs:
+  - id: 1405262948.9577788
+    name: IAP
+    items:
+    - id: restore
+      localId:
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      fetch: 0
+      type: 0
+      title: restore
+      description: restore purchases
+      realPrice: X
+      icon: {fileID: 21300000, guid: e165572b11ad6214a9cf46afd0eaa1fd, type: 3}
+      virtualPrice: []
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: pacote1
+      localId:
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      fetch: 0
+      type: 0
+      title: 
+      description: 
+      realPrice: 
+      icon: {fileID: 0}
+      virtualPrice: []
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: pacote2
+      localId:
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      fetch: 0
+      type: 0
+      title: 
+      description: 
+      realPrice: 
+      icon: {fileID: 0}
+      virtualPrice: []
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: pacote3
+      localId:
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      fetch: 0
+      type: 0
+      title: 
+      description: 
+      realPrice: 
+      icon: {fileID: 0}
+      virtualPrice: []
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+    - id: pacote4
+      localId:
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      - overridden: 0
+        id: 
+      fetch: 0
+      type: 0
+      title: 
+      description: 
+      realPrice: 
+      icon: {fileID: 0}
+      virtualPrice: []
+      req:
+        entry: 
+        target: 0
+        labelText: 
+        nextId: 
+      platformFoldout: 0
+  currency:
+  - name: coins
+    amount: 2000
+  IGCs: []
 --- !u!1 &1628077997
 GameObject:
   m_ObjectHideFlags: 0
@@ -4946,6 +5079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20a3624475fe7d74292ab7640dc0ba31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
 --- !u!4 &2041245160
 Transform:
   m_ObjectHideFlags: 0

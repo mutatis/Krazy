@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-//using SIS;
+using SIS;
 
 public class ManagerBuyPower : MonoBehaviour 
 {
@@ -30,9 +30,9 @@ public class ManagerBuyPower : MonoBehaviour
 
 	public void Buy()
 	{
-		if(/*DBManager.GetFunds("coins") >= preco*/ true)
+		if(DBManager.GetFunds("coins") >= preco)
 		{
-			//DBManager.IncreaseFunds("coins", (preco * -1));
+			DBManager.IncreaseFunds("coins", (preco * -1));
 			PlayerPrefs.SetInt(titulo, PlayerPrefs.GetInt(titulo) + 1);
 			GameObject obj = Instantiate(compro) as GameObject;
 			obj.GetComponent<BoaCompraManager>().nomePowerup = titulo;
