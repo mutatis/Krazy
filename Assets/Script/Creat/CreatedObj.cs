@@ -72,7 +72,7 @@ public class CreatedObj : MonoBehaviour
                     gridRandom = rdm.Next(0, grid.Length);
                     pode = -1;   
                 }
-                //yield return new WaitForEndOfFrame();
+                yield return new WaitForEndOfFrame();
             } while (pode < 0);
 
             target.SendMessage("OnHover");

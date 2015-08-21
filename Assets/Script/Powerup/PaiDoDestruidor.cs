@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,7 +7,7 @@ public class PaiDoDestruidor : MonoBehaviour
 
 	public List<string> tagsBlock;
 
-	public CircleCollider2D circle;
+	public BoxCollider2D circle;
 
 	public Destruidor dest;
 
