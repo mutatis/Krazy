@@ -3108,6 +3108,18 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 542492468}
+    - target: {fileID: 11488854, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488854, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488854, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18ce1982f60fd6841b48d54e263e6b88, type: 2}
   m_RootGameObject: {fileID: 233977668}
@@ -134743,7 +134755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: .39199999}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: b4acb9e5975427d4581256e5c20544ed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -136519,7 +136531,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11420958, guid: 5dfb779719edcc7438dbb7ce26247225, type: 2}
         m_MethodName: OnChangeLevel
         m_Mode: 3
         m_Arguments:
